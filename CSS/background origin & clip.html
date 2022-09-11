@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .origin {
+            height: 310px;
+            padding: 31px;
+            background-image: url(./5\(1\).jpg);
+            /* background-repeat: no-repeat; */
+            background-origin: padding-box;
+            border: 4px dotted black;
+        }
+
+        .origin2 {
+            height: 310px;
+            padding: 15px;
+            background-image: url(./5\(1\).jpg);
+            /* background-repeat: no-repeat; */
+            background-origin: content-box;
+            border: 4px dotted black;
+        }
+
+        .origin3 {
+            height: 310px;
+            padding: 15px;
+            background-image: url(./5\(1\).jpg);
+            background-origin: border-box;
+            /* background-repeat: no-repeat; */
+            border: 4px dotted black;
+        }
+
+        .clip {
+            height: 310px;
+            padding: 15px;
+            /* background-repeat: no-repeat; */
+            background-image: url(./5\(1\).jpg);
+            background-clip: padding-box;
+            border: 4px dotted black;
+        }
+
+        .clip2 {
+            height: 310px;
+            padding: 15px;
+            /* background-repeat: no-repeat; */
+            background-image: url(./5\(1\).jpg);
+            background-clip: content-box;
+            border: 4px dotted black;
+        }
+
+        .clip3 {
+            height: 310px;
+            padding: 15px;
+            /* background-repeat: no-repeat; */
+            background-image: url(./5\(1\).jpg);
+            background-clip: border-box;
+            border: 4px dotted black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="origin">
+        <p><b> background begins at the upper-left corner of the padding area</b></p>
+    </div>
+    <br>
+    <br>
+    <div class="origin2">
+        <p><b>The background begins at the upper-left corner of the content area</b></p>
+    </div>
+    <br>
+    <br>
+    <div class="origin3">
+        <p><b>the background begins at the upper-left corner of the border area</b></p>
+    </div>
+    <br>
+    <br>
+    <div class="clip">
+        <p><b>The background extended to the padding area this time</b></p>
+    </div>
+    <br>
+    <br>
+    <div class="clip2">
+        <p><b>the background only fills up within the content area, but not the padding nor border area</b></p>
+    </div>
+    <br>
+    <br>
+    <div class="clip3">
+        <p><b>The background extends to the complete div, including its border area</b></p>
+    </div>
+</body>
+
+</html>
