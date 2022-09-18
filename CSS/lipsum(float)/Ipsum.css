@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    width: 960px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 70px;
+}
+
+h1,h2,h3,h4,h5 {
+    font-weight: 400;
+}
+
+h4 {
+    font-style: italic;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 30px;
+}
+
+h5 {
+    line-height: 20px;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: radial-gradient(black 0%, white 95%);
+    margin: 0 auto;
+    padding: 0;
+
+}
+
+.content {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.a {
+    float: left;
+    width: 51%;
+    margin: 21px 2px 2px 0px;
+    font-size: 14px;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.b {
+    float: right;
+    width: 46%;
+    margin: 0px 0px 0px 0px;
+    font-size: 14px;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+p {
+    margin: 20px 0px 23px 0px;
+    line-height: 1.5
+}
+
+#data {
+    width: 25px;
+    text-align: center;
+    padding: 7px 7px;
+    margin: 40px 0px 0px 3px;
+}
+
+.m {
+    margin: 22px 0px 0px 22px;
+}
+
+.n {
+    padding: 12px 0px 0px 15px;
+}
+
+.box {
+    margin: 11px 2px 10px 0px;
+}
+
+.box img {
+    margin: 8px 2px 0px 8px;
+}
+
+.box a.link {
+    color: red;
+    font-weight: 700;
+    margin: 3px 3px;
+}
+
+.box a {
+    color: black;
+    margin: 3px 3px;
+}
+
+.final h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.final p {
+    font-size: 14px;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.end {
+    text-align: center;
+    margin-top: 8px;
+    height: 90px;    
+}
+
+.end a {
+    text-decoration: none;
+    color: #000;
+}
