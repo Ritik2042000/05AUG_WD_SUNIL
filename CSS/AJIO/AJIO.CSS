@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 85%;
+    height: 90px;
+    background-color: azure;
+    margin: 0 auto;
+}
+
+.top-left-detalis ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+
+}
+
+.top-left-detalis ul li {
+    padding: 5px 5px 0px 8px;
+    font-size: 12px;
+}
+
+.top-left-detalis a {
+    text-decoration: none;
+    color: black;
+}
+
+.top-left-detalis li button {
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.logo {
+    width: 130px;
+    display: inline-block;
+    margin: 4px 0px 0px 165px;
+}
+
+.right-nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.bottom-right-detalis {
+    text-align: center;
+
+}
+
+.bottom-right-detalis ul>li {
+    display: inline-block;
+    margin: 0px 15px 0px 15px;
+}
+
+.bottom-right-detalis ul li a {
+
+    text-decoration: none;
+    color: black;
+}
+
+.bottom-right-detalis li:hover {
+    color: white;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: azure;
+    border: 1px solid black;
+    width: 150px;
+    height: 180px;
+}
+
+.dropdown ul li {
+    display: block;
+    line-height: 1.3;
+
+}
+
+.dropdown a:hover {
+    background-color: blanchedalmond;
+    color: black;
+
+}
+
+.menu:hover .dropdown {
+    display: block;
+
+}
+
+.menu:hover .dropdown-women {
+    display: block;
+    background-color: blanchedalmond;
+    color: black;
+
+}
+
+.menu:hover .dropdown-kids {
+    display: block;
+    background-color: cadetblue;
+    color: black;
+}
+
+.menu:hover .dropdown-indie {
+    display: block;
+    background-color: aquamarine;
+    color: black;
+}
+
+.menu:hover .dropdown-home-kitchen {
+    display: block;
+    background-color: thistle;
+    color: black;
+}
+
+.search input {
+    border-radius: 5px;
+    padding: 2px;
+    width: 200px;
+}
+
+.whishlist i {
+    font-size: 25px;
+    margin: 0px 6px 0px 20px;
+}
+
+.cart i {
+    font-size: 23px;
+    margin: 1px 12px 0px 12px;
+}
