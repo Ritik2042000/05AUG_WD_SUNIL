@@ -2,18 +2,20 @@
     margin: 0;
     padding: 0;
 }
-
 .container {
-    width: 85%;
-    height: 90px;
-    background-color: azure;
+    width: 100%;
+    height: 100px;
     margin: 0 auto;
+    position: fixed;
+    box-shadow: 1px 1px 10px rgb(101, 101, 43);
+    border-top: 3px solid black;
 }
 
 .top-left-detalis ul {
     display: flex;
     justify-content: flex-end;
     list-style: none;
+    width: 89%;
 
 }
 
@@ -45,6 +47,8 @@
 .right-nav {
     display: flex;
     justify-content: flex-end;
+    width: 89%;
+    margin-bottom: 5px;
 }
 
 .bottom-right-detalis {
@@ -58,46 +62,43 @@
 }
 
 .bottom-right-detalis ul li a {
-
     text-decoration: none;
     color: black;
 }
 
-.bottom-right-detalis li:hover {
-    color: white;
+.bold-hover:hover {
+    color: #2c4152;
+    font-weight: 900;
 }
-
 .dropdown {
     display: none;
     position: absolute;
-    background-color: azure;
     border: 1px solid black;
-    width: 150px;
-    height: 180px;
+    width: 120px;
+    height: 200px;
+    
 }
 
-.dropdown ul li {
+.dropdown ul li:hover{
     display: block;
-    line-height: 1.3;
-
-}
-
-.dropdown a:hover {
-    background-color: blanchedalmond;
-    color: black;
-
+    line-height: 1.2;
+    border-bottom: 1px solid black;
+    color: white;
+    
 }
 
 .menu:hover .dropdown {
     display: block;
-
+    background-color: thistle;
+    line-height: 1.2;
+    border-bottom: 1px solid black;
+    
 }
 
 .menu:hover .dropdown-women {
     display: block;
-    background-color: blanchedalmond;
+    background-color: rgb(255, 210, 205);
     color: black;
-
 }
 
 .menu:hover .dropdown-kids {
@@ -117,11 +118,22 @@
     background-color: thistle;
     color: black;
 }
+.search{
+    position: relative;
+}
 
 .search input {
-    border-radius: 5px;
-    padding: 2px;
-    width: 200px;
+    border-radius: 12px;
+    padding: 1px;
+    width: 255px;
+    background-color: #fffded;
+    height: 20px;
+       
+}
+.search i{
+    position: absolute;
+    right: 13px;
+    padding-top: 5px;
 }
 
 .whishlist i {
