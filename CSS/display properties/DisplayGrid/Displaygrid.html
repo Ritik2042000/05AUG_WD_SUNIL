@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 1380px;
+            margin: 0 auto;
+            display: grid;
+            color: white;
+            grid-template-rows: 60px 200px 200px 150px;
+            grid-template-columns: repeat(3, 1fr) 150px;
+            gap: 15px;
+
+        }
+
+        .container>div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .a {
+            background-color: black;
+            grid-column: 1/5;
+        }
+
+        .a>ul {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .a ul li {
+            list-style: none;
+            padding: 0px 50px;
+        }
+
+        .a ul>li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .a ul>li :hover {
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        .b {
+            background-color: coral;
+            background-image: url(./pexels-anand-dandekar-1532771.jpg);
+            background-repeat: no-repeat;
+            background-size: 450px 300px;
+
+        }
+
+        .c {
+            background-color: cornflowerblue;
+            background-image: url(./pexels-brett-sayles-1322185.jpg);
+            background-repeat: no-repeat;
+            background-size: 450px 200px;
+        }
+
+        .d {
+            background-color: lightgray;
+            background-image: url(./pexels-pixabay-15239.jpg);
+            background-repeat: no-repeat;
+            background-size: 450px 200px;
+        }
+
+        .e {
+            background-color: darkblue;
+            background-image: url(./pexels-fathi-vee-1020478.jpg);
+            background-repeat: no-repeat;
+            background-size: 150px 420px;
+            grid-row: 2/4;
+            grid-column: 4/5;
+        }
+
+        .f {
+            background-color: yellowgreen;
+            background-image: url(./cristina-gottardi-CSpjU6hYo_0-unsplash.jpg);
+            background-repeat: no-repeat;
+            background-size: 1250px 200px;
+            grid-column: 1/4;
+        }
+
+        .g {
+            background-color: darkslategrey;
+            grid-column: 1/5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="a">
+            <ul>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">About As</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="b">box1</div>
+        <div class="c">box2</div>
+        <div class="d">box3</div>
+        <div class="e">sidebar</div>
+        <div class="f">main</div>
+        <div class="g">&#169 display grid</div>
+    </div>
+
+</body>
+
+</html>
