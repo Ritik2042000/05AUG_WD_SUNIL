@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .container{
+        columns: 3;
+        gap: 50px;
+    }
+    img{
+        width: 100%;
+        transition: all 5s;
+        
+    }
+    .a img{
+        position: relative;
+    }
+    .b img{
+        position: relative;
+    }
+    .a img:hover{
+        width: 600px;
+        height: 500px;
+        cursor: pointer;
+        position: sticky;
+    }
+    .b img:hover{
+        width: 400px;
+        height: 300px;
+        cursor: pointer;
+        box-shadow: 10px 8px 80px rgb(48, 45, 45);
+        /* overflow: auto; */
+                
+    }
+    .c img:hover{
+        transform:rotate(35deg);
+        transition-duration: 5s;
+        cursor: pointer;
+        opacity: .5;
+    }
+    
+    .d img:hover{
+        cursor: pointer;
+        transform: translateX(50px);
+        transition-duration: 5s;
+        cursor: pointer;    
+    }
+    .e img:hover{
+        width: 800px;
+        height: 800px;
+        position: relative;
+        overflow: hidden        
+    }
+    .f img:hover{
+        transform: translateX(50px);
+        transition-duration: 5s;
+        cursor: pointer;
+        
+    }
+    .g img:hover{
+        transform: scale(1.5);
+        transition-duration: 5s;
+        cursor: pointer;
+        
+    }
+    .h img:hover{
+        transform:skewx(10deg);
+        transition-duration: 5s;
+        cursor: pointer;
+        
+    }
+    .i img:hover{
+        transform:skewy(20deg);
+        transition-duration: 5s;
+        box-shadow: 2px 20px 40px black;
+        cursor: pointer;
+        
+    }
+    .j img:hover{
+        transform:rotate(180deg);
+        transition-duration: 5s;
+        cursor: pointer;
+        
+    }
+    .k img:hover{
+        transform:matrix(1,1,0,1,1,2);
+        transition-duration: 5s;
+        cursor: pointer;
+        
+    }
+    .l img:hover{
+        transform: rotate3d(1,2,3,10deg);
+        transition-duration: 5s;
+        box-shadow: 1px 20px 50px darkred;
+        cursor: pointer;
+        
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="a" >
+            <img src="./pexels-anand-dandekar-1532771.jpg" alt="No Image Found">
+        </div>
+        <div class="b" >
+            <img src="./pexels-blaque-x-863963.jpg" alt="No Image Found">
+        </div>
+        <div class="c">
+            <img src="./pexels-brett-sayles-1322185.jpg" alt="No Image Found">
+        </div>
+        <div class="d">
+            <img src="./pexels-fathi-vee-1020478.jpg" alt="No Image Found">
+        </div>
+        <div class="e">
+            <img src="./pexels-oliver-sjöström-1433052.jpg" alt="No Image Found">
+        </div>
+        <div class="f">
+            <img src="./pexels-pixabay-15239.jpg" alt="No Image Found">
+        </div>
+        <div class="g">
+            <img src="./pexels-laraine-davis-1580025.jpg" alt="No Image Found">
+        </div>
+        <div class="h">
+            <img src="./pexels-avery-nielsenwebb-2406382.jpg" alt="No Image Found">
+        </div>
+        <div class="i">
+            <img src="./pexels-juan-pablo-serrano-arenas-1242347.jpg" alt="No Image Found">
+        </div>
+        <div class="j">
+            <img src="./pexels-skully-mba-1316484.jpg" alt="No Image Found">
+        </div>
+        <div class="k" >
+            <img src="./pexels-tausif-hossain-1226302.jpg" alt="No Image Found">
+        </div>
+        <div class="l">
+            <img src="./pexels-vlad-chețan-2604929.jpg" alt="No Image Found">
+        </div>
+        
+    </div>
+</body>
+</html>
