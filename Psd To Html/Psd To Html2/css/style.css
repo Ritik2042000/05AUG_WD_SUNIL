@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.backgruond{
+    background-color: #ffe001;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    
+}
+.clip-path{
+    width: 100%;
+    clip-path: polygon(79% 0, 100% 0, 100% 100%, 57% 100%);
+    background-color: #ebe9ac;
+    height: 100vh;
+    
+}
+.container{
+    display: flex;
+    width: 1280px;
+    margin: 0 auto;
+}
+.row{
+    display: flex;
+    width: 100%;
+}
+.logo{
+
+}
+.r-info{
+    margin-left: auto;
+}
