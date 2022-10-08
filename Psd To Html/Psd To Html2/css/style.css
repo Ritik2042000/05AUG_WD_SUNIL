@@ -1,35 +1,74 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* border: 1px solid black; */
 }
-.backgruond{
+
+a {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../font/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+.backgruond {
     background-color: #ffe001;
     height: 100vh;
     width: 100%;
     position: absolute;
     z-index: -1;
-    
-}
-.clip-path{
-    width: 100%;
-    clip-path: polygon(79% 0, 100% 0, 100% 100%, 57% 100%);
-    background-color: #ebe9ac;
-    height: 100vh;
-    
-}
-.container{
-    display: flex;
-    width: 1280px;
-    margin: 0 auto;
-}
-.row{
-    display: flex;
-    width: 100%;
-}
-.logo{
 
 }
-.r-info{
+
+.clip-path {
+    width: 100%;
+    clip-path: polygon(76% 0, 100% 0, 100% 100%, 60% 100%);
+    background-color: #ebe9ac;
+    height: 100vh;
+
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+    padding-top: 8px;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+}
+
+.col2 {
     margin-left: auto;
+    width: 120px;
+    display:inline-block;
+    margin-top: 10px;
+}
+
+.r-info{
+    font-size: 10px;
+    font-weight:900;
+    font-family: Montserrat;
+}
+.r-info :nth-child(2){
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.row2 ul {
+    display: flex;
+    list-style: none;
+    justify-content: end;
+}
+.row2 ul li a{
+    font-size: 12px;
+    font-weight: 700;
+    color: black;
+    margin-left:45px;
+    letter-spacing: 3px;
+    font-family:Montserrat;
 }
