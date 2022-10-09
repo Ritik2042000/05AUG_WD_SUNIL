@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+.background{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../image/Bg\ image.png);
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    /* filter: grayscale(1); */
+    opacity: 0.85;
+
+}
+.container{
+    width: 100%;
+    
+}
+nav{
+    padding-top: 18px;
+}
+.row{
+    width: 100%;
+    background-color: black;
+    height: 5vh;
+}
+.row .col{
+    width: 1280px;
+    height: 5vh;
+    margin:0 auto;
+    display: flex;
+    align-items: center;
+}
+@font-face {
+    font-family:Raleway ;
+    src: url(../fonts/Raleway/Raleway-VariableFont_wght.ttf);
+}
+
+.img img{
+    width: 30px;
+}
+.text{
+    color: white;
+    display: block;
+    font-family:Raleway;
+    font-size: 15px;
+}
+.text :nth-child(2){
+    color: white;
+    display: block;
+    font-family:Raleway;
+    font-size: 8px;
+    
+}
+.r-widght{
+    margin-left: auto;
+}
+.r-widght ul{
+    display: flex;
+    list-style: none;
+}
+.r-widght ul li a{
+    color: rgb(29, 195, 228);
+    margin-right: 25px;
+    font-family:Raleway ;
+}
+
+.sport{
+    width: 100%;
+    margin-top: 180px;
+    
+}
+.sport h2{
+    text-align: center;
+    font-size: 175px;
+    color: #f6f6f6;;
+    font-family:Raleway ;
+    font-weight: 700;
+}
+.small-text{
+    width:700px ;
+    margin: 0 auto;
+    text-align: center;
+    font-family:Raleway ;
+    font-size: 12px;
+    color: #ffffff;
+}
+@font-face {
+    font-family:Roboto ;
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+.button{
+    width: 700px;
+    margin-top: 100px;
+}
+.button button{
+    padding: 10px 45px 10px 45px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family:Roboto;
+    color:rgb(29, 195, 228) ;
+    font-weight: 700;
+}
+.col2{
+    height: 50vh;
+    background-color: black;
+    padding-top: 20vh;
+}
+.detalis{
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 30px;
+    color: rgb(29, 195, 228);
+    font-family:Raleway;
+}
+.detalis h3{
+    font-size: 1.3em;
+    font-weight: 800;
+}
+.detalis p{
+    font-size: 12px;
+}
+
