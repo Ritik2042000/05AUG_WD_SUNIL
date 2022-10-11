@@ -1,3 +1,15 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(../font/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family:gabelisa ;
+    src: url(../font/gabelisa/Gabelisa\ Font\ by\ Keithzo\ \(7NTypes\).otf);
+}
+@font-face {
+    font-family:Fredericka ;
+    src: url(../font/Fredericka_the_Great/FrederickatheGreat-Regular.ttf);
+}
 * {
     margin: 0;
     padding: 0;
@@ -9,25 +21,26 @@ a {
     text-decoration: none;
 }
 
-@font-face {
-    font-family: Montserrat;
-    src: url(../font/Montserrat/Montserrat-VariableFont_wght.ttf);
+img{
+    width: 100%;
 }
 
 .backgruond {
     background-color: #ffe001;
-    height: 100vh;
     width: 100%;
+    /* height: 100vh; */
+    height: 818px;
     position: absolute;
     z-index: -1;
-
+    
 }
 
 .clip-path {
     width: 100%;
+    /* height: 100vh; */
+    height: 818px;
     clip-path: polygon(76% 0, 100% 0, 100% 100%, 60% 100%);
     background-color: #ebe9ac;
-    height: 100vh;
 
 }
 
@@ -40,16 +53,18 @@ a {
 .row {
     display: flex;
     width: 100%;
+    align-items: center;
 }
 
-.col2 {
+.m-aut {
     margin-left: auto;
-    width: 120px;
-    display:inline-block;
-    margin-top: 10px;
 }
-
+.col2{
+    width: 125px;
+    align-items: center;
+}
 .r-info{
+    display: block;
     font-size: 10px;
     font-weight:900;
     font-family: Montserrat;
@@ -59,16 +74,105 @@ a {
     font-weight: 900;
 }
 
-.row2 ul {
-    display: flex;
-    list-style: none;
-    justify-content: end;
+.row2 ul li {
+    display: inline-block;
+    
 }
 .row2 ul li a{
     font-size: 12px;
     font-weight: 700;
     color: black;
-    margin-left:45px;
+    padding:15px;
     letter-spacing: 3px;
     font-family:Montserrat;
+}
+
+.u-hungry{
+    width: 580px;
+    text-align: center;
+}
+.u-hungry span{
+    font-family:gabelisa ;
+    font-size: 60px;
+    margin: 20px 0px; 
+}
+.u-hungry img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+.u-hungry :nth-child(5) {
+    font-size: 27px;
+    font-family:Montserrat;
+    font-weight: 700;
+}
+.u-hungry h3 {
+    font-family:Fredericka ;
+    font-size: 80px;
+    color: #000000;
+    font-weight: 400;
+}
+.poi-rel{
+    position: relative;
+}
+.poi-ab{
+    position: absolute;
+}
+.up-case{
+    text-transform: uppercase;
+}
+hr{
+    border: 0;
+    height: 1px;
+    width: 80%;
+    background: radial-gradient(black 50%, white 98%);
+    margin: 0 auto; 
+}
+.fit-contant{
+    width: fit-content;
+    margin: 0 auto;
+}
+.th-mon{
+    font-size: 19px !important;
+    font-family:Fredericka !important ;
+    font-weight: 400;
+    width: 150px;
+    margin: 20px 0px;
+}
+
+.number span{
+    font-size: 57px ;
+    font-family:Fredericka !important;
+    font-weight: 400;
+}
+.btn{
+    display: inline-block;
+    padding: 10px 30px;
+    border: 1px solid;
+    color: #000000;
+    font-size: 21px;
+    font-weight: 900;
+    font-family:Montserrat;
+    margin-top: 50px;
+}
+.header-img{
+    width: 700px;
+}
+.img-w-h-l{
+    width: 100px;
+    height: 100px;
+    bottom: 0;
+    left: -10px;
+}
+.img-w-h-r{
+    width: 100px;
+    height: 100px;
+    bottom: 90px;
+    right: 35px;
+    transform: rotate(10deg);    
+}
+.spaghetti{
+    width:100px;
+    height:100px;
+    left: 0;
 }
