@@ -19,6 +19,7 @@
 
 a {
     text-decoration: none;
+    color: #000000;
 }
 
 img{
@@ -151,11 +152,10 @@ hr{
     display: inline-block;
     padding: 10px 30px;
     border: 1px solid;
-    color: #000000;
     font-size: 21px;
     font-weight: 900;
     font-family:Montserrat;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 .header-img{
     width: 700px;
@@ -163,7 +163,7 @@ hr{
 .img-w-h-l{
     width: 100px;
     height: 100px;
-    bottom: 0;
+    bottom: 30px;
     left: -80px;
 }
 .img-w-h-r{
@@ -173,15 +173,11 @@ hr{
     right: 35px;
     transform: rotate(10deg);    
 }
-.poi-st{
-    position:sticky;
-    
-}
-.spaghetti img{
-    width:300px;
-    height:300px;
-    left: -100px;
-    object-fit: contain;
 
-    
+.spaghetti {
+    width:auto !important;
+    height:auto !important;
+    left: -450px;
+    bottom: -380px;
+    object-fit: contain;
 }
