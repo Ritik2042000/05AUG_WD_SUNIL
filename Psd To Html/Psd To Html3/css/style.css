@@ -283,7 +283,7 @@ nav {
 }
 
 .do-v-do {
-    width: 714px;
+    width: 550px;
     color: rgb(29, 195, 228);
     text-align: center;
 }
@@ -292,12 +292,42 @@ nav {
     font-size: 29px;
     font-weight: 500;
     font-family: Raleway;
+    margin-top: 50px;
 }
 
 .do-v-do p {
-    font-size: 19px;
-    line-height: 33px;
+    font-size: 14px;
+    line-height: 25px;
     font-weight: 400;
-    font-family: "Raleway";
+    font-family: Raleway;
+    margin-top: 20px;
+s
+}
+.line{
+    margin-top: 60px;
+}
+.line span {
+    display: inline-block;
+    font-size: 17px;
+    color: rgb(29, 195, 228);
+    font-weight: 500;
+    font-family: Raleway;
+    text-transform: capitalize;
+    padding: 0px 20px;
+}
+.col-33{
+    width: 20%;
+   background-color: #f6f6f6;
+   margin: 0px 50px;
+   text-align: center;
+}
 
+.col-33 p{
+    width: 200px;
+    margin: 70px auto;
+}
+.sp-det{
+    font-size: 14px;
+    font-weight: 200;
+    font-family: Lora;
 }
