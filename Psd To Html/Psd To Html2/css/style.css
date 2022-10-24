@@ -17,7 +17,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
 a {
@@ -102,6 +102,10 @@ nav {
     padding: 10px 30px;
     font-family: Raleway;
 }
+.r-widght ul li a:hover{
+    font-weight: 900;
+}
+
 
 .sport {
     width: 100%;
@@ -137,13 +141,19 @@ nav {
     padding: 50px 0px;
 }
 
-.button button {
+.button a {
     padding: 10px 45px 10px 45px;
+    background-color: #ffffff;
+    
     border-radius: 15px;
     cursor: pointer;
     font-family: Roboto;
     color: #00c0ff;
     font-weight: 700;
+}
+.button a:hover{
+    background-color: black;
+    box-shadow: 2px 2px 5px black;
 }
 
 .col2 {
@@ -365,7 +375,7 @@ nav {
     text-align: center;
     color: #00c0ff;
     display: flex;
-    
+
 }
 
 .quote {
@@ -407,7 +417,7 @@ nav {
 .nature {
     width: 500px;
     font-family: Raleway;
-    
+
 }
 
 .nature h3 {
@@ -423,7 +433,7 @@ nav {
 }
 
 .sec8 {
-    height: 80vh;
+    /* height: 80vh; */
     background-image: url(../image/Place\ Your\ Design\ Here\ \(Double\ Click\ to\ Edit\)\ \(1\).png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -432,7 +442,7 @@ nav {
 
 .by-yr-tic {
     width: 300px;
-    margin-left: auto;
+    margin: 80px 0px 80px auto;
     color: #fefefe;
     font-family: Roboto;
     text-align: right;
@@ -442,18 +452,18 @@ nav {
     font-size: 58px;
     line-height: 50px;
     font-weight: 700;
-    
+
 }
 
 .by-yr-tic p {
     font-size: 15px;
     font-weight: 400;
-    
+
 }
 
 .here {
     margin-top: 30px;
-    
+
 }
 
 .here a {
@@ -466,10 +476,14 @@ nav {
     border-radius: 23px;
     background-color: #ffffff;
 }
+.here a:hover{
+    background-color: black;
+    font-weight: 800;
+    box-shadow: 2px 2px 8px black;
+}
 
 .sec9 {
     background-color: black;
-    /* height: 95vh; */
     text-align: center;
 }
 
@@ -516,7 +530,7 @@ nav {
     font-family: Raleway;
     color: #ffffff;
     text-align: center;
-    margin: 60px 0px ;
+    margin: 60px 0px;
 }
 
 .col-33 p {
@@ -531,9 +545,80 @@ nav {
     line-height: 33px;
     font-weight: 500;
 }
-.sec11{
+
+.sec11 {
     background-color: black;
     text-align: center;
     color: #00c0ff;
     display: flex;
+}
+
+footer {
+    background-color: rgb(40, 39, 39);
+    
+}
+.col-4{
+    width: 1280px;
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.about{
+    width: 350px;
+    color: #ffffff;
+    font-family: Roboto;
+    margin: 50px 0px;
+}
+.about h5 {
+    font-size: 25px;
+    line-height: 33px;
+    font-weight: 700;
+}
+
+.about p {
+    font-size: 19px;
+    line-height: 29px;
+    font-weight: 400;
+    margin: 10px 0px;
+}
+.social-icon a i{
+    color: #ffffff;
+    font-size: 1.8em;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin: 0px 3px;
+    
+}
+.social-icon i:hover{
+    color:lavenderblush;
+    transform: scale(1.3);
+}
+.left-list{
+    margin: 50px 0px;
+}
+.left-list ul li{
+    list-style: none;
+
+}
+.left-list ul li a{
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 21px;
+    line-height: 33px;
+    font-weight: 400;
+    transition: all 0.5s;
+    
+}
+.left-list ul li a:hover{
+    color: #00c0ff;
+    font-size: 23px;
+
+
+}
+
+.left-list ul li h5{
+    font-weight: 700;
+    margin: 8px 0px;
 }
