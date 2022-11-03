@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        body {
+            display: flex;
+        }
+
+        .poi-re {
+            position: relative;
+        }
+
+        .poi-ab {
+            position: absolute;
+        }
+
+        .pic1 {
+            width: 500px;
+            height: 400px;
+            margin-right: 10px;
+        }
+
+        .pic2 {
+            width: 417px;
+        }
+
+        .pic1 p {
+            top: 220px;
+            left: 140px;
+            right: 0px;
+            bottom: 0px;
+            font-size: 60px;
+            font-weight: 500;
+            opacity: 0;
+            transition: all ease-in-out 0.8s;
+            color: whitesmoke;
+        }
+
+        .pic1:hover p {
+            opacity: 1;
+            top:225px ;
+            left: 155px;
+            transform: scale(1.2);
+        }
+
+        .pic1:hover img {
+            cursor: pointer;
+            filter: blur(0.8px);
+        }
+
+        .pic2 img {
+            cursor: pointer;
+        }
+
+        .card {
+            width: 350px;
+            height: 150px;
+            top: 215px;
+            left: 35px;
+            bottom: 0px;
+            border-top: 1px solid rgb(255, 255, 255, 0.5);
+            border-left: 1px solid rgb(255, 255, 255, 0.5);
+            box-shadow: 0px 5px 15px rgba(216, 208, 208, 0.2);
+            color: aliceblue;
+            font-size: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(150px);
+            transition: all ease-in-out 1s;
+        }
+
+        .pic2:hover .card {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+
+        .pic2:hover img {
+            filter: brightness(0.7);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pic1 poi-re">
+        <img src="./pexels-oliver-sjöström-1433052.jpg" alt="No Image Found">
+        <p class="poi-ab">See View</p>
+    </div>
+    <div class="pic2 poi-re">
+        <img src="./pexels-skully-mba-1316484.jpg" alt="No Image Found">
+        <div class="card poi-ab">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum et eos consequuntur doloribus adipisci
+                hic, quaerat nemo rem, debitis illum officiis! Quas dolore labore beatae excepturi maxime et aut
+                aperiam.</p>
+        </div>
+    </div>
+</body>
+
+</html>
