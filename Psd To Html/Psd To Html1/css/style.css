@@ -312,28 +312,162 @@ hr {
     font-family: Montserrat;
     margin: 10px 0px;
 }
-.left{
-    width:405px;
+
+.left {
+    width: 405px;
 }
+
 .middle {
-    width:700px;
+    width: 700px;
 }
-.right{
-    width:405px
+
+.right {
+    width: 405px
 }
-.row3{
+
+.row3 {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     align-items: center;
     margin: 50px 0px;
 }
-.right-si-img{
+
+.try-it-2day {
+    width: 150px;
+    top: 30px;
+    left: 50px;
+    font-family: Montserrat;
+    color: #ffffff;
+}
+
+.try-it-2day span {
+    display: inline-block;
+    font-size: 21px;
+    line-height: 38px;
+    font-weight: 700;
+}
+
+.try-it-2day p {
+    font-size: 45px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.right-si-img {
     margin: 0px 15px;
 }
-.mor-fun{
+
+.mor-fun {
     margin: 0px 0px 28px 0px;
 }
-.fre-chil{
+
+.more-test {
+    width: 200px;
+    top: 10px;
+    left: 30px;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-weight: 700;
+}
+
+.more-test span {
+    font-size: 20px;
+    line-height: 38px;
+
+}
+
+.more-test p {
+    font-size: 30px;
+    line-height: 38px;
+
+}
+
+.fresh {
     margin: 28px 0px 0px 0px;
+}
+
+.chil {
+    width: 230px;
+    top: 10px;
+    left: 30px;
+    line-height: 38px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: Montserrat;
+}
+
+.chil span {
+    font-size: 20px;
+}
+
+.chil p {
+    font-size: 30px;
+}
+
+.sec5 {
+    margin: 30px auto;
+    text-align: center;
+}
+
+
+.reser {
+    font-size: 21px;
+    letter-spacing: 1px;
+    line-height: 46px;
+    font-weight: 700;
+    font-family: Montserrat;
+}
+
+.book-yr-tic {
+    font-size: 50px;
+    letter-spacing: 3px;
+    line-height: 46px;
+    font-weight: 400;
+    font-family: Fredericka;
+    margin: 10px 0px;
+}
+.form{
+    margin: 30px 0px;
+}
+.form input {
+    font-size: 17px;
+    line-height: 46px;
+    color: #3d3d3d;
+    font-weight: 400;
+    font-family: Montserrat;
+    margin: 10px 20px;
+    padding: 0px 10px;
+}
+
+.form a {
+    font-size: 21px;
+    line-height: 46px;
+    color: #000000;
+    font-weight: 700;
+    font-family: Montserrat;
+    background-color: #ffe001;
+    padding: 13px 108px;
+}
+.fot-bg{
+    width: 100%;
+    height: 50vh;
+    background-image: url(../image/BG\ Image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* padding: 100px 0px ; */
+}
+.f-logo{
+    margin: 30px 0px;
+}
+.f-logo img{
+    width: 200px;
+}
+.info{
+    justify-content: space-between;
+    color: #ffffff;
+    margin: 50px 0px;
+}
+.info p{
+    width: 450px;
 }
