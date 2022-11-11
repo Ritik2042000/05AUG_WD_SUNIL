@@ -169,7 +169,7 @@ nav {
     box-shadow: 2px 2px 5px black;
 }
 
-.col2 {
+.sec2 {
     width: 100%;
     background-color: black;
 }
@@ -663,19 +663,9 @@ footer {
         opacity: 0.85;
     }
 
-    .text-main {
-        width: 100%;
-        /* padding: 100px 0; */
-    }
-
     .container {
         width: 100%;
     }
-
-    .logo {
-        /* margin: 0px auto; */
-    }
-
     .col {
         width: 100%;
         margin: 0px auto;
@@ -729,7 +719,7 @@ footer {
         padding: 10px 30px 10px 30px;
     }
 
-    .col2 {
+    .sec2 {
         width: 100%;
     }
 
@@ -746,9 +736,6 @@ footer {
         /* height: 310px; */
         ;
     }
-
-
-
     .card p {
         width: fit-content;
         margin: 70px auto;
@@ -788,14 +775,6 @@ footer {
         margin: 20px 0 20px auto;
     }
 
-    /* .sec9{
-
-    } */
-    /* .zig-zack {
-        width: 50%;
-        margin: 60px 0px;
-        font-family: Raleway;
-    }    */
     .lorem {
         display: inline-block;
         width: 100%;
@@ -837,7 +816,7 @@ footer {
     }
 
 
-    .col2 {
+    .sec2 {
         width: 100%;
     }
 
@@ -916,7 +895,7 @@ footer {
         width: 100%;
     }
 
-    .col2 {
+    .sec2 {
         width: 100%;
     }
 
@@ -981,7 +960,7 @@ footer {
         width: 100%;
     }
 
-    .col2 {
+    .sec2 {
         width: 100%;
     }
 
@@ -1033,7 +1012,7 @@ footer {
         width: 700px;
     }
 
-    .col2 {
+    .sec2 {
         width: 100%;
     }
 
