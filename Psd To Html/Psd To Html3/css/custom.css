@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Baskerville;
+    src: url(../font/Libre_Baskerville/LibreBaskerville-Regular.ttf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../font/Montserrat/static/Montserrat-Regular.ttf);
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #fefdfc;
+}
+
+.up-case {
+    text-transform: uppercase;
+}
+
+.poi-rel {
+    position: relative;
+}
+
+.poi-ab {
+    position: absolute;
+}
+
+.container {
+    width: 100%;
+}
+
+.row {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 100%;
+    text-align: center;
+}
+
+.logo h2 {
+    font-size: 67px;
+    letter-spacing: 9px;
+    line-height: 81px;
+    color: #cb9e61;
+    font-family: Baskerville
+}
+
+.logo p {
+    font-size: 21px;
+    letter-spacing: 2px;
+    line-height: 26px;
+    color: #929496;
+    font-family: Baskerville;
+}
+
+nav {
+    display: flex;
+    margin: 15px 0px;
+}
+
+.navbar ul {
+    list-style: none;
+
+}
+
+.navbar ul li {
+    display: inline-block;
+    opacity: 0.902;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 18px;
+    font-family: Montserrat;
+    margin: 8px 20px;
+}
+
+.navbar ul li a {
+    font-weight: 800;
+    color: #8c8c8c;
+}
+
+.navbar2 {
+    margin: 0px 20px
+}
+
+.navbar2::before {
+    content: "";
+    border-left: 2px solid #8c8c8c;
+    margin: 0px 10px;
+}
+
+.navbar2 li a {
+    margin: 0px 5px;
+}
+
+.free-ship {
+    width: 100%;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 16px;
+    color: #cb9e61;
+    font-family: Baskerville;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.free-ship p {
+    display: inline-block;
+    margin: 0px 10px;
+}
+.main-img{
+    width: 100%;
+}
+
+.email {
+    /* width: 100%; */
+    bottom: -150px;
+    right: 120px;
+}
+
+::placeholder {
+    text-transform: uppercase;
+    font-size: 10px;
+    padding: 5px 0px 5px 5px;
+}
+
+.email input {
+    display: block;
+
+}
+
+.email a {
+    display: inline-block;
+    background-color: #cb9e61;
+    color: white;
+    padding: 5px 52px;
+    margin: 5px 0px;
+}
+
+.texture-up {
+    width: 56%;
+    top: -33px;
+    right: -54px;
+    opacity: 0.8;
+}
+
+.texture-down {
+    bottom: -170px;
+    right: -115px;
+    z-index: -1;
+}
+
+.tips {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.tips p {
+    font-size: 36px;
+    line-height: 41px;
+    color: #cb9e61;
+    font-family: Baskerville;
+}
+.imagegallery{
+    width: 900px;
+    margin: 0 auto;
+    columns: 3;
+    gap: 25px;
+}
+.imagegallery img{
+    width: 100%;
+    margin: 20px;
+}
