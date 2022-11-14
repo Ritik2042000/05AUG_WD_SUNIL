@@ -238,9 +238,20 @@ nav {
     margin: 30px 0px;
 }
 
+.texture-white {
+    width: 70%;
+    top: -80px;
+    left: -150px;
+}
+
+.tree {
+    bottom: -50px;
+    right: -150px;
+}
+
 .interior-des {
-    width: 430px;
-    font-size: 35px;
+    width: 435px;
+    font-size: 30px;
     font-family: Baskerville;
 }
 
@@ -262,7 +273,7 @@ nav {
     line-height: 22px;
     font-family: Baskerville;
     padding: 5px 10px;
-    margin: 30px 30px;
+    margin: 10px 30px;
 }
 
 .interior-des span {
@@ -271,7 +282,24 @@ nav {
     line-height: 34px;
     color: #808183;
     font-weight: 800;
-    /* text-align: right; */
     font-family: blackjack;
-    margin: 40px 30px;
+    margin: 60px 30px;
+}
+
+.news {
+    width: 820px;
+    font-size: 35px;
+    font-family: Baskerville;
+    text-align: right;
+}
+.news p{
+    width: 570px;
+    margin-left: auto;
+
+}
+.news :nth-child(1){
+    color: #cb9e61;
+}
+.news :nth-child(2){
+    color: #8c8c8c;
 }
