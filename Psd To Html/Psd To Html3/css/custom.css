@@ -286,20 +286,95 @@ nav {
     margin: 60px 30px;
 }
 
-.news {
+.do-u-want {
     width: 820px;
-    font-size: 35px;
+}
+
+.news {
+    font-size: 25px;
     font-family: Baskerville;
     text-align: right;
-}
-.news p{
-    width: 570px;
+    width: 500px;
     margin-left: auto;
 
 }
-.news :nth-child(1){
+
+.news :nth-child(1) {
     color: #cb9e61;
+    margin: 20px 25px;
 }
-.news :nth-child(2){
+
+.news :nth-child(2) {
     color: #8c8c8c;
+    margin: 20px 25px;
+}
+
+.form {
+    width: 440px;
+    margin-left: auto;
+}
+
+.form input {
+    display: block;
+    width: 380px;
+    padding: 5px;
+    margin: 5px 25px;
+}
+
+.form form a {
+    display: inline-block;
+    background-color: #cb9e61;
+    color: white;
+    padding: 10px 160px;
+    margin: 5px 25px;
+}
+
+.form p {
+    /* width: 50px; */
+    font-size: 12px;
+    color: #808183;
+    font-weight: 500;
+    font-family: Barlow;
+    margin: 5px 25px;
+}
+
+.texture-left {
+    top: -180px;
+    left: -150px;
+    z-index: -1;
+    padding: 100px 0px;
+}
+
+.texture-left img {
+    width: 100%;
+    /* height: max-content; */
+    opacity: 0.5;
+}
+
+.flower img {
+    width: 100%;
+}
+.sec5{
+    width: 100%;
+}
+.season{
+    width: 100%;
+    margin: 20px 0px;
+    text-align: center;
+}
+.season p {
+    font-size: 57px;
+    letter-spacing: 5px;
+    line-height: 69px;
+    color: #cb9e61;
+    font-family: Baskerville;
+}
+.decor{
+    text-align: end;
+    width: 1000px;
+    margin-left: auto;
+}
+.bed{
+    width: 800px;
+    margin-left: auto;
 }
