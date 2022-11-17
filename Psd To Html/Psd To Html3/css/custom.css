@@ -354,14 +354,26 @@ nav {
 .flower img {
     width: 100%;
 }
-.sec5{
+
+.sec5 {
     width: 100%;
+    height: 1100px;
 }
-.season{
+
+.right-texure {
+    width: 80%;
+    bottom: 110px;
+    right: -115px;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.season {
     width: 100%;
-    margin: 20px 0px;
+    margin: 40px 0px;
     text-align: center;
 }
+
 .season p {
     font-size: 57px;
     letter-spacing: 5px;
@@ -369,12 +381,201 @@ nav {
     color: #cb9e61;
     font-family: Baskerville;
 }
-.decor{
+
+.decor {
     text-align: end;
     width: 1000px;
     margin-left: auto;
+    bottom: -40px;
+    left: -45px;
 }
-.bed{
-    width: 800px;
+
+.bed {
+    width: 63%;
+    /* text-align: center; */
     margin-left: auto;
+    top: -160px;
+}
+
+.rect-ang {
+    left: -200px;
+    bottom: 120px;
+}
+
+.elegant p {
+    width: 60%;
+    font-size: 33px;
+    color: #cb9e61;
+    font-family: Baskerville;
+    margin: 10px 20px;
+}
+
+.pillow {
+    width: 100%;
+    left: 70px;
+    bottom: 280px;
+}
+
+.leaf {
+    z-index: -1;
+    left: -50px;
+}
+
+.do-it-self {
+    width: 35%;
+    font-size: 35px;
+    font-family: Baskerville;
+    text-align: right;
+}
+
+.do-it-self :nth-child(1) {
+    color: #cb9e61;
+    margin: 40px 0px;
+}
+
+.do-it-self :nth-child(2) {
+    color: #8c8c8c;
+    margin: 40px 0px;
+}
+
+.do-it-self span {
+    display: block;
+    color: #8c8c8c;
+    font-family: blackjack;
+    margin: 40px 0px;
+}
+
+.wall-paint {
+    margin: 10px 0px 50px 0px;
+}
+
+.ganesh {
+    bottom: -80px;
+    right: 60px;
+}
+
+.color-shape {
+    right: -180px;
+    bottom: -50px;
+    z-index: -1;
+}
+
+.st-rect {
+    top: 05px;
+}
+
+.plant {
+    left: 10px;
+    bottom: -90px;
+}
+
+.balls {
+    right: -5px;
+    top: 180px;
+}
+
+.color-ball1 {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: #cca77c;
+    border: 3px solid #ffffff;
+}
+
+.color-ball2 {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: #daccb6;
+    border: 3px solid #ffffff;
+
+}
+
+.color-ball3 {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: #8d8b8a;
+    border: 3px solid #ffffff;
+}
+
+.bg {
+    width: 100%;
+    /* height: 120vh; */
+    background-image: url(../image/kitchen.png);
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0px;
+    margin: 80px 0px;
+}
+
+.tree-bottam {
+    bottom: -80px;
+    right: 0px;
+    z-index: -1;
+}
+
+.white-tx {
+    top: -100px;
+    left: -100px;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.gift {
+    z-index: 10;
+}
+
+.gift p {
+    width: 600px;
+    margin: 0px auto;
+    font-size: 30px;
+    color: #cb9e61;
+    font-family: Baskerville;
+    text-align: center;
+}
+
+.card {
+    opacity: 0.812;
+    width: 544px;
+    background-color: #ffffff;
+    margin: 100px auto;
+    text-align: center;
+
+
+}
+
+.form2 {
+    margin: 0 auto;
+    padding: 40px 0px;
+}
+
+.form2 input {
+    width: 70%;
+    margin: 10px auto;
+    padding: 5px 10px;
+}
+
+.form2 a {
+    display: inline-block;
+    background-color: #cb9e61;
+    color: #ffffff;
+    padding: 10px 135px;
+    font-size: 21px;
+    letter-spacing: 2px;
+    line-height: 23px;
+    font-family: Baskerville;
+}
+
+.ipsum {
+    margin: 30px 0px;
+}
+
+.ipsum p {
+    width: 70%;
+    font-size: 12px;
+    color: #808183;
+    font-weight: 500;
+    font-family: Barlow;
+    text-align: left;
 }
