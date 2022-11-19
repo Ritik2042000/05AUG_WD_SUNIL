@@ -105,8 +105,31 @@ nav {
 }
 
 .navbar ul li a {
-    font-weight: 800;
+    font-weight: 900;
     color: #8c8c8c;
+    position: relative;
+
+
+    /* opacity: 0; */
+}
+
+.navbar ul li a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    border-bottom: 3px solid #cb9e61;
+    box-shadow: 3px 3px 3px #cb9e61;
+    position: absolute;
+    left: -0%;
+    top: 100%;
+    transform: translate(1%);
+    transition: width 0.4s;
+
+}
+
+
+.navbar ul li a:hover::after {
+    width: 100%;
 }
 
 .navbar2 {
@@ -122,6 +145,7 @@ nav {
 .navbar2 li a {
     margin: 0px 5px;
 }
+
 
 .free-ship {
     width: 100%;
@@ -144,9 +168,11 @@ nav {
 }
 
 .email {
-    /* width: 100%; */
-    bottom: -150px;
-    right: 120px;
+    width: 100%;
+    bottom: 50px;
+    right: 50px;
+    text-align: right;
+
 }
 
 ::placeholder {
@@ -157,7 +183,8 @@ nav {
 
 .email input {
     display: block;
-
+    margin-left: auto;
+    padding: 3px 0px;
 }
 
 .email a {
@@ -165,7 +192,7 @@ nav {
     background-color: #cb9e61;
     color: white;
     padding: 5px 52px;
-    margin: 5px 0px;
+    margin: 15px 0px;
 }
 
 .texture-up {
@@ -180,6 +207,8 @@ nav {
     right: -115px;
     z-index: -1;
 }
+
+/* section2 */
 
 .tips {
     width: 100%;
@@ -207,6 +236,12 @@ nav {
 .img img {
     width: 100%;
     margin: 20px 0px;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.img :hover {
+    transform: translateX(2%);
 }
 
 .pic-info {
@@ -222,6 +257,7 @@ nav {
     font-family: Barlow;
 }
 
+
 .lorem {
     text-align: center;
 }
@@ -233,6 +269,8 @@ nav {
     font-weight: 500;
     font-family: Barlow;
 }
+
+/* section3 */
 
 .laptop {
     margin: 30px 0px;
@@ -285,6 +323,8 @@ nav {
     font-family: blackjack;
     margin: 60px 30px;
 }
+
+/* section4 */
 
 .do-u-want {
     width: 820px;
@@ -355,6 +395,8 @@ nav {
     width: 100%;
 }
 
+/* section5 */
+
 .sec5 {
     width: 100%;
     height: 1100px;
@@ -420,6 +462,8 @@ nav {
     z-index: -1;
     left: -50px;
 }
+
+/* section6 */
 
 .do-it-self {
     width: 35%;
@@ -499,6 +543,7 @@ nav {
     border: 3px solid #ffffff;
 }
 
+/* section7 */
 .bg {
     width: 100%;
     /* height: 120vh; */
@@ -596,10 +641,6 @@ nav {
     top: 50px;
 }
 
-.sofa img {
-    /* width: 100%; */
-}
-
 .ganesh2 {
     width: 80%;
     top: 80px;
@@ -652,7 +693,7 @@ nav {
 
 .bg-footer {
     width: 100%;
-    height: 70vh;
+    /* height: 70vh; */
     background-color: #929496;
     margin: 50px 0px;
     /* justify-content: space-between; */
@@ -660,7 +701,8 @@ nav {
 
 .list {
     width: 33%;
-    /* margin: 0px 80px; */
+    padding: 0px 70px;
+    margin: 50px 0px;
 }
 
 .list ul {
@@ -669,17 +711,28 @@ nav {
     margin: 20px 0px;
 }
 
+.list ul li {
+    margin: 10px 0px;
+    text-align: right;
+}
+
 .list ul a {
     color: white;
     font-family: Montserrat;
+    
+}
+
+.list ul li a:hover {
+    font-weight: 800;
 }
 
 .sign-up {
     width: 33%;
+    margin: 50px 0px;
 }
 
 .sign-up p {
-    margin: 0px 10px;
+    margin: 0px 25px;
     font-size: 20px;
     color: #ffffff;
     font-family: Baskerville;
@@ -687,8 +740,7 @@ nav {
 }
 
 .form3 {
-    /* width: 33%; */
-    /* margin: 0px 80px; */
+    width: 100%;
 }
 
 .form3 input {
@@ -706,6 +758,13 @@ nav {
     margin: 5px 25px;
 }
 
+.form3 a:hover {
+    background-color: crimson;
+    font-weight: 800;
+    transform: translateY(5%);
+
+}
+
 .form3 p {
     width: 80%;
     font-size: 8px;
@@ -717,14 +776,32 @@ nav {
 
 .solution {
     width: 33%;
+    color: #ffffff;
+    font-family: Baskerville;
+    margin: 50px 0px;
 }
 
 .solution p {
     font-size: 16px;
     letter-spacing: 1px;
     line-height: 19px;
-    color: #ffffff;
-    font-family: Baskerville;
+    margin: 10px 0px;
+}
+
+.solution h3 {
+    font-size: 57px;
+    letter-spacing: 8px;
+    line-height: 70px;
+    margin: 10px 0px;
+}
+
+.solution span {
+    display: block;
+    font-size: 30px;
+    line-height: 37px;
+    font-weight: 800;
+    font-family: BlackJack;
+    margin: 30px 0px;
 }
 
 /* @media (min-width:576px) {
