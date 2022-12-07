@@ -21,7 +21,7 @@
             <tr>
                 <td>
                     First Name:<br>
-                    <input type="text" placeholder="Name" name="firstname" id="firstname" required>
+                    <input type="text" placeholder="Name" name="firstname" id="firstname" required><br>
                 </td>
             </tr>
 
@@ -35,7 +35,7 @@
             <tr>
                 <td>
                     Last Name:<br>
-                    <input type="text" placeholder="Surname" name="lastname" required>
+                    <input type="text" placeholder="Surname" name="lastname" required><br>
                 </td>
             </tr>
 
@@ -68,7 +68,7 @@
             <tr>
                 <td>
                     Email:<br>
-                    <input type="email" placeholder="XYZ@mail.com" required>
+                    <input type="email" placeholder="XYZ@mail.com" required><br>
                 </td>
             </tr>
 
@@ -89,7 +89,8 @@
                         <option>92</option>
                         <option>93</option>
                     </select>
-                    <input type="phone" placeholder="99321*****" required>
+                    <input type="tel" placeholder="99321*****" onkeypress="return (event.which >=48 && event.which <=57 )" minlength="10" maxlength="10"
+                    name="email" id="tel" required><br>
                 </td>
             </tr>
 
@@ -98,7 +99,6 @@
                     <input type="submit" value="submit" onclick="checkvalidation() " id="save" name="save">
                 </td>
             </tr>
-
         </table>
     </form>
     <script>
