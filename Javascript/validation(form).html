@@ -78,8 +78,9 @@
             <tr>
                 <td>
                     Password:
-                    <input type="password" placeholder="Password" id="password" onblur="validate(this,'passewordError')"><br>
+                    <input type="password" placeholder="Password" onblur="validate(this,'passwordError')">
                     <span id="passwordError"></span>
+        
                 </td>
             </tr>
             
@@ -93,13 +94,14 @@
                     <option>92</option>
                     <option>93</option>   
                     </select>
-                    <input type="phone" placeholder="99321*****">
+                    <input type="tel" placeholder="99321*****" onblur="validate(this,'telError')">
+                    <span id="telError"></span>
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <input onclick="validate(this)" id="check" type="submit" value="submit"> 
+                    <input  id="check" type="submit" value="submit"> 
                 </td>
             </tr>
             
