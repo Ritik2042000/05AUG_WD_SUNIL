@@ -1,0 +1,15 @@
+
+.size{
+    width: 100px;
+    height:34px;
+    margin:10px 0px ;
+}
+.mar{
+    margin: 0px 90px;
+}
+.navbar>.container{
+    display: block;
+}
+.nav-item{
+    padding: 0px 10px;
+}
