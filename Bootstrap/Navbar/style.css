@@ -1,8 +1,16 @@
 
 .bg-light{
     background-color: #fff;
-    box-shadow: 1px 1px 10px rgb(101, 101, 43);
+    box-shadow: 1px 1px 10px rgba(50, 50, 36, 0.677);
     border-top: 3px solid black;
+}
+.bg-clr{
+    background-color: #000;
+    color: white;
+}
+.bg-clr:hover{
+    color: white;
+    font-weight: 500;
 }
 .size{
     height:40px;
