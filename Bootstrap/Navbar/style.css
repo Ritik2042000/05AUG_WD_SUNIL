@@ -1,0 +1,50 @@
+
+.bg-light{
+    background-color: #fff;
+    box-shadow: 1px 1px 10px rgb(101, 101, 43);
+    border-top: 3px solid black;
+}
+.size{
+    height:40px;
+}
+
+.mar{
+    margin: 0px 90px;
+}
+.navbar{
+    --bs-navbar-padding-y:0;
+    --bs-navbar-hover-color: rgba(0, 0, 0, 1);
+}
+.navbar>.container{
+    display:initial;
+}
+.nav-item{
+    padding: 0px 10px;
+}
+.fs{
+    font-size: 13px;
+
+}
+.form-control{
+    background-color: #fffded;
+    border-radius: 20px;
+    padding: 0px 28px;
+    margin-bottom: 5px;
+}
+.position-absolute{
+    right: 18px;
+    bottom: 15px;
+    
+} 
+.whishlist i {
+    cursor: pointer;
+    font-size: 22px;
+    margin: 7px 6px 0px 20px;
+    /* background-color: dimgrey; */   
+}
+
+.cart i {
+    cursor: pointer;
+    font-size: 21px;
+    margin: 7px 12px 0px 12px;
+}
