@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 90%;
+
+        }
+
+        .col img {
+            width: 90%;
+            height: 500px;
+            height: 900px;
+        }
+
+        .col2 {
+            background-color: aquamarine;
+            opacity: 0.3;
+            transform: translateX(-150px);
+        }
+
+        .animated{
+            opacity: 1;
+            transition: all 1.3s ease-in-out ;
+            transform: translateX(0px);
+            font-weight: 800;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="./images/apurba-nag-usVYPlEuPK4-unsplash.jpg" alt="">
+            </div>
+            <div class="col2">
+                <!-- <img src="./images/lucas-calloch-P-yzuyWFEIk-unsplash.jpg" alt=""> -->
+                <p id="col3">Hello world</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        $(window).scroll(function () {
+            let Topscrolled = $(window).scrollTop();
+            // console.log(Topscrolled);
+            if (Topscrolled > 200) {
+                $(".col2").addClass("animated")
+            }
+            else {
+                $(".col2").removeClass("animated")
+            }
+
+
+        })
+    </script>
+</body>
+
+</html>
