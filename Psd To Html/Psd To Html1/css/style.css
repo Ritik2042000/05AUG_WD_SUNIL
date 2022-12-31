@@ -336,9 +336,9 @@ hr {
 }
 
 .row3 {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
     align-items: center;
     margin: 50px 0px;
 }
@@ -420,7 +420,6 @@ hr {
     text-align: center;
 }
 
-
 .reser {
     font-size: 21px;
     letter-spacing: 1px;
@@ -488,7 +487,6 @@ hr {
     justify-content: space-between;
     color: #ffffff;
     margin: 30px 0px 50px 0px;
-    /* flex-wrap: nowrap; */
 }
 
 .info p {
@@ -497,7 +495,6 @@ hr {
 
 .addres {
     width: 500px;
-    /* flex-wrap: nowrap; */
     margin: 50px 0px;
 }
 
@@ -545,23 +542,9 @@ hr {
 }
 
 @media (max-width:576px) {
-    .backgruond {
-        background-color: #ffe001;
-        height: auto;
-        position: absolute;
-        z-index: -1;
-    }
-
-    .clip-path {
-        width: 100%;
-        height: auto;
-        clip-path: polygon(76% 0, 100% 0, 100% 100%, 60% 100%);
-        background-color: #ebe9ac;
-    }
-
     .container {
         width: 100%;
-        padding: 0px 0px 0px 20px;
+        padding: 0px 0px 0px 0px;
     }
 
     .u-hungry {
@@ -569,7 +552,7 @@ hr {
     }
 
     .u-hungry img {
-        width: 40px;
+        width: 38px;
     }
 
     .u-hungry span {
@@ -585,7 +568,6 @@ hr {
     }
 
     .th-mon {
-        /* width: 100px; */
         font-size: 20px;
     }
 
@@ -595,10 +577,7 @@ hr {
     }
 
     .spaghetti {
-        width: 100px !important;
-        height: auto !important;
-        left: -400px;
-        bottom: -340px;
+        width: 0px !important;
     }
 
     .header-img {
@@ -624,7 +603,7 @@ hr {
     }
 
     .cho-en h3 {
-        font-size: 40px;
+        font-size: 38px;
     }
 
     .back-line {
@@ -640,7 +619,7 @@ hr {
     }
 
     .left {
-        width: 100%;
+        width: 90%;
     }
 
     .middle {
@@ -649,7 +628,31 @@ hr {
     }
 
     .right {
-        width: 100%;
+        width: 90%;
+    }
+
+    .try-it-2day span {
+        font-size: 16px;
+    }
+
+    .try-it-2day p {
+        font-size: 25px;
+    }
+
+    .more-test span {
+        font-size: 16px;
+    }
+
+    .more-test p {
+        font-size: 14px;
+    }
+
+    .chil span {
+        font-size: 16px;
+    }
+
+    .chil p {
+        font-size: 25px;
     }
 
     .sec5 {
@@ -662,7 +665,7 @@ hr {
     }
 
     .form input {
-        width: 177px;
+        width: 178px;
         margin: 10px 5px;
         padding: 0px 10px;
     }
@@ -676,22 +679,13 @@ hr {
         background-color: #ffe001;
         padding: 15px 30px;
     }
+
+    .copy-rig {
+        width: 100%;
+    }
 }
 
 @media (min-width: 576px) {
-    .backgruond {
-        background-color: #ffe001;
-        height: auto;
-        position: absolute;
-        z-index: -1;
-    }
-
-    .clip-path {
-        width: 100%;
-        height: auto;
-        clip-path: polygon(76% 0, 100% 0, 100% 100%, 60% 100%);
-        background-color: #ebe9ac;
-    }
 
     .container {
         width: 100%;
@@ -768,10 +762,6 @@ hr {
         transform: scale(1);
     }
 
-    .sec5 {
-        width: 100%;
-    }
-
     .form {
         width: 100%;
         margin: 0 auto;
@@ -785,11 +775,6 @@ hr {
 
     .form a {
         font-size: 21px;
-        line-height: 46px;
-        color: #000000;
-        font-weight: 700;
-        font-family: Montserrat;
-        background-color: #ffe001;
         padding: 13px 60px;
     }
 }
@@ -800,15 +785,12 @@ hr {
     }
 
     .backgruond {
-        background-color: #ffe001;
         width: 100%;
         height: 600px;
     }
 
     .clip-path {
-        width: 100%;
         height: 600px;
-        clip-path: polygon(76% 0, 100% 0, 100% 100%, 60% 100%);
     }
 
     .row {
@@ -822,10 +804,12 @@ hr {
     .u-hungry {
         width: 40%;
     }
-    .img-w-h-r{
+
+    .img-w-h-r {
         right: -17px;
     }
-    .header-img{
+
+    .header-img {
         width: 50%;
     }
 
@@ -846,24 +830,19 @@ hr {
         margin: 0px 8px;
     }
 
-    .sec5 {
-        width: 100%;
-    }
-
-    .left{
-        width:25% ;
+    .left {
+        width: 25%;
         height: 220px;
     }
 
-    .middle{
+    .middle {
         width: 50%;
         transform: scale(1.1);
     }
 
-    .right{
+    .right {
         width: 23%;
         height: 220px;
-    
     }
 
     .form input {
@@ -873,11 +852,6 @@ hr {
 
     .form a {
         font-size: 21px;
-        line-height: 46px;
-        color: #000000;
-        font-weight: 700;
-        font-family: Montserrat;
-        background-color: #ffe001;
         padding: 13px 93px;
     }
 }
@@ -889,7 +863,6 @@ hr {
     }
 
     .backgruond {
-        background-color: #ffe001;
         width: 100%;
         height: 580px;
     }
@@ -897,8 +870,6 @@ hr {
     .clip-path {
         width: 100%;
         height: 580px;
-        clip-path: polygon(76% 0, 100% 0, 100% 100%, 60% 100%);
-        background-color: #ebe9ac;
     }
 
     .u-hungry {
@@ -915,7 +886,7 @@ hr {
     }
 
     .back-line {
-        width: 1110px;
+        width: 110%;
     }
 
     .col3 {
@@ -923,41 +894,35 @@ hr {
     }
 
     .sec5 {
-        width: 968px;
         margin: 0 auto;
     }
 
     .food-item {
-        width: 33%;
+        width: 30%;
     }
+
+    .row3 {
+        width: 100%;
+    }
+
+
 }
 
 @media (min-width: 1200px) {
     .backgruond {
-        background-color: #ffe001;
         width: 100%;
-        /* height: 100vh; */
-        height: 818px;
-        position: absolute;
-        z-index: -1;
+        height: 750px;
     }
 
     .clip-path {
         width: 100%;
-        /* height: 100vh; */
-        height: 818px;
-        clip-path: polygon(76% 0, 100% 0, 100% 100%, 60% 100%);
-        background-color: #ebe9ac;
+        height: 750px;
     }
 
     .container {
-        width: 1280px;
+        width: 1180px;
         margin: 0 auto;
         padding-top: 8px;
-    }
-
-    .m-aut {
-        margin-left: auto;
     }
 
     .col2 {
@@ -965,58 +930,35 @@ hr {
         align-items: center;
     }
 
-    .sec2 {}
-
     .u-hungry {
-        width: 580px;
+        width: 500px;
         text-align: center;
     }
 
     .u-hungry span {
-        font-family: gabelisa;
         font-size: 60px;
-        margin: 20px 0px;
     }
 
+    .u-hungry :nth-child(6) {
+        font-size: 27px;
+    }
+
+    .u-hungry h3 {
+        font-size: 80px;
+    }
 
     .btn a {
-        display: inline-block;
-        padding: 10px 30px;
-        border: 1px solid;
         font-size: 21px;
-        font-weight: 900;
-        font-family: Montserrat;
-        margin-top: 20px;
-    }
-
-    .btn a:hover {
-        background-color: #000000;
-        color: #ffe001;
     }
 
     .header-img {
-        width: 670px;
-    }
-
-    .img-w-h-l {
-        width: 100px;
-        height: 100px;
-        bottom: 30px;
-        left: -80px;
-    }
-
-    .img-w-h-r {
-        width: 100px;
-        height: 100px;
-        bottom: 90px;
-        right: 35px;
-        transform: rotate(10deg);
+        width: 600px;
     }
 
     .spaghetti {
         width: auto !important;
         height: auto !important;
-        left: -450px;
+        left: -470px;
         bottom: -380px;
         object-fit: contain;
     }
@@ -1026,136 +968,32 @@ hr {
     }
 
     .back-line {
-        /* width: 1200px; */
-        height: 139px;
-        background-color: #e8e6a9;
-        z-index: -1;
-        left: -115px;
+        width: 110%;
         top: 250px;
         bottom: 250px;
-        /* right: -180px; */
-    }
-
-    .cho-en {
-        width: 1000px;
-        margin: 50px auto;
-        margin-top: 80px;
-        text-align: center;
-    }
-
-    .cho-en h3 {
-        font-size: 50px;
-        font-family: Fredericka;
-        line-height: 38px;
-        font-weight: 400;
-        margin-bottom: 20px;
-    }
-
-    .cho-en span {
-        font-family: Montserrat;
-        font-size: 14px;
-        line-height: 20px;
-        font-weight: 400;
     }
 
     .food-item {
-        width: 423px;
+        width: 33%;
         margin: 10px 0px;
     }
 
-
     .left {
-        width: 430px;
+        width: 29%;
         height: 100%;
     }
 
     .middle {
-        width: 650px;
-        height: 100%;
-        transform: scale(1.1);
+        width: 41%;
     }
 
     .right {
-        width: 430px;
+        width: 29%;
         height: 100%;
     }
 
     .row3 {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        align-items: center;
-        margin: 50px 0px;
-    }
-
-    .try-it-2day {
-        width: 150px;
-        top: 30px;
-        left: 50px;
-        font-family: Montserrat;
-        color: #ffffff;
-    }
-
-    .try-it-2day span {
-        display: inline-block;
-        font-size: 21px;
-        line-height: 38px;
-        font-weight: 700;
-    }
-
-    .try-it-2day p {
-        font-size: 45px;
-        text-transform: uppercase;
-        font-weight: 700;
-    }
-
-    .right-si-img {
-        margin: 0px 15px;
-    }
-
-    .mor-fun {
-        margin: 0px 0px 28px 0px;
-    }
-
-    .more-test {
-        width: 200px;
-        top: 10px;
-        left: 30px;
-        color: #ffffff;
-        font-family: Montserrat;
-        font-weight: 700;
-    }
-
-    .more-test span {
-        font-size: 20px;
-        line-height: 38px;
-    }
-
-    .more-test p {
-        font-size: 30px;
-        line-height: 38px;
-    }
-
-    .fresh {
-        margin: 28px 0px 0px 0px;
-    }
-
-    .chil {
-        width: 230px;
-        top: 10px;
-        left: 30px;
-        line-height: 38px;
-        color: #ffffff;
-        font-weight: 700;
-        font-family: Montserrat;
-    }
-
-    .chil span {
-        font-size: 20px;
-    }
-
-    .chil p {
-        font-size: 30px;
+        width: 105%;
     }
 
     .sec5 {
@@ -1163,125 +1001,21 @@ hr {
         text-align: center;
     }
 
-    .reser {
-        font-size: 21px;
-        letter-spacing: 1px;
-        line-height: 46px;
-        font-weight: 700;
-        font-family: Montserrat;
-    }
-
-    .book-yr-tic {
-        font-size: 50px;
-        letter-spacing: 3px;
-        line-height: 46px;
-        font-weight: 400;
-        font-family: Fredericka;
-        margin: 10px 0px;
-    }
-
-    .form {
-        margin: 30px 0px;
-    }
-
     .form input {
-        font-size: 17px;
-        line-height: 46px;
-        color: #3d3d3d;
-        font-weight: 400;
-        font-family: Montserrat;
-        margin: 10px 20px;
-        padding: 0px 10px;
+        width: 370px;
     }
 
     .form a {
         font-size: 21px;
-        line-height: 46px;
-        color: #000000;
-        font-weight: 700;
-        font-family: Montserrat;
-        background-color: #ffe001;
         padding: 13px 108px;
-    }
-
-    .form a:hover {
-        background-color: black;
-        color: #ffe001;
-        box-shadow: 2px 2px 5px black;
-    }
-
-    .fot-bg {
-        width: 100%;
-        background-image: url(../image/BG\ Image.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    .f-logo {
-        margin: 30px 0px;
-    }
-
-    .f-logo img {
-        width: 200px;
     }
 
     .info {
         justify-content: space-between;
-        color: #ffffff;
-        margin: 30px 0px 50px 0px;
-        /* flex-wrap: nowrap; */
-    }
-
-    .info p {
-        width: 450px;
-    }
-
-    .addres {
-        width: 500px;
-        /* flex-wrap: nowrap; */
-        margin: 50px 0px;
-    }
-
-    .addres i {
-        font-size: 28px;
-        color: #ffe001;
-        margin: 8px;
-    }
-
-    .addres p {
-        display: inline-block;
-        font-size: 17px;
-        line-height: 38px;
-        color: #ffffff;
-        font-weight: 500;
-        font-family: Montserrat;
     }
 
     .jus-fy-con {
         justify-content: space-between;
-        /* padding-bottom: 80px; */
-        color: #ffffff;
     }
 
-    .copy-rig {
-        font-size: 17px;
-        font-weight: 400;
-        font-family: Montserrat;
-    }
-
-    .social-media {
-        margin: 50px 0px;
-        transition: all 1s ease-in-out;
-    }
-
-    .social-media i:hover {
-        color: #ffe001;
-        transform: scale(1.2);
-    }
-
-    .social-media i {
-        color: #ffffff;
-        font-size: 25px;
-        margin: 5px;
-    }
 }
