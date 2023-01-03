@@ -1,0 +1,455 @@
+@font-face {
+    font-family: AmaticSC;
+    src: url(../fonts/Amatic_SC/AmaticSC-Regular.ttf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family:MontserratBold ;
+    src: url(../fonts/Montserrat/static/Montserrat-Bold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.up-case {
+    text-transform: uppercase;
+}
+
+.poi-rel {
+    position: relative;
+}
+
+.poi-ab {
+    position: absolute;
+}
+
+header {
+    background-image: url(../images/Header\ Background.png);
+    /* height: 100vh; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.jus-fy-con {
+    justify-content: space-around;
+    padding: 20px 50px;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar li {
+    justify-content: center;
+    list-style: none;
+    margin-left: 50px;
+}
+
+.navbar li a {
+    display: inline-block;
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 16px;
+    padding: 5px 8px;
+}
+
+.navbar li a:hover {
+    font-weight: 900;
+}
+
+.col-33 {
+    width: 33%;
+    text-align: center;
+}
+
+.pocket-3d {
+    left: 0;
+    top: -160px;
+}
+
+.help p {
+    width: 58%;
+    font-size: 42px;
+    line-height: 46px;
+    color: #452a31;
+    font-weight: 700;
+    font-family: AmaticSC;
+    margin: 20px auto;
+}
+
+.help span {
+    color: #0072a8;
+}
+
+.organic p {
+    font-size: 67px;
+    color: #0072a8;
+    font-weight: 700;
+    font-family: AmaticSC;
+    transform: rotate(-15deg);
+    margin: 75px 20px;
+}
+
+.design1 {
+    width: initial;
+    top: -50px;
+    left: 28px;
+    transform: rotate(2deg);
+}
+
+.design2 {
+    width: initial;
+    width: 100%;
+    top: -50px;
+    left: 27px;
+}
+
+/* section2 CSS */
+
+.sec2 {
+    margin: 80px 0px 50px 0px;
+    /* padding: 50px auto; */
+}
+
+.ali-item {
+    align-items: initial;
+}
+
+.our-story {
+    font-family: Montserrat;
+}
+
+.our-story p {
+    font-size: 42px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: #452a31;
+    /* margin: 0 auto; */
+}
+
+.our-story span {
+    display: block;
+    font-size: 95px;
+    letter-spacing: -2px;
+    color: #2ea2d0;
+    font-weight: 900;
+    margin: -30px 0px 0px 80px;
+    font-family: MontserratBold ;
+}
+
+.dog2 {
+    width: 80%;
+    left: -08px;
+    top: -40px;
+
+}
+
+.dog2-des {
+    width: initial;
+    top: 370px;
+    left: 10px;
+}
+
+.detalis {
+    font-family: Montserrat;
+    text-align: left;
+}
+
+.detalis p {
+    font-size: 21px;
+    line-height: 33px;
+    color: #3d3d3d;
+    font-weight: 400;
+}
+
+.detalis a {
+    font-size: 17px;
+    letter-spacing: 3px;
+    line-height: 33px;
+    color: #2ea2d0;
+    font-weight: 600;
+    margin: 20px auto;
+}
+
+.detalis a:hover {
+    font-weight: 900;
+    color: #3d3d3d;
+}
+
+.sml-pack img {
+    width: initial;
+}
+
+/* section3 CSS */
+
+.sec3 {
+    background-image: url(../images/Chicken\ Image.png);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.col {
+    width: 100%;
+    text-align: center;
+}
+
+.our-no1 {
+    color: #ffffff;
+    font-weight: 700;
+    font-family: AmaticSC;
+    letter-spacing: 5px;
+    margin: 50px auto;
+}
+
+.our-no1 h4 {
+    font-size: 33px;
+}
+
+.our-no1 h3 {
+    font-size: 50px;
+}
+
+.lorem {
+    width: 880px;
+    margin: 50px auto;
+    font-size: 21px;
+    line-height: 33px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: Montserrat;
+}
+
+/* section4 CSS */
+
+.container2 {
+    width: 1180px;
+    margin: 50px auto;
+}
+
+.col-50 {
+    width: 50%;
+}
+
+.perfect-strt {
+    text-align: left;
+}
+
+.perfect-strt :nth-child(1) {
+    font-size: 54px;
+    line-height: 67px;
+    color: #452a31;
+    font-weight: 700;
+    font-family: AmaticSC;
+    margin: 15px 0px;
+}
+
+.perfect-strt :nth-child(2) {
+    font-size: 19px;
+    line-height: 33px;
+    font-weight: 400;
+    font-family: Montserrat;
+    margin: 15px 0px;
+}
+
+.perfect-strt a {
+    font-size: 17px;
+    line-height: 37px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: Montserrat;
+    background-color: #2ea2d0;
+    padding: 5px 10px;
+    margin: 15px 0px;
+}
+
+.perfect-strt a:hover {
+    font-weight: 900;
+    background-color: #3d3d3d;
+}
+
+.dog3 {
+    text-align: center;
+}
+
+.dog3 img {
+    width: initial;
+}
+
+.dog3-des {
+    top: 10px;
+    right: 90px;
+}
+
+/* section5 CSS */
+
+.bg {
+    background-color: #f0f0f0;
+    margin: 50px auto;
+}
+
+.about-dog {
+    margin: 70px 0px;
+}
+
+.about-dog p {
+    font-size: 33px;
+    letter-spacing: 2px;
+    line-height: 46px;
+    color: #452a31;
+    font-weight: 700;
+    font-family: AmaticSC;
+    margin: 25px 0px;
+}
+
+.about-dog input {
+    display: block;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background-color: #f0f0f0;
+    margin: 25px auto;
+    text-align: center;
+}
+
+.about-dog a {
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 46px;
+    color: #ffffff;
+    background-color: #2ea2d0;
+    font-weight: 700;
+    font-family: Montserrat;
+    padding: 5px 10px;
+    margin: 25px 0px;
+}
+.about-dog a:hover{
+    background-color:#3d3d3d;
+}
+
+.dog4 {
+    text-align: center;
+}
+
+.dog4 img {
+    width: initial;
+    /* top: 0; */
+    bottom: -260px;
+    left: 80px;
+    right: 0;
+}
+
+.thinking-of-dog {
+    margin: 70px 0px;
+    text-align: left;
+}
+
+.thinking-of-dog p {
+    font-size: 33px;
+    letter-spacing: 2px;
+    line-height: 46px;
+    color: #452a31;
+    font-weight: 700;
+    font-family: AmaticSC;
+    margin: 25px 0px;
+}
+
+.thinking-of-dog span {
+    display: block;
+    width: 90%;
+    font-size: 17px;
+    line-height: 21px;
+    color: #3d3d3d;
+    font-weight: 400;
+    font-family: Montserrat;
+    margin: 25px 0px;
+}
+
+.thinking-of-dog a {
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 46px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: Montserrat;
+    background-color: #2ea2d0;
+    padding: 2px 15px;
+    margin: 25px 0px;
+}
+.thinking-of-dog a:hover{
+    background-color: #3d3d3d;
+}
+
+/* section6 CSS */
+
+.packet3 img {
+    width: initial;
+    margin: 20px auto;
+}
+
+.find-rit-food {
+    width: 100%;
+}
+
+.find-rit-food :nth-child(1) {
+    font-size: 33px;
+    letter-spacing: 2px;
+    line-height: 46px;
+    color: #452a31;
+    font-family: AmaticSC;
+    font-weight: 700;
+    margin: 15px 0px;
+}
+
+.find-rit-food :nth-child(2) {
+    font-size: 17px;
+    line-height: 21px;
+    color: #3d3d3d;
+    font-weight: 400;
+    font-family: Montserrat;
+    margin: 15px 0px;
+}
+
+.find-rit-food a {
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 46px;
+    background-color: #2ea2d0;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: Montserrat;
+    padding: 5px 10px;
+    margin: 15px 0px;
+}
+
+.find-rit-food a:hover {
+    font-weight: 900;
+    background-color: #3d3d3d;
+}
