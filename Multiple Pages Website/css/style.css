@@ -545,6 +545,213 @@ footer .copyright {
     text-align: center;
 }
 
+/* Shop Page CSS */
+#page-header {
+    background-image: url(../img/banner/b1.jpg);
+    width: 100%;
+    height: 40vh;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+    /* background-repeat: no-repeat; */
+}
+
+#page-header h2,
+#page-header p {
+    color: #fff;
+}
+
+#paginatipon {
+    text-align: center;
+
+}
+
+#paginatipon a {
+    background-color: #088178;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+}
+
+#paginatipon a i {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Single Product img */
+#prodetalis {
+    display: flex;
+    margin-top: 20px;
+}
+
+#prodetalis .single-pro-image {
+    width: 40%;
+    margin-right: 50px;
+}
+
+.small-img-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-img-col {
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+#prodetalis .single-pro-detalis {
+    width: 50%;
+    padding-top: 30px;
+}
+
+#prodetalis .single-pro-detalis h4 {
+    padding: 40px 0 20px 0;
+}
+
+#prodetalis .single-pro-detalis h2 {
+    font-size: 26px;
+}
+
+#prodetalis .single-pro-detalis select {
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+}
+
+#prodetalis .single-pro-detalis input {
+    width: 50px;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#prodetalis .single-pro-detalis input:focus {
+    outline: none;
+}
+
+#prodetalis .single-pro-detalis button {
+    background-color: #088178;
+    color: #fff;
+}
+
+#prodetalis .single-pro-detalis span {
+    line-height: 25px;
+}
+
+/* Blog CSS */
+#page-header.blog-header {
+    background-image: url(../img/banner/b19.jpg);
+    background-size: cover;
+}
+
+#blog {
+    padding: 150px 150px 0 150px;
+}
+
+#blog .blog-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    padding-bottom: 90px;
+}
+
+#blog .blog-img {
+    width: 50%;
+    margin-right: 40px;
+}
+
+#blog img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+#blog .blog-detalis {
+    width: 50%;
+}
+
+#blog .blog-detalis a {
+    font-size: 11px;
+    color: #000;
+    font-weight: 700;
+    position: relative;
+    transition: 0.3s;
+}
+
+#blog .blog-detalis a::after {
+    content: "";
+    width: 50px;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    top: 4px;
+    right: -60px;
+}
+
+#blog .blog-detalis a:hover {
+    color: #088178;
+}
+
+#blog .blog-detalis a:hover::after {
+    background-color: #088178;
+}
+
+#blog .blog-box h1 {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    font-size: 70px;
+    font-weight: 700;
+    color: #c9cbce;
+    z-index: -9;
+}
+
+#about-app {
+    text-align: center;
+}
+
+#about-app .video {
+    width: 70%;
+    height: 100%;
+    margin: 30px auto 0 auto;
+}
+
+#about-app .video video {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+/* About Page CSS */
+#page-header.about-header {
+    background-image: url(../img/about/banner.png);
+}
+
+#about-head {
+    display: flex;
+    align-items: center;
+}
+
+#about-head img {
+    width: 50%;
+    height: auto;
+}
+
+#about-head div {
+    padding-left: 40px;
+}
+
+/* Contact Page CSS */
+
+#page-header.contact-header{
+    background-image: url(../img/about/banner.png);
+}
 @media (max-width:799px) {
     .section-p1 {
         padding: 40px;
@@ -704,101 +911,61 @@ footer .copyright {
     footer .copyright {
         text-align: start;
     }
-}
 
-/* Shop Page CSS */
-#page-header {
-    background-image: url(../img/banner/b1.jpg);
-    width: 100%;
-    height: 40vh;
-    background-size: contain;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    padding: 40px;
-}
+    /* single-Product */
+    #prodetalis {
+        display: flex;
+        flex-direction: column;
+    }
 
-#page-header h2,
-#page-header p {
-    color: #fff;
-}
+    #prodetalis .single-pro-image {
+        width: 100%;
+        margin-right: 0;
+    }
 
-#paginatipon {
-    text-align: center;
+    #prodetalis .single-pro-detalis {
+        width: 100%;
+        /* margin-right: 0; */
+    }
 
-}
+    /* Blog Page CSS */
 
-#paginatipon a {
-    background-color: #088178;
-    padding: 15px 20px;
-    border-radius: 4px;
-    color: #fff;
-    font-weight: 600;
-}
+    #blog {
+        padding: 100px 20px 0px 20px;
+    }
 
-#paginatipon a i {
-    font-size: 16px;
-    font-weight: 600;
-}
+    #blog .blog-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-/* Single Product img */
-#prodetalis {
-    display: flex;
-    margin-top: 20px;
-}
+    #blog .blog-img {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
 
-#prodetalis .single-pro-image {
-    width: 40%;
-    margin-right: 50px;
-}
+    #blog .blog-detalis {
+        width: 100%;
+    }
 
-.small-img-group {
-    display: flex;
-    justify-content: space-between;
-}
+    /* About Page CSS */
+    #about-head {
+        flex-direction: column;
+    }
 
-.small-img-col {
-    flex-basis: 24%;
-    cursor: pointer;
-}
+    #about-head img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
 
-#prodetalis .single-pro-detalis {
-    width: 50%;
-    padding-top: 30px;
-}
+    #about-head div {
+        padding-left: 0px;
+    }
 
-#prodetalis .single-pro-detalis h4 {
-    padding: 40px 0 20px 0;
-}
-
-#prodetalis .single-pro-detalis h2 {
-    font-size: 26px;
-}
-
-#prodetalis .single-pro-detalis select {
-    display: block;
-    padding: 5px 10px;
-    margin-bottom: 20px;
-}
-
-#prodetalis .single-pro-detalis input {
-    width: 50px;
-    height: 47px;
-    padding-left: 10px;
-    font-size: 16px;
-    margin-right: 10px;
-}
-
-#prodetalis .single-pro-detalis input:focus {
-    outline: none;
-}
-
-#prodetalis .single-pro-detalis button {
-    background-color: #088178;
-    color: #fff;
-}
-
-#prodetalis .single-pro-detalis span {
-    line-height: 25px;
+    #about-head .video {
+        width: 100%;
+    }
 }
