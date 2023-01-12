@@ -749,9 +749,126 @@ footer .copyright {
 
 /* Contact Page CSS */
 
-#page-header.contact-header{
+#page-header.contact-header {
     background-image: url(../img/about/banner.png);
 }
+
+#contact-detalis {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact-detalis .detalis {
+    width: 40%;
+}
+
+#contact-detalis .detalis span {
+    font-size: 12px;
+}
+
+#contact-detalis .detalis h2 {
+    font-size: 20px;
+    line-height: 35px;
+    padding: 20px 0;
+}
+
+#contact-detalis .detalis h3 {
+    font-size: 16px;
+    padding: 15px 0;
+}
+
+#contact-detalis .detalis li {
+    list-style: none;
+    display: flex;
+    padding: 10px 0;
+}
+
+#contact-detalis .detalis li i {
+    font-size: 14px;
+    padding: 0 20px 0 0;
+}
+
+#contact-detalis .detalis p {
+    margin: 0;
+    font-size: 14px;
+}
+
+#contact-detalis .map {
+    width: 55%;
+    height: 400px;
+}
+
+#contact-detalis .map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#form-detalis form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form-detalis {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 80px;
+    border: 1px solid #e1e1e1;
+}
+
+#form-detalis form span {
+    font-size: 12px;
+}
+
+#form-detalis form h2 {
+    font-size: 26px;
+    line-height: 36px;
+    padding: 20px 0;
+}
+
+#form-detalis form input,
+#form-detalis form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    margin-bottom: 20px;
+    border: 1px solid #e1e1e1;
+}
+
+#form-detalis form button {
+    background-color: #088178;
+    color: #fff;
+    /* text-align: flex-start; */
+}
+
+#form-detalis .people div {
+    padding-bottom: 25px;
+    display: flex;
+    align-items: flex-start;
+}
+
+#form-detalis .people div img {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+#form-detalis .people div p {
+    font-size: 14px;
+    line-height: 25px;
+}
+
+#form-detalis .people div span {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
 @media (max-width:799px) {
     .section-p1 {
         padding: 40px;
@@ -846,6 +963,15 @@ footer .copyright {
 
     #newsletter .form {
         width: 70%;
+    }
+
+    /* Contact Page CSS */
+    #form-detalis {
+        padding: 40px;
+    }
+
+    #form-detalis form {
+        width: 50%;
     }
 }
 
@@ -966,6 +1092,26 @@ footer .copyright {
     }
 
     #about-head .video {
+        width: 100%;
+    }
+
+    /* Contact Page CSS */
+    #contact-detalis {
+        flex-direction: column;
+    }
+
+    #contact-detalis .detalis{
+        width: 100%;
+    }
+    #contact-detalis .map{
+        width: 100%;
+    }
+    #form-detalis{
+        margin: 10px;
+        padding: 30px 10px;
+        flex-wrap: wrap;
+    }
+    #form-detalis form{
         width: 100%;
     }
 }
