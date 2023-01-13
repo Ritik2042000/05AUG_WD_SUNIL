@@ -869,6 +869,109 @@ footer .copyright {
     color: #000;
 }
 
+/* Cart Page CSS */
+#cart{
+    overflow-x: auto;
+}
+#cart table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+    table-layout: fixed;
+}
+
+#cart tbody img {
+    width: 70px;
+}
+
+#cart table td:nth-child(1) {
+    width: 100px;
+    text-align: center;
+}
+
+#cart table td:nth-child(2) {
+    width: 150px;
+    text-align: center;
+}
+
+#cart table td:nth-child(3) {
+    width: 250px;
+    text-align: center;
+}
+
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6) {
+    width: 150px;
+    text-align: center;
+}
+
+#cart table td:nth-child(5) input {
+    width: 70px;
+    padding: 10px 5px 10px 15px;
+}
+
+#cart table thead {
+    border: 1px solid #e2e9e1;
+    border-left: none;
+    border-right: none;
+}
+
+#cart table thead td {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 18px 0;
+}
+
+#cart table tbody td tr {
+    padding-top: 15px;
+}
+
+#cart table tbody td {
+    font-size: 13px;
+}
+#cart-add{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#coupan{
+    width: 50%;
+    margin-bottom: 30px;
+}
+#coupan h3,#subtotal h3{
+    padding-bottom: 15px;
+}
+#coupan input{
+    width: 60%;
+    outline: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: 1px solid #e2e9e1;
+}
+#coupan button,#subtotal button{
+    background-color: #088178;
+    color: #fff;
+    padding: 12px 20px;
+}
+#subtotal{
+    width: 50%;
+    margin-bottom: 30px;
+    border: 1px solid #e2e9e1;
+    padding: 30px;
+}
+#subtotal table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+#subtotal table td{
+    width: 50%;
+    padding: 10px;
+    font-size: 13px;
+    border: 1px solid #e2e9e1;
+}
 @media (max-width:799px) {
     .section-p1 {
         padding: 40px;
@@ -973,6 +1076,8 @@ footer .copyright {
     #form-detalis form {
         width: 50%;
     }
+
+
 }
 
 @media (max-width:477px) {
@@ -1100,18 +1205,34 @@ footer .copyright {
         flex-direction: column;
     }
 
-    #contact-detalis .detalis{
+    #contact-detalis .detalis {
         width: 100%;
     }
-    #contact-detalis .map{
+
+    #contact-detalis .map {
         width: 100%;
     }
-    #form-detalis{
+
+    #form-detalis {
         margin: 10px;
         padding: 30px 10px;
         flex-wrap: wrap;
     }
-    #form-detalis form{
+
+    #form-detalis form {
         width: 100%;
     }
+
+    /* Cart Page */
+    #cart-add{
+        flex-direction: column;
+    }
+    #coupan{
+        width: 100%;
+    }
+    #subtotal{
+        width: 100%;
+        padding: 20px;
+    }
+
 }
