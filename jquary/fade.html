@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        div {
+            width: 400px;
+            height: 100px;
+            display: none;
+            color: #000;
+            margin: 10px;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 80px;
+        }
+        #div1 {
+            background-color: aqua;
+        }
+
+        #div2 {
+            background-color: greenyellow;
+        }
+
+        #div3 {
+            background-color: tomato;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Demonstrate fadeIn() with different parameters.</p>
+
+    <button>Click to fade in boxes</button><br><br>
+    <div class="container">
+        <div id="div1">Hello</div><br>
+        <div id="div2">Good Morning</div><br>
+        <div id="div3">Have a Nice Day</div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#div1").fadeIn();
+                $("#div2").fadeIn("slow");
+                $("#div3").fadeIn(2200);
+            });
+        });
+    </script>
+</body>
+
+</html>
