@@ -10,4 +10,4 @@ class Component1 extends Component {
     }
 }
 
-export default MainRouter;
+export default Component1;

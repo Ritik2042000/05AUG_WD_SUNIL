@@ -12,7 +12,7 @@ import MainRouter from './mainrouter';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
- <><RouterProvider router={MainRouter} /></> 
+ <><RouterProvider router={MainRouter} /></>
 );
 
 reportWebVitals();

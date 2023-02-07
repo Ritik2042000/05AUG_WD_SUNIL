@@ -41,7 +41,7 @@ export default function Header() {
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink to=''>Link</MDBNavbarLink>
+              <MDBNavbarLink >Link</MDBNavbarLink>
             </MDBNavbarItem>
 
             <MDBNavbarItem>
