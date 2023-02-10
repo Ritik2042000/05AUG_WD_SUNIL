@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link, Outlet } from 'react-router-dom';
 
 
 class Home extends Component {
@@ -10,10 +11,14 @@ class Home extends Component {
                 <form action="">
                     <input type="text" />
                     <br />
+                    <br />
                     <input type="password" />
                     <br />
+                    <br />
                     <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <Link to="hello">heelo</Link>
                 </form>
+                <Outlet></Outlet>
             </div>
 
 
