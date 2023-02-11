@@ -16,7 +16,8 @@ class Home extends Component {
                     <br />
                     <br />
                     <textarea name="" id="" cols="30" rows="10"></textarea>
-                    <Link to="hello">heelo</Link>
+                    <br />
+                    <Link to="hello">Click to get Hello </Link>
                 </form>
                 <Outlet></Outlet>
             </div>

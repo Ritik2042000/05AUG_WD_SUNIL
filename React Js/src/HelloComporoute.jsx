@@ -3,7 +3,7 @@ import React from 'react';
 const HelloComporoute = () => {
     return (
         <div>
-            hello 
+            Hello World
         </div>
     );
 };
