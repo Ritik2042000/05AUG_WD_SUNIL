@@ -23,7 +23,7 @@ export default function Header() {
   return (
     <MDBNavbar expand='lg' light bgColor='light'>
       <MDBContainer fluid>
-        <MDBNavbarBrand href='#'>Brand</MDBNavbarBrand>
+        <MDBNavbarBrand href='#'>React</MDBNavbarBrand>
 
         <MDBNavbarToggler
           aria-controls='navbarSupportedContent'
@@ -61,11 +61,11 @@ export default function Header() {
               </MDBDropdown>
             </MDBNavbarItem>
 
-            <MDBNavbarItem>
+            {/* <MDBNavbarItem>
               <MDBNavbarLink disabled href='#' tabIndex={-1} aria-disabled='true'>
                 Disabled
               </MDBNavbarLink>
-            </MDBNavbarItem>
+            </MDBNavbarItem> */}
           </MDBNavbarNav>
 
           <form className='d-flex input-group w-auto'>

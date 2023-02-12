@@ -11,7 +11,6 @@ const Examples = () => {
                 </div>
                 <div className="col-6">
                     <h2><Link to="functionalcompo">Fuctional Component</Link></h2>
-
                 </div>
             </div>
             <Outlet></Outlet>

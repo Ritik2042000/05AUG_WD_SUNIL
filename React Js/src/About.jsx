@@ -5,12 +5,13 @@ import { Link } from 'react-router-dom';
 class About extends Component {
     render() {
         return (
-            <div className='container'>
+            <div className='container mt-3'>
                 <div className="row">
-                    <div className="col-3">
-                        know more about us
-                        <br />
-                       <a href="#">Follow us</a> 
+                    <div className="col">
+                        <h2>To Know More About Us</h2>
+                        {/* <br /> */}
+                       {/* <a href=""></a>  */}
+                       <Link to='https://reactjs.org/'>Click here </Link>
                     </div>
                 </div>
             </div>
