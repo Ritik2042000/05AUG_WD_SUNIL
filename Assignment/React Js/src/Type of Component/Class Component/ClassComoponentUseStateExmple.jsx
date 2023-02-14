@@ -3,12 +3,12 @@ import React, { Component } from 'react';
 class ClassComoponentUseStateExmple extends Component {
     constructor() {
         super()
-        this.state = { data: "something" }
+        this.state = { data: ".......something" }
     }
     changsomthing = () => {
         console.log('hello');
         this.setState({
-            data: "Do Something"
+            data: "Do Something "
         })
     }
     render() {
@@ -17,7 +17,7 @@ class ClassComoponentUseStateExmple extends Component {
             <div>
                 {a}
                 <p>{this.state.data}</p>
-                <button onClick={this.changsomthing} className='btn'>Click for Change</button>
+                <button onClick={this.changsomthing} className='btn'>Click for Complate the sentance</button>
             </div>
         );
     }
