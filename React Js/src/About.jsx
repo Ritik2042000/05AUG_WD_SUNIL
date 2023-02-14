@@ -9,8 +9,6 @@ class About extends Component {
                 <div className="row">
                     <div className="col">
                         <h2>To Know More About Us</h2>
-                        {/* <br /> */}
-                       {/* <a href=""></a>  */}
                        <Link to='https://reactjs.org/'>Click here </Link>
                     </div>
                 </div>

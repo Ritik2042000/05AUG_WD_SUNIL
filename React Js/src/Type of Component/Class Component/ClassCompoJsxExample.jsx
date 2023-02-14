@@ -16,14 +16,14 @@ class ClassCompoJsxExample extends Component {
                 <div className="row">
                     <div className="col">
                         <p>This Are Some Jsx Examples</p>
-                        <p>Like Addition</p>
+                        <p>Like Addition & Multification</p>
                         <input type="text" id='A' placeholder='Put a value'/>
                         <br />
                         <br />
                         <input type="text" id='B' placeholder='Put a value'/>
                         <br />
                         <br />
-                        <button className='btn' onClick={btnclick}>Get SUM & Multifiction</button>
+                        <button className='btn' onClick={btnclick}>Get SUM & Multification</button>
                         <div id="showdata" className='m-3'>sum =</div>
                         <div id="multidata" className='m-3'>multification =</div>
                     </div>

@@ -4,7 +4,7 @@ class ClassCompoIntro extends Component {
     render() {
         return (
             <div className='container'>
-                <h3>Welcome To Class CompoIntro</h3>
+                <h3>Welcome To Class Component Intro</h3>
             </div>
         );
     }

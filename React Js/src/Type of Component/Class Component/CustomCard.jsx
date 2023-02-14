@@ -6,7 +6,7 @@ class CustomCard extends Component {
             <>
                 <MDBCard>
                     <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-                        <MDBCardImage src='https://mdbootstrap.com/img/new/standard/nature/111.webp' fluid alt='...' />
+                        <MDBCardImage src={window.location.origin+'/image/'+this.props.url} fluid alt='...' />
                         <a>
                             <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
                         </a>
@@ -14,9 +14,9 @@ class CustomCard extends Component {
                     <MDBCardBody>
                         <MDBCardTitle>{this.props.title}</MDBCardTitle>
                         <MDBCardText>
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                            {this.props.children}
                         </MDBCardText>
-                        <MDBBtn href='#'>Button</MDBBtn>
+                        <MDBBtn href='#'>{this.props.button}</MDBBtn>
                     </MDBCardBody>
                 </MDBCard>
             </>
