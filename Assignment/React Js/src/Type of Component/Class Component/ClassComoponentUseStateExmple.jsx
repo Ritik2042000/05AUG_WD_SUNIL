@@ -6,16 +6,16 @@ class ClassComoponentUseStateExmple extends Component {
         this.state = { data: ".......something" }
     }
     changsomthing = () => {
-        console.log('hello');
+        // console.log('hello');
         this.setState({
             data: "Do Something "
         })
     }
     render() {
-        let a = 'Hello'
+        let a = 'Hello '
         return (
             <div>
-                {a}
+                variable : {a}
                 <p>{this.state.data}</p>
                 <button onClick={this.changsomthing} className='btn'>Click for Complate the sentance</button>
             </div>
