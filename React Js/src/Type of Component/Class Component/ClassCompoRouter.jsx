@@ -5,6 +5,7 @@ import ClassCompoIntro from "./ClassCompoIntro.jsx";
 import ClassCompoJsxExample from "./ClassCompoJsxExample.jsx";
 import ClassCompoPorpsExample from "./ClassCompoPorpsExample.jsx";
 import ClassComoponentUseStateExample from "./ClassComoponentUseStateExmple.jsx";
+import ClassComoponentLifeCycle from "./ClassComoponentLifeCycle.jsx";
 import HocClassComoponent from "./HocClassCompo/HocClassComoponent";
 class ClassCompoRouter extends Component {
     render() {
@@ -16,6 +17,7 @@ class ClassCompoRouter extends Component {
                 <Route path="jsxexmple" element={<ClassCompoJsxExample/> }/>
                 <Route path="propsexmple" element={<ClassCompoPorpsExample/> }/>
                 <Route path="stateexmple" element={<ClassComoponentUseStateExample/> }/>
+                <Route path="classcompolifecycle" element={<ClassComoponentLifeCycle/> }/>
                 <Route path="Hocclasscompoexmple" element={<HocClassComoponent/> }/>
                 </Route>
               </Routes>  
