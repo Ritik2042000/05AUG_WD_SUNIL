@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Class Add Remove Toggle Containes </title>
+    <style>
+        #container{
+            width: 50%;
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+        .clr{
+            border: 1px solid red;
+            color: aqua;
+        }
+        .change{
+            background-color: #fff;
+            padding: 50px;
+            color:crimson;
+        }
+    </style>
+</head>
+<body>
+    <div id="container" class="clr" >
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, nobis?</p>
+    </div>
+
+    <script>
+        let cssclass = document.getElementById('container')
+        // console.log(cssclass.className);
+
+        // Class Adding By Oprateros By using "+="
+        // cssclass.className += ' change'
+
+        // To Know  what Classes are used For that 'classList' used
+        // console.log(cssclass.classList);
+
+        // To Acess Class one By One We use For loop
+        // for(let box of cssclass.classList){
+        //     console.log(box);
+        // }
+        
+        // To Add Class '.add()' is Used
+        cssclass.classList.add('change')
+        
+        // To Remove Class '.remove()' is Used
+        // cssclass.classList.remove('change')
+        
+        // To Toggle Class '.toggle()' is Used 
+        // cssclass.classList.toggle('change')
+        
+        // To Replace Class '.replace()' is Used in which first we have to say which class to replace to whoam
+        // cssclass.classList.replace('clr','change');
+
+        // To Know Class added was true or flase  '.containes()' is Used 
+        // let know = cssclass.classList.contains('change')  false
+        // let know = cssclass.classList.contains('clr')   true
+        // console.log(know);
+    </script>
+</body>
+</html>

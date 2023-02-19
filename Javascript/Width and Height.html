@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Width And Height</title>
+    <style>
+        #container {
+            width: 70%;
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .clr {
+            border: 1px solid red;
+            color: aqua;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container" class="clr" >
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, nobis?</p>
+    </div>
+
+    <script>
+        let box = document.getElementById('container')
+
+        // in offsetWidth And offsetHeight border is include 
+        // let width = box.offsetWidth
+        // let height = box.offsetHeight
+        
+        
+        // in clientWidth And clientHeight border is not  include 
+        let width = box.clientWidth
+        let height = box.clientHeight
+        console.log(width);
+        console.log(height);
+    </script>
+</body>
+
+</html>

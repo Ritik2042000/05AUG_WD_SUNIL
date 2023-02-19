@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click</button>
+    <p>in inline we have to add inline detalis in tag like <b>'onclick=function()'</b></p>
+    <p>in Script We can use <b>Object.addEventListener('eventname',function)</b></p>
+    <script>
+        let btn = document.getElementById('btn')
+        function btnclick(){
+            alert('hello')
+        } 
+        // btn.addEventListener('click',function(){
+        //     alert('hello')
+
+        // })
+        
+        btn.addEventListener('mouseover',function(){
+            alert('welcome Good To See You')
+        })
+        btn.addEventListener('mouseout',function(){
+            console.log('Good Bye');
+        })
+    </script>
+</body>
+</html>
