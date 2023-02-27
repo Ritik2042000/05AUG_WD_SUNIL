@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Link, Outlet } from 'react-router-dom';
-
 
 class Home extends Component {
     render() {
@@ -18,15 +16,17 @@ class Home extends Component {
                         <br />
                         <textarea name="" id="" cols="30" rows="10"></textarea>
                         <br />
-                        <Link to="hello">Click to get Hello </Link>
+                        {/* <Link to="hello">Click to get Hello </Link> */}
                         <button className="btn">Click </button>
                     </form>
-                    <Outlet></Outlet>
+                    {/* <Outlet></Outlet> */}
                 </div>
             </div>
 
-
+                
+            
         );
     }
 }
+
 export default Home;

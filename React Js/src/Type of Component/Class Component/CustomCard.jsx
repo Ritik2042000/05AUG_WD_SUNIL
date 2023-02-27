@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImage, MDBBtn, MDBRipple } from 'mdb-react-ui-kit';
+/* eslint-disable jsx-a11y/anchor-is-valid */
+
 class CustomCard extends Component {
     render() {
         return (
@@ -16,7 +18,7 @@ class CustomCard extends Component {
                         <MDBCardText>
                             {this.props.children}
                         </MDBCardText>
-                        <MDBBtn href='#'>{this.props.button}</MDBBtn>
+                        <MDBBtn >{this.props.button}</MDBBtn>
                     </MDBCardBody>
                 </MDBCard>
             </>
