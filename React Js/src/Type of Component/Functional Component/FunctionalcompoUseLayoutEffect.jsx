@@ -22,7 +22,7 @@ const FunctionalcompoUseLayoutEffect = () => {
     }
     return (
         <>
-            <p> In useLayoutEffect and useEffect <b> 'useLayoutEffect'</b> is called first so we use it as a (constructor like) with empty [] when we have requried of both type of process work with chnage with variable and change once when data is loaded </p>
+            <p> In useLayoutEffect and useEffect <b> 'useLayoutEffect'</b> is called first so we use it as a (constructor like) with empty [ ] when we have requried of both type of process work with change with variable and change once when data is loaded </p>
             <p>Button {count} Clicked</p>
             <p>Button {number} Multiply</p>
             <button onClick={updatecount}>Click</button><br />

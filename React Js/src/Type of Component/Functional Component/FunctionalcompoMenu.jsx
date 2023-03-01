@@ -13,7 +13,10 @@ class FunctionalcompoMenu extends Component {
                             <li><Link to="functionalcompprops">Functional Component Props</Link></li>
                             <li><Link to="functionalcompuseeffect">Functional Component Use Effect</Link></li>
                             <li><Link to="functionalcompuselayouteffect">Functional Component Use Layout Effect </Link></li>
-                            <li><Link to="functionalcompusecontexr">Functional Component Use Context </Link></li>
+                            <li><Link to="functionalcompusecontex">Functional Component Use Context </Link></li>
+                            <li><Link to="functionalcompusereducer">Functional Component Use Reducer </Link></li>
+                            <li><Link to="functionalcompusereducer">Functional Component Use Reducer </Link></li>
+                            <li><Link to="functionalcompusecallback">Functional Component Use Reducer </Link></li>
                         </ul>
                     </div>
                 </div>
