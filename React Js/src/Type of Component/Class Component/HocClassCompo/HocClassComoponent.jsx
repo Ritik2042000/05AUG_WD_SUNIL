@@ -9,7 +9,7 @@ class HocClassComoponent extends Component {
             <div>
                  {/* <EnhancedComponent show="a" handleclick="handleclick"/> */}
                 {/* <button onClick={handleclick}>{show}sdf</button>  */}
-                <button onClick={handleclick}>{show}</button>
+                <button className='btn btn-warning' onClick={handleclick}>{show}</button>
             </div>
         );
     }

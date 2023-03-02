@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React, { Component } from 'react';
 
 const EnhancedComponent = (OriginalComponent) => {
     class NewComponent extends Component {
@@ -13,13 +13,12 @@ const EnhancedComponent = (OriginalComponent) => {
         }
         render() {
             console.log("EnhancedComponent called");
-            return <>
-            EnhancedComponenet
-            <OriginalComponent
-                handleclick={this.handleClick}
-                show={this.state.count} />
-            </> 
-                
+            return<>
+                EnhancedComponenet
+                <OriginalComponent
+                    handleclick={this.handleClick}
+                    show={this.state.count} />
+            </>
         }
     }
     return NewComponent;
