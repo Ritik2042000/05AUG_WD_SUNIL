@@ -8,6 +8,7 @@ import FunctionalcompoUseEffect from './FunctionalcompoUseEffect.jsx';
 import FunctionalcompoUseLayoutEffect from './FunctionalcompoUseLayoutEffect.jsx';
 import FunctionalcompoUseContext from './FunctionalcompoUseContext.jsx';
 import FunctionalcompoUseReducer from './FunctionalcompoUseReducer.jsx';
+import FunctionalcompoUseMemo from './FunctionalcompoUseMemo.jsx';
 import FunctionalcompoUseCallback from './FunctionalcompoUseCallback.jsx';
 
 class FunctionalcompoRouter extends Component {
@@ -23,6 +24,7 @@ class FunctionalcompoRouter extends Component {
                         <Route path="functionalcompuselayouteffect" element={<FunctionalcompoUseLayoutEffect />} />
                         <Route path="functionalcompusecontex" element={<FunctionalcompoUseContext />} />
                         <Route path="functionalcompusereducer" element={<FunctionalcompoUseReducer />} />
+                        <Route path="functionalcompusememo" element={<FunctionalcompoUseMemo />} />
                         <Route path="functionalcompusecallback" element={<FunctionalcompoUseCallback />} />
                     </Route>
                 </Routes>

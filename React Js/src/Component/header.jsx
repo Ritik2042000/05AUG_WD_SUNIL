@@ -7,7 +7,6 @@ import {
   MDBIcon,
   MDBNavbarNav,
   MDBNavbarItem,
-  MDBNavbarLink,
   MDBBtn,
   MDBDropdown,
   MDBDropdownToggle,
@@ -47,6 +46,12 @@ export default function App() {
             </MDBNavbarItem>
             <MDBNavbarItem>
               <Link to='/Example' className='nav-link'>Example</Link>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+              <Link to='/Login' className='nav-link'>Login</Link>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+              <Link to='/Subscribe' className='nav-link'>Subscribe</Link>
             </MDBNavbarItem>
 
             <MDBNavbarItem>

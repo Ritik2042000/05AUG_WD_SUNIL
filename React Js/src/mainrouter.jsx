@@ -3,6 +3,8 @@ import HeaderComponent from "./Component/header"
 import Home from "./Home";
 import About from "./About";
 import Example from "./Example";
+import Login from "./Login.jsx";
+import Subscribe from "./Subscribe.jsx";
 import React, { Suspense } from "react";
 
 const ClassCompoRouter = React.lazy(()=> import('./Type of Component/Class Component/ClassCompoRouter'))
@@ -36,5 +38,13 @@ const MainRouter = createBrowserRouter([
           }
         ]
       },
-  ]);
-  export default MainRouter;
+      {
+        path: "/Login",
+        element:<><HeaderComponent/><Login/></>,
+      },
+      {
+        path: "/Subscribe",
+        element:<><HeaderComponent/><Subscribe/></>,
+      },
+    ]);
+    export default MainRouter;
