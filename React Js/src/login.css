@@ -115,4 +115,35 @@ h4{
     width: 80%;
     height: 40px;
 }
+.fb{
+    display: none;
+}
+.fb input{
+    margin: 15px auto;
 
+} 
+.fb .sml-text{
+    /* font-size: 18px; */
+    margin: 15px ;
+}
+ .btn-con{
+    width: 80%;
+    margin: 15px auto;
+    background-color: var(--BRAND_BLUE);
+    color: var(--TEXT_COLOR_L0);
+    font-size: 16px;
+}
+.btn-fb{
+    width: 80%;
+    margin: 15px auto;
+    background-color: #3f51b5;
+    color: var(--TEXT_COLOR_L0);
+    font-size: 14px;
+}
+.btn-con,.btn-fb:hover{
+    color: var(--TEXT_COLOR_L0);
+    font-weight: 700;
+}
+.dis-none{
+    display: none;
+}

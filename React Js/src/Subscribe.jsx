@@ -50,6 +50,22 @@ const Subscribe = () => {
                                     <td >Dolby 5.1</td>
                                 </tr>
                             </table>
+                            <div className="plans">
+                                <button className="plans-box clr-chng2 poi-rel">
+                                    <p>Super</p>
+                                    <p>899/<span>Year</span></p>
+                                    <i class="fa-solid fa-check poi-ab check-mark"></i>
+                                </button>
+                                <button className="plans-box">
+                                    <p>Premium</p>
+                                    <p>1499/<span>Year</span></p>
+                                </button>
+                                <button className="plans-box">
+                                    <p>Premium</p>
+                                    <p>299/<span>Month</span></p>
+                                </button>
+                            </div>
+                            <button className='btn btn-2'>CONTINUE WITH SUPER <i class="fa-solid fa-chevron-right"></i> </button>
                         </div>
                     </div>
                 </div>

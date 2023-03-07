@@ -40,11 +40,11 @@ const MainRouter = createBrowserRouter([
       },
       {
         path: "/Login",
-        element:<><HeaderComponent/><Login/></>,
+        element:<><Login/></>,
       },
       {
         path: "/Subscribe",
-        element:<><HeaderComponent/><Subscribe/></>,
+        element:<><Subscribe/></>,
       },
     ]);
     export default MainRouter;
