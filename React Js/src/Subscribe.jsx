@@ -1,9 +1,11 @@
 import React from 'react';
 import './Subscribe.css'
+import Header from './headerofsub.jsx'
 
 const Subscribe = () => {
     return (
         <>
+            <Header/>
             <div className="container">
                 <div className="row">
                     <div className="col">
@@ -11,7 +13,6 @@ const Subscribe = () => {
                         <div className="box">
                             <table>
                                 <tr>
-                                    {/* <td></td> */}
                                     <td colSpan={1}></td>
                                     <td className='mid back-chnge clr-chng'> Super</td>
                                     <td className='mid'>Premium</td>

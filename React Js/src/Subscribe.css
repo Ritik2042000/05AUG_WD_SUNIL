@@ -23,7 +23,7 @@
     --TEXT_BTN_COLOR: #1f80e0;
 }
 
-.col {
+.container {
     /* background-color:var(--BG_COLOR_L1) ; */
 }
 
@@ -126,6 +126,10 @@ td {
     width: 100%;
     background-color: var(--TEXT_BTN_COLOR);
     color: var(--TEXT_COLOR_L0);
+}
+.btn-2:hover{
+    color: var(--TEXT_COLOR_L0);
+    background-color: #243bbb;
 }
 .clr-chng2 p:nth-child(1) {
     color: yellow;
