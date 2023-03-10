@@ -6,9 +6,9 @@ const Subscribe = () => {
     return (
         <>
             <Header/>
-            <div className="container">
+            <div className="container-fluid bg">
                 <div className="row">
-                    <div className="col">
+                    <div className="col ">
                         <h3>Subscribe to watch all content on Disney+ Hotstar</h3>
                         <div className="box">
                             <table>

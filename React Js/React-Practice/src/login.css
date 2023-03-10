@@ -37,6 +37,10 @@
     padding: 35px;
     background-color:#192133 ;
     color:var(--TEXT_COLOR_L0);
+    position: relative;
+    top: 50%;
+    left:35%;
+    /* z-index: 10; */
 }
 h4{
     margin-top: 10px;
@@ -122,13 +126,13 @@ h4{
 }
 .back i{
     font-size: 20px;
-    margin: 10px 0px;
+    margin: 5px 0px;
     cursor: pointer;
 }
 
 .fb input{
     margin: 15px auto;
-
+    background-color: transparent;
 } 
 .fb .sml-text{
     margin: 15px ;
@@ -145,7 +149,7 @@ h4{
 }
 .btn-fb{
     width: 80%;
-    margin: 15px auto;
+    margin: 10px auto;
     background-color: #3f51b5;
     color: var(--TEXT_COLOR_L0);
     font-size: 14px;

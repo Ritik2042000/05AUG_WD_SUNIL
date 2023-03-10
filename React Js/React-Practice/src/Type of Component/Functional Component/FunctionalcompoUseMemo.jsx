@@ -1,19 +1,32 @@
 // import React from 'react';
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
+
 
 const FunctionalcompoUseMemo = () => {
-    const [isVisible, setIsVisible] = useState(false);
+    const [nub,setNub] = useState(0)
+    const [show,setShow] = useState(true)
 
-    const handleClick = () => {
-        setIsVisible(!isVisible);
-    };
+    const clicked = () => {
+        return setNub(nub+1) 
+    }
+
+    
+    const countNumber = (num) => {
+        for (let i = 0; i < 10000000; i++) {}
+        console.log(num);
+        return num;
+    }
+
+    const checkdata = useMemo(() => {
+        return countNumber(nub)
+
+    },[nub])
+
     return (
         <>
-            <div>
-                <button onClick={handleClick}>Toggle</button>
-                {isVisible && <p>Visible content</p>}
-                {!isVisible && <p style={{ display: 'none' }}>Hidden content</p>}
-            </div>
+            <button className='btn btn-primary' onClick={clicked}>Counter</button>
+            <p>My new Number :{checkdata}</p>
+            <button onClick={() => setShow(!show)}>{show ? "Click me" : "Done"} </button>
         </>
     );
 };

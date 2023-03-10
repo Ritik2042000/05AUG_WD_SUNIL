@@ -23,7 +23,7 @@ export default function App() {
   return (
     <MDBNavbar expand='lg' light bgColor='light'>
       <MDBContainer fluid>
-        <MDBNavbarBrand href='#'>Brand</MDBNavbarBrand>
+        <MDBNavbarBrand href='#'>React</MDBNavbarBrand>
 
         <MDBNavbarToggler
           aria-controls='navbarSupportedContent'

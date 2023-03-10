@@ -26,11 +26,13 @@
 .container {
     /* background-color:var(--BG_COLOR_L1) ; */
 }
-
+.bg{
+    background-color: var(--BG_COLOR_L1);
+}
 .col h3 {
     width: 50%;
     margin: 40px auto;
-    
+   color: var(--TEXT_COLOR_L5); 
 }
 
 .box {
@@ -41,7 +43,7 @@
     padding: 0 50px 20px;
     border-radius: 8px;
     /* -webkit-box-shadow: 0 -80px 100px 0 #0c111b; */
-    /* box-shadow: 0 -80px 100px 0 #0c111b; */
+    box-shadow: 0 -80px 100px 0 #0c111b;
     /* display: -webkit-box; */
 }
 

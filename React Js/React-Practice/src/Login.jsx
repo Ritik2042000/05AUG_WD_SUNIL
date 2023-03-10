@@ -10,9 +10,9 @@ function Login(props) {
 
     return (
         <>
-            <div className="container">
+            <div className="container-fluid ">
                 <div className="row">
-                    <div className="col ">
+                    <div className="col">
                         {!isVisible &&
                             <div className="card" >
                                 <div className="close">
