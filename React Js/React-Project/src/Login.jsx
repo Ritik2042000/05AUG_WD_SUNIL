@@ -14,8 +14,9 @@ const Login = () => {
             <div className="App" id={theme}>
                 <Form />
                 <div>
-                    <label >{theme === "light" ? "Light Mode" : "Dark Mode"}</label>
+                    <label>{theme === "light" ? "Light Mode" : "Dark Mode"}</label>
                     <input type="checkbox" name="" id="" className='switch ' onChange={toggleTheme} checked={theme === 'dark'} />
+                    <i className='fa fa-sun'></i><i className='fa fa-moon'></i>
                 </div>
             </div>
         </ThemeContext.Provider>

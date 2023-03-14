@@ -47,6 +47,9 @@ export default function App() {
             <MDBNavbarItem>
               <Link to='/Subscribe' className='nav-link'>Subscribe</Link>
             </MDBNavbarItem>
+            <MDBNavbarItem>
+              <Link to='/Apidata' className='nav-link'>Data</Link>
+            </MDBNavbarItem>
 
             <MDBNavbarItem>
               <MDBDropdown>

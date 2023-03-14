@@ -4,8 +4,9 @@ import Home from "./Home";
 import About from "./About";
 import Example from "./Example";
 import Login from "./Login.jsx";
+import Apidata from "./Apidata";
 // import Subscribe from "./Subscribe.jsx";
-import React, { Suspense } from "react";
+// import React, { Suspense } from "react";
 
 // const ClassCompoRouter = React.lazy(()=> import('./Type of Component/Class Component/ClassCompoRouter'))
 // const FunctionalCompoRouter = React.lazy(()=> import('./Type of Component/Functional Component/FunctionalcompoRouter'))
@@ -23,6 +24,10 @@ const MainRouter = createBrowserRouter([
       {
         path: "/About",
         element:<><HeaderComponent/><About/></>,
+      },
+      {
+        path: "/Apidata",
+        element:<><HeaderComponent/><Apidata/></>,
       },
       {
         path: "/Example",
