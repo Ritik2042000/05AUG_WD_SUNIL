@@ -34,6 +34,7 @@
 .card{
     min-width:330px;
     max-width: 400px;
+    height: 400px;
     padding: 35px;
     background-color:#192133 ;
     color:var(--TEXT_COLOR_L0);

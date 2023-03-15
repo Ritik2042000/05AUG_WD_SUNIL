@@ -26,13 +26,15 @@
 .container {
     /* background-color:var(--BG_COLOR_L1) ; */
 }
-.bg{
+
+.bg {
     background-color: var(--BG_COLOR_L1);
 }
+
 .col h3 {
     width: 50%;
     margin: 40px auto;
-   color: var(--TEXT_COLOR_L5); 
+    color: var(--TEXT_COLOR_L5);
 }
 
 .box {
@@ -105,51 +107,62 @@ td {
     display: flex;
 }
 
-.plans-box{
+.plans-box {
     width: 33%;
     margin: 15px 10px;
-    border: 1px solid var(--TEXT_COLOR_L3) ;
+    border: 1px solid var(--TEXT_COLOR_L3);
     border-radius: 10px;
     color: var(--TEXT_COLOR_L0);
     font-weight: 600;
     background-color: var(--BG_COLOR_L1);
     text-align: left;
 }
-.plans-box p{
+
+.plans-box p {
     color: var(--TEXT_COLOR_L0);
     font-size: 18px;
     padding: 15px 10px 0px 10px;
     line-height: 0;
 }
-.plans-box span{
+
+.plans-box span {
     font-size: 14px;
 }
-.btn-2{
+
+.btn-2 {
     width: 100%;
     background-color: var(--TEXT_BTN_COLOR);
     color: var(--TEXT_COLOR_L0);
 }
-.btn-2:hover{
+
+.btn-2:hover {
     color: var(--TEXT_COLOR_L0);
     background-color: #243bbb;
 }
+
 .clr-chng2 p:nth-child(1) {
     color: yellow;
 }
-.clr-chng2{
+
+.blue {
     background-color: var(--BG_COLOR_L2);
 }
-.poi-rel{
+.black{
+    background-color:var(--BG_COLOR_L1);
+}
+.poi-rel {
     position: relative;
 }
-.poi-ab{
+
+.poi-ab {
     position: absolute;
 }
-.check-mark{
+
+.check-mark {
     font-size: 18px;
     background-color: var(--TEXT_COLOR_L0);
     color: var(--BG_COLOR_L2);
     border-radius: 15px;
-    right:-5px;
+    right: -5px;
     top: -8px;
 }

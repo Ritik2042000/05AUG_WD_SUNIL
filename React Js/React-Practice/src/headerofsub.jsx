@@ -50,7 +50,7 @@ export default function App() {
     </g>
 </svg>
 </MDBNavbarBrand>
-
+    
         <MDBNavbarToggler
           aria-controls='navbarSupportedContent'
           aria-expanded='false'
@@ -62,6 +62,7 @@ export default function App() {
 
         <MDBCollapse navbar show={showBasic}>
           <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
+            <img src="./disney-hotstar-logo-dark" alt="" />
           </MDBNavbarNav> 
               <MDBDropdown>
                 <MDBDropdownToggle tag='a' className='nav-link bord' role='button'>
