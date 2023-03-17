@@ -50,6 +50,9 @@ export default function App() {
             <MDBNavbarItem>
               <Link to='/Apidata' className='nav-link'>Data</Link>
             </MDBNavbarItem>
+            <MDBNavbarItem>
+              <Link to='/Adminpanel' className='nav-link'>Adminpanel</Link>
+            </MDBNavbarItem>
 
             <MDBNavbarItem>
               <MDBDropdown>

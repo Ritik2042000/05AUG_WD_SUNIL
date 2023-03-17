@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ol,ul{
+    padding-left: 0;
+}
+li{
+    list-style: none;
+    padding: 5px 0px;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.width{
+    width: 220px;
+    padding: 10px 45px;
+    background-color: aliceblue;
+}
+.drop-down{
+    display: none;
+    position: relative;
+}
+.drop-down ul li a{
+    display: inline-block;
+    /* padding: 15px 0px; */
+}
+.abc{
+    height: 100%;
+    background-color: rgb(194, 209, 222);
+    border-radius: 10px;
+}
+.abc ul li a{
+    display: inline-block;
+    padding: 2px 2px;
+
+}
+.abc ul li a:hover{
+    font-weight: 600;
+}

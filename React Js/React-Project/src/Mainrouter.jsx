@@ -5,6 +5,8 @@ import About from "./About";
 import Example from "./Example";
 import Login from "./Login.jsx";
 import Apidata from "./Apidata";
+import Register from "./Register";
+import Adminpanel from "./Adminpanel";
 // import Subscribe from "./Subscribe.jsx";
 // import React, { Suspense } from "react";
 
@@ -28,6 +30,14 @@ const MainRouter = createBrowserRouter([
       {
         path: "/Apidata",
         element:<><HeaderComponent/><Apidata/></>,
+      },
+      {
+        path: "/Register",
+        element:<><Register/></>,
+      },
+      {
+        path: "/Adminpanel",
+        element:<><Adminpanel/></>,
       },
       {
         path: "/Example",
