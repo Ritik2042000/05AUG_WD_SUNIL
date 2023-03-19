@@ -23,7 +23,6 @@ const Apidata = () => {
                                     <span>User No:{items.userId}</span>
                                     <h5 className="card-title">{items.title}</h5>
                                     <p className="card-text">{items.body}</p>
-                                    <button type="button" className="btn btn-primary">Button</button>
                                     <span>Post No:{items.id}</span>
                                 </div>
                             </div>

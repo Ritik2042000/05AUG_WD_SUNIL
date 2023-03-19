@@ -1,6 +1,5 @@
 import Form from './form/Form.jsx'
 import React, { createContext, useState } from 'react';
-import Register from './Register.jsx';
 
 export const ThemeContext = createContext(null)
 

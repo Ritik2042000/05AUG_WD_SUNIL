@@ -9,7 +9,7 @@ h2{
 table{
     width: 400px ;
     margin: 0 auto;
-    /* background-color: rgba(145, 129, 246, 0.534); */
+    
     border-radius: 20px;
 }
 tr{
@@ -17,12 +17,15 @@ tr{
     margin: 20px 50px;
 }
 td{
-    /* text-align: center; */
     color: #000;
     text-align: center;
 }
+.form-control{
+    width: auto;
+    display: inline-block;
+    padding: 0px;
+}
 .form-control input{
-    /* display: block; */
     background: transparent;
     border: none;
     border-bottom:1px solid black ;

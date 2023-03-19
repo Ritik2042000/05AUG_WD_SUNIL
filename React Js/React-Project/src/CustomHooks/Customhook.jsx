@@ -9,7 +9,7 @@ const Customhook = (intVal,initError) => {
         // console.log("called inputHandleChange Hook",e.target.value);
         setInps((inps)=>({...inps,[e.target.name]:e.target.value}))
         if (e.target.name == "username") {
-            if (e.target.value == "") {
+            if (e.target.value == '') {
                 setErrors((errors)=>({...errors,"usernameError":"User Name is required"}))
             } else {
                 setErrors((errors)=>({...errors,"usernameError":""}))
@@ -22,6 +22,28 @@ const Customhook = (intVal,initError) => {
                 setErrors((errors)=>({...errors,"passwordError":""}))
             }  
         } 
+        if (e.target.name == "email") {
+            if (e.target.value == "") {
+                setErrors((errors)=>({...errors,"emailError":"Email is required"}))
+            } else {
+                setErrors((errors)=>({...errors,"emailError":""}))
+            }  
+        } 
+        if (e.target.name == "mobile") {
+            if (e.target.value == "") {
+                setErrors((errors)=>({...errors,"mobieError":"MobileNo. is required"}))
+            } else {
+                setErrors((errors)=>({...errors,"mobileError":""}))
+            }  
+        } 
+        if (e.target.name == "birthday") {
+            if (e.target.value == "") {
+                setErrors((errors)=>({...errors,"birthdayError":"Birthdate is required"}))
+            } else {
+                setErrors((errors)=>({...errors,"birthdayError":""}))
+            }  
+        } 
+       
     }
     return{
         inps,
