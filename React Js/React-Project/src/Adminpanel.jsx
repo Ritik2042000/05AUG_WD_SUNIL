@@ -15,103 +15,15 @@ const Adminpanel = () => {
     const [height11, setHegit11] = useState('drop-down');
     const [height12, setHegit12] = useState('drop-down');
     const [height13, setHegit13] = useState('drop-down');
-    const [down, setDown] = useState('fa-angle-right');
-    const dropdown = () => {
-        if (height === 'drop-down') {
-            setHegit((height) => (height = 'abc'))
-            setDown((down) => (down = 'fa-angle-down'))
-        } else {
-            setHegit((height) => (height = 'drop-down'))
-            setDown((down) => (down = 'fa-angle-right'))
-        }
-    };
-    const dropdown2 = () => {
-        if (height2 === 'drop-down') {
-            setHegit2((height2) => (height2 = 'abc'))
-            setDown((down) => (down = 'fa-angle-down'))
-        } else {
-            setHegit2((height2) => (height2 = 'drop-down'))
-            setDown((down) => (down = 'fa-angle-right'))
-        }
 
-    };
-    const dropdown3 = () => {
-        if (height3 === 'drop-down') {
-            setHegit3((height3) => (height3 = 'abc'))
+    const dropdown = (height,setStatefunction) => {
+        if (height === 'drop-down') {
+            setStatefunction((height) => (height = 'abc'))
         } else {
-            setHegit3((height3) => (height3 = 'drop-down'))
+            setStatefunction((height) => (height = 'drop-down'))
         }
     };
-    const dropdown4 = () => {
-        if (height4 === 'drop-down') {
-            setHegit4((height4) => (height4 = 'abc'))
-        } else {
-            setHegit4((height4) => (height4 = 'drop-down'))
-        }
-    };
-    const dropdown5 = () => {
-        if (height5 === 'drop-down') {
-            setHegit5((height5) => (height5 = 'abc'))
-        } else {
-            setHegit5((height5) => (height5 = 'drop-down'))
-        }
-    };
-    const dropdown6 = () => {
-        if (height6 === 'drop-down') {
-            setHegit6((height6) => (height6 = 'abc'))
-        } else {
-            setHegit6((height6) => (height6 = 'drop-down'))
-        }
-    };
-    const dropdown7 = () => {
-        if (height7 === 'drop-down') {
-            setHegit7((height7) => (height7 = 'abc'))
-        } else {
-            setHegit7((height7) => (height7 = 'drop-down'))
-        }
-    };
-    const dropdown8 = () => {
-        if (height8 === 'drop-down') {
-            setHegit8((height8) => (height8 = 'abc'))
-        } else {
-            setHegit8((height8) => (height8 = 'drop-down'))
-        }
-    };
-    const dropdown9 = () => {
-        if (height9 === 'drop-down') {
-            setHegit9((height9) => (height9 = 'abc'))
-        } else {
-            setHegit9((height9) => (height9 = 'drop-down'))
-        }
-    };
-    const dropdown10 = () => {
-        if (height10 === 'drop-down') {
-            setHegit10((height10) => (height10 = 'abc'))
-        } else {
-            setHegit10((height10) => (height10 = 'drop-down'))
-        }
-    };
-    const dropdown11 = () => {
-        if (height11 === 'drop-down') {
-            setHegit11((height11) => (height11 = 'abc'))
-        } else {
-            setHegit11((height11) => (height11 = 'drop-down'))
-        }
-    };
-    const dropdown12 = () => {
-        if (height12 === 'drop-down') {
-            setHegit12((height12) => (height12 = 'abc'))
-        } else {
-            setHegit12((height12) => (height12 = 'drop-down'))
-        }
-    };
-    const dropdown13 = () => {
-        if (height13 === 'drop-down') {
-            setHegit13((height13) => (height13 = 'abc'))
-        } else {
-            setHegit13((height13) => (height13 = 'drop-down'))
-        }
-    };
+    
     return (
         <>
             <div className="width">
@@ -128,8 +40,9 @@ const Adminpanel = () => {
                         <div className="component">
                             <p>Componet</p>
                             <ul>
-                                <li onClick={dropdown}><i class="fa-brands fa-elementor"></i>
-                                    <a href="#/"  >Ui Elements</a><i class={`fa-solid ${down}`}></i></li>
+                                <li onClick={()=>dropdown(height,setHegit)}><i class="fa-brands fa-elementor"></i>
+                                    <a href="#/">Ui Elements</a>
+                                    <i class='fa-solid fa-angle-right' ></i></li>
                                 <div className={height}>
                                     <ul>
                                         <li><a href="#/">Buttons</a></li>
@@ -145,7 +58,7 @@ const Adminpanel = () => {
                                         <li><a href="#/">Tooltips & Popover</a></li>
                                     </ul>
                                 </div>
-                                <li onClick={dropdown2}><i class="fa-sharp fa-solid fa-pencil"></i> <a href="#/" >Forms</a><i class={`fa-solid ${down}`}></i></li>
+                                <li onClick={()=>dropdown(height2,setHegit2)}><i class="fa-sharp fa-solid fa-pencil"></i> <a href="#/" >Forms</a><i class='fa-solid fa-angle-right' ></i></li>
                                 <div className={height2}>
                                     <ul>
                                         <li><a href="#/">General</a></li>
@@ -157,7 +70,7 @@ const Adminpanel = () => {
                                         <li><a href="#/">Text Editor</a></li>
                                     </ul>
                                 </div>
-                                <li onClick={dropdown3}> <i class="fa-solid fa-calculator"></i> <a href="#/" >Tables</a><i class="fa-solid fa-angle-right"></i></li>
+                                <li onClick={()=>dropdown(height3,setHegit3)}> <i class="fa-solid fa-calculator"></i> <a href="#/" >Tables</a><i class="fa-solid fa-angle-right"></i></li>
                                 <div className={height3}>
                                     <ul>
                                         <li><a href="#/">Static Tables</a></li>
@@ -165,7 +78,7 @@ const Adminpanel = () => {
                                         <li><a href="#/">Tabulator</a></li>
                                     </ul>
                                 </div>
-                                <li onClick={dropdown4}> <i class="fa-solid fa-chart-simple"></i><a href="#/" >Charts</a><i class="fa-solid fa-angle-right"></i></li>
+                                <li onClick={()=>dropdown(height4,setHegit4)}> <i class="fa-solid fa-chart-simple"></i><a href="#/" >Charts</a><i class="fa-solid fa-angle-right"></i></li>
                                 <div className={height4}>
                                     <ul>
                                         <li><a href="#/">ChartJS</a></li>
@@ -173,7 +86,7 @@ const Adminpanel = () => {
                                         <li><a href="#/">Sparklines</a></li>
                                     </ul>
                                 </div>
-                                <li onClick={dropdown5}><i class="fa-solid fa-ellipsis"></i><a href="#/" >Miscellaneous</a><i class="fa-solid fa-angle-right"></i> </li>
+                                <li onClick={()=>dropdown(height5,setHegit5)}><i class="fa-solid fa-ellipsis"></i><a href="#/" >Miscellaneous</a><i class="fa-solid fa-angle-right"></i> </li>
                                 <div className={height5}>
                                     <ul>
                                         <li><a href="#/">Timeline</a></li>
@@ -187,7 +100,7 @@ const Adminpanel = () => {
                         <div className="More" >
                             <p>More</p>
                             <ul>
-                                <li onClick={dropdown6}><i class="fa-solid fa-display"></i><a href="#/" >App views</a><i class="fa-solid fa-angle-right"></i></li>
+                                <li onClick={()=>dropdown(height6,setHegit6)}><i class="fa-solid fa-display"></i><a href="#/" >App views</a><i class="fa-solid fa-angle-right"></i></li>
                                 <div className={height6}>
                                     <ul>
                                         <li><a href="#/">File Manager</a></li>
@@ -200,7 +113,7 @@ const Adminpanel = () => {
                                         <li><a href="#/">Contact Us</a></li>
                                     </ul>
                                 </div>
-                                <li onClick={dropdown7}><i class="fa-regular fa-message"></i><a href="#/">Blog Apps</a><i class="fa-solid fa-angle-right"></i></li>
+                                <li onClick={()=>dropdown(height7,setHegit7)}><i class="fa-regular fa-message"></i><a href="#/">Blog Apps</a><i class="fa-solid fa-angle-right"></i></li>
                                 <div className={height7}>
                                     <ul>
                                         <li><a href="#/">Blog</a></li>
@@ -211,7 +124,7 @@ const Adminpanel = () => {
                                         <li><a href="#/">Add Edit Posts</a></li>
                                     </ul>
                                 </div>
-                                <li onClick={dropdown8}><i class="fa-regular fa-envelope"></i><a href="#/" >Email</a><i class="fa-solid fa-angle-right"></i></li>
+                                <li onClick={()=>dropdown(height8,setHegit8)}><i class="fa-regular fa-envelope"></i><a href="#/" >Email</a><i class="fa-solid fa-angle-right"></i></li>
                                 <div className={height8}>
                                     <ul>
                                         <li><a href="#/">Inbox</a></li>
@@ -219,7 +132,7 @@ const Adminpanel = () => {
                                         <li><a href="#/">Compose Message</a></li>
                                     </ul>
                                 </div>
-                                <li onClick={dropdown9}><i class="fa-regular fa-file"></i><a href="#/" >Other Pages</a><i class="fa-solid fa-angle-right"></i></li>
+                                <li onClick={()=>dropdown(height9,setHegit9)}><i class="fa-regular fa-file"></i><a href="#/" >Other Pages</a><i class="fa-solid fa-angle-right"></i></li>
                                 <div className={height9}>
                                     <ul>
                                         <li><a href="#/">Blank Page</a></li>
@@ -231,7 +144,7 @@ const Adminpanel = () => {
                                         <li><a href="#/">Error 500</a></li>
                                     </ul>
                                 </div>
-                                <li onClick={dropdown10}><i class="fa-regular fa-window-maximize"></i><a href="#/" >Front Pages</a><i class="fa-solid fa-angle-right"></i></li>
+                                <li onClick={()=>dropdown(height10,setHegit10)}><i class="fa-regular fa-window-maximize"></i><a href="#/" >Front Pages</a><i class="fa-solid fa-angle-right"></i></li>
                                 <div className={height10}>
                                     <ul>
                                         <li><a href="#/">Error 404</a></li>
@@ -243,7 +156,7 @@ const Adminpanel = () => {
                                         <li><a href="#/">Lock Screen</a></li>
                                     </ul>
                                 </div>
-                                <li onClick={dropdown11}><i class="fa-solid fa-menorah"></i><a href="#/" >Menu Levels</a><i class="fa-solid fa-angle-right"></i> </li>
+                                <li onClick={()=>dropdown(height11,setHegit11)}><i class="fa-solid fa-menorah"></i><a href="#/" >Menu Levels</a><i class="fa-solid fa-angle-right"></i> </li>
                                 <div className={height11}>
                                     <ul>
                                         <li><a href="#/">Menu Link</a></li>
@@ -258,7 +171,7 @@ const Adminpanel = () => {
                         <div className="extra">
                             <p>Extra</p>
                             <ul>
-                                <li onClick={dropdown12}><i class="fa-regular fa-face-grin-wide"></i><a href="#/" >Icons Packs</a><i class="fa-solid fa-angle-right"></i></li>
+                                <li onClick={()=>dropdown(height12,setHegit12)}><i class="fa-regular fa-face-grin-wide"></i><a href="#/" >Icons Packs</a><i class="fa-solid fa-angle-right"></i></li>
                                 <div className={height12}>
                                     <ul>
                                         <li><a href="#/">Ionicons</a></li>
@@ -267,7 +180,7 @@ const Adminpanel = () => {
                                         <li><a href="#/">Weather Icons</a></li>
                                     </ul>
                                 </div>
-                                <li onClick={dropdown13}><i class="fa-solid fa-award"></i><a href="#/" >Premium Packs</a><i class="fa-solid fa-angle-right"></i></li>
+                                <li onClick={()=>dropdown(height13,setHegit13)}><i class="fa-solid fa-award"></i><a href="#/" >Premium Packs</a><i class="fa-solid fa-angle-right"></i></li>
                                 <div className={height13}>
                                     <ul>
                                         <li><a href="#/">Line Icons Pack</a></li>
