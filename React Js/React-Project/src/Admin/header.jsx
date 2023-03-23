@@ -43,13 +43,13 @@ export default function App() {
             <MDBNavbarItem>
               <Link to='/Apidata' className='nav-link'>Data</Link>
             </MDBNavbarItem>
-            <MDBNavbarItem>
+            {/* <MDBNavbarItem>
               <Link to='/Adminpanel' className='nav-link'>Adminpanel</Link>
-            </MDBNavbarItem>
+            </MDBNavbarItem> */}
 
            
           </MDBNavbarNav>
-               <MDBBtn href='Login' className='nav-link'>Login</MDBBtn>
+               {/* <MDBBtn href='Login' className='nav-link'>Login</MDBBtn> */}
         </MDBCollapse>
       </MDBContainer>
     </MDBNavbar>

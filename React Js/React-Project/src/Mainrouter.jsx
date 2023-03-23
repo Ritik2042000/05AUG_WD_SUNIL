@@ -8,20 +8,21 @@ import Apidata from "./Apidata";
 import Register from "./Register";
 import Adminpanel from "./Adminpanel";
 // import Subscribe from "./Subscribe.jsx";
-// import React, { Suspense } from "react";
+import React, { Suspense } from "react";
 
+const AdminRouter = React.lazy(()=> import('./Admin/AdminRouter'))
 // const ClassCompoRouter = React.lazy(()=> import('./Type of Component/Class Component/ClassCompoRouter'))
 // const FunctionalCompoRouter = React.lazy(()=> import('./Type of Component/Functional Component/FunctionalcompoRouter'))
 const MainRouter = createBrowserRouter([
     {
         path: "/",
         element: <><HeaderComponent/><Home/></>,
-        children: [
+        // children: [
         //   {
         //     path: "hello/*",
         //     element: <HelloComporoute/>
         //   }
-        ]
+        // ]
       },
       {
         path: "/About",
@@ -36,8 +37,17 @@ const MainRouter = createBrowserRouter([
         element:<><Register/></>,
       },
       {
+        path: "/Login",
+        element:<><Login/></>,
+      },
+      {
         path: "/Adminpanel",
-        element:<><Adminpanel/></>,
+        element: <><Suspense fallback={<h2>Loading...</h2>}><Adminpanel/></Suspense></>
+        // children: [
+        //     {
+        //       path: "classcompo/*",
+        //       // element:<Suspense fallback={<h3>Loading Please Wait.....</h3>}><ClassCompoRouter/></Suspense>,
+        //     }],
       },
       {
         path: "/Example",
@@ -53,10 +63,7 @@ const MainRouter = createBrowserRouter([
         //   }
         // ]
       },
-      {
-        path: "/Login",
-        element:<><Login/></>,
-      },
+      
     //   {
     //     path: "/Subscribe",
     //     element:<><Subscribe/></>,

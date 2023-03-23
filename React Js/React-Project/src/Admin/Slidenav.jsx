@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './adminpanel.css'
-import Header from './Admin/header'
+import Header from './header'
 
 const Adminpanel = () => {
     const [height, setHegit] = useState('drop-down');
@@ -26,6 +26,7 @@ const Adminpanel = () => {
     };
 
     const logout = () => {
+        
         
     }
     

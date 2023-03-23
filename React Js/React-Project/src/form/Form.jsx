@@ -6,16 +6,17 @@ import { useCookies } from "react-cookie";
 
 function Form() {
   const [form, setForm] = useState({});
-  const [cookies,setCookies] =useCookies([]);
+  const [cookies, setCookies] = useCookies([]);
   const navigate = useNavigate();
 
   const validation = () => {
     fetch(`https://justjayapi.000webhostapp.com/login? username=${form.username} & 
-      password=${form.password}`).then((res) => res.json()).then((response) => { console.log(response.Data);
+      password=${form.password}`).then((res) => res.json()).then((response) => {
+      console.log(response.Data)
       if (response.Code == 1) {
         alert('sucess')
-        setCookies('userid',response.Data[0].id)
-        setCookies('username',response.Data[0].username)
+        setCookies('userid', response.Data[0].id)
+        setCookies('username', response.Data[0].username)
         if (response.Data[0].role_id == 1) {
           navigate('/Adminpanel')
         } else {
@@ -23,8 +24,8 @@ function Form() {
         }
       } else {
         alert('invalid username or password')
-      } })
-  }
+      }
+    })}
   return (
     <div className="main">
       <p className="sign" >
@@ -38,8 +39,8 @@ function Form() {
         </Link>
         <p className="forgot" >
           <Link to='/Register'>Create New Account</Link>
-          { JSON.stringify(form)}
-          {cookies}
+          {JSON.stringify(form)}
+          {/* {cookies} */}
         </p>
       </form>
     </div >
