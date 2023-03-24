@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import './Form.css'
 import { Link, useNavigate } from 'react-router-dom'
 import { useCookies } from "react-cookie";
+import Slidenav from '../Admin/Slidenav';
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
 function Form() {
   const [form, setForm] = useState({});
-  const [cookies, setCookies] = useCookies([]);
+  const [cookies, setCookies,removeCookies] = useCookies([]);
   const navigate = useNavigate();
 
   const validation = () => {
@@ -26,6 +27,11 @@ function Form() {
         alert('invalid username or password')
       }
     })}
+    const handleLogout = () => {
+      removeCookies(response.Data)
+      console.log(removeCookies);
+      
+    }
   return (
     <div className="main">
       <p className="sign" >
@@ -41,8 +47,10 @@ function Form() {
           <Link to='/Register'>Create New Account</Link>
           {JSON.stringify(form)}
           {/* {cookies} */}
+          
         </p>
       </form>
+      <Slidenav onClick={handleLogout}/>
     </div >
   );
 }

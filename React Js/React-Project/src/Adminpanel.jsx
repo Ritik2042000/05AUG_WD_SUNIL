@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import './adminpanel.css'
 import Header from './Admin/header'
+import Form from './form/Form'; 
 
-const Adminpanel = () => {
+const Adminpanel = (props) => {
     const [height, setHegit] = useState('drop-down');
     const [height2, setHegit2] = useState('drop-down');
     const [height3, setHegit3] = useState('drop-down');
@@ -25,10 +26,6 @@ const Adminpanel = () => {
         }
     };
 
-    const logout = () => {
-        
-    }
-    
     return (
         <>
         <Header></Header>
@@ -196,7 +193,7 @@ const Adminpanel = () => {
                             </ul>
                         </div>
                         <div className="logout poi-fx ">
-                            <p><i class="fa-solid fa-lock-open" onClick={logout}></i>Logout</p>
+                            <p><i class="fa-solid fa-lock-open" onClick={props.onClick}></i>Logout</p>
                         </div>
                         <div className="server-status">
                             <p>CPU Usage <span className='pad'>35%</span></p>

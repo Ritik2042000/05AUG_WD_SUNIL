@@ -25,10 +25,6 @@ const Adminpanel = () => {
         }
     };
 
-    const logout = () => {
-        
-        
-    }
     
     return (
         <>
@@ -197,7 +193,7 @@ const Adminpanel = () => {
                             </ul>
                         </div>
                         <div className="logout poi-fx ">
-                            <p><i class="fa-solid fa-lock-open" onClick={logout}></i>Logout</p>
+                            <p><i class="fa-solid fa-lock-open"></i>Logout</p>
                         </div>
                         <div className="server-status">
                             <p>CPU Usage <span className='pad'>35%</span></p>

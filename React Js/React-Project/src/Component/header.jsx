@@ -49,7 +49,8 @@ export default function App() {
 
            
           </MDBNavbarNav>
-               <MDBBtn href='Login' className='nav-link'>Login</MDBBtn>
+               <MDBBtn href='Login' className='nav-link' >{cookies.cookieName ? 'Logout' : 'Login'}
+Login</MDBBtn>
         </MDBCollapse>
       </MDBContainer>
     </MDBNavbar>
