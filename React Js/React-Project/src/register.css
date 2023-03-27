@@ -13,7 +13,7 @@ table{
     border-radius: 20px;
 }
 tr{
-    display: block;
+    /* display: block; */
     margin: 20px 50px;
 }
 td{

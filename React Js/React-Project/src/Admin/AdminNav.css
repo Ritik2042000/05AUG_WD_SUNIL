@@ -1,0 +1,32 @@
+.bg-blueX{
+    background: #25476a;
+    box-shadow: none !important;
+}
+.btnNav{
+    background: none;
+    border: none;
+    color: white;
+}
+.formInput{
+    margin: 0;
+}
+.buttonDiv button{
+    color: white;
+    background: none;
+}
+.buttonDiv button:hover{
+    color: rgb(198, 198, 198);
+    background: none;
+}
+.buttonDiv button:focus{
+    color: rgb(198, 198, 198);
+    background: none !important;
+}  
+.buttonDiv button:active{
+    color: rgb(198, 198, 198);
+    background: none !important;
+}
+.btnSrcForm{
+    color: white;
+    transition: all 1s;
+}

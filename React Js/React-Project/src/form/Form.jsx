@@ -19,7 +19,7 @@ function Form() {
         setCookies('userid', response.Data[0].id)
         setCookies('username', response.Data[0].username)
         if (response.Data[0].role_id == 1) {
-          navigate('/Adminpanel')
+          navigate('/Admin')
         } else {
           navigate('/')
         }
@@ -50,7 +50,7 @@ function Form() {
           
         </p>
       </form>
-      <Slidenav onClick={handleLogout}/>
+     
     </div >
   );
 }

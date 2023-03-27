@@ -43,16 +43,11 @@ export default function App() {
             <MDBNavbarItem>
               <Link to='/Apidata' className='nav-link'>Data</Link>
             </MDBNavbarItem>
-            <MDBNavbarItem>
-              <Link to='/Adminpanel' className='nav-link'>Adminpanel</Link>
-            </MDBNavbarItem>
-
-           
           </MDBNavbarNav>
-               <MDBBtn href='Login' className='nav-link' >{cookies.cookieName ? 'Logout' : 'Login'}
-Login</MDBBtn>
+               <MDBBtn href='Login' className='nav-link' >Login</MDBBtn>
         </MDBCollapse>
       </MDBContainer>
     </MDBNavbar>
   );
+  // {cookies.cookieName ? 'Logout' : 'Login'}
 }

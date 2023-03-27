@@ -43,9 +43,9 @@ p{
     bottom:  10px;
     /* left: 30px; */
 }
-.width{
+.widthofsidnav{
     width: 240px;
-    height: 150vh;
+    /* height: 150vh; */
     padding: 10px 0px 10px 40px;
     margin: 50px 0px 0px 0px;
     background-color: rgba(245, 250, 255, 0.658);

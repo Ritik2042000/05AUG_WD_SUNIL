@@ -6,7 +6,6 @@ import Example from "./Example";
 import Login from "./Login.jsx";
 import Apidata from "./Apidata";
 import Register from "./Register";
-import Adminpanel from "./Adminpanel";
 // import Subscribe from "./Subscribe.jsx";
 import React, { Suspense } from "react";
 
@@ -17,12 +16,6 @@ const MainRouter = createBrowserRouter([
     {
         path: "/",
         element: <><HeaderComponent/><Home/></>,
-        // children: [
-        //   {
-        //     path: "hello/*",
-        //     element: <HelloComporoute/>
-        //   }
-        // ]
       },
       {
         path: "/About",
@@ -41,8 +34,8 @@ const MainRouter = createBrowserRouter([
         element:<><Login/></>,
       },
       {
-        path: "/Adminpanel",
-        element: <><Suspense fallback={<h2>Loading...</h2>}><Adminpanel/></Suspense></>
+        path: "/admin/*",
+        element: <><Suspense fallback={<h2>Loading...</h2>}><AdminRouter/></Suspense></>
         // children: [
         //     {
         //       path: "classcompo/*",
@@ -62,7 +55,7 @@ const MainRouter = createBrowserRouter([
         //     element:<Suspense fallback={<h3>Loading Please Wait.....</h3>}><FunctionalCompoRouter/></Suspense>
         //   }
         // ]
-      },
+      }
       
     //   {
     //     path: "/Subscribe",

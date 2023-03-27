@@ -1,57 +1,65 @@
-import React, { useState } from 'react';
-import {
-  MDBContainer,
-  MDBNavbar,
-  MDBNavbarBrand,
-  MDBNavbarToggler,
-  MDBIcon,
-  MDBNavbarNav,
-  MDBNavbarItem,
-  MDBBtn,
-  MDBCollapse,
-} from 'mdb-react-ui-kit';
-import { Link } from 'react-router-dom';
+import React from "react";
+import "./AdminNav.css";
 
-
-export default function App() {
-  const [showBasic, setShowBasic] = useState(false);
-
+const AdminNav = () => {
   return (
-    <MDBNavbar expand='lg' light bgColor='light'>
-      <MDBContainer fluid>
-        <MDBNavbarBrand href='#'>Project</MDBNavbarBrand>
+    <>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-blueX">
+        <div class="container">
+          <button className="p-1 ps-2 btnNav">
+            <i class="fas fa-bars"></i>
+          </button>
 
-        <MDBNavbarToggler
-          aria-controls='navbarSupportedContent'
-          aria-expanded='false'
-          aria-label='Toggle navigation'
-          onClick={() => setShowBasic(!showBasic)}
-        >
-          <MDBIcon icon='bars' fas />
-        </MDBNavbarToggler>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarButtonsExample"
+            aria-controls="navbarButtonsExample"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
 
-        <MDBCollapse navbar show={showBasic}>
-          <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
-          <MDBNavbarItem>
-              <Link active aria-current='page' to='/' className='nav-link'>
-                Home
-              </Link>
-            </MDBNavbarItem>
-            <MDBNavbarItem>
-              <Link to='/About' className='nav-link'>About</Link>
-            </MDBNavbarItem>
-            <MDBNavbarItem>
-              <Link to='/Apidata' className='nav-link'>Data</Link>
-            </MDBNavbarItem>
-            {/* <MDBNavbarItem>
-              <Link to='/Adminpanel' className='nav-link'>Adminpanel</Link>
-            </MDBNavbarItem> */}
+          <div class="collapse navbar-collapse" id="navbarButtonsExample">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <form class="d-flex input-group widthForm">
+                  <input
+                    type="search"
+                    class="form-control rounded formInput widthInput"
+                    placeholder="Search"
+                    aria-label="Search"
+                    aria-describedby="search-addon"
+                  />
+                  <span class="input-group-text border-0 btnSrcForm" id="search-addon">
+                    <i class="fas fa-search"></i>
+                  </span>
+                </form>
+              </li>
+            </ul>
 
-           
-          </MDBNavbarNav>
-               {/* <MDBBtn href='Login' className='nav-link'>Login</MDBBtn> */}
-        </MDBCollapse>
-      </MDBContainer>
-    </MDBNavbar>
+            <div class="d-flex align-items-center buttonDiv">
+              <button type="button" class="btn btn-link p-1 me-3">
+                <i class="fas fa-grip-horizontal fa-lg"></i>
+              </button>
+              <button type="button" class="btn btn-link p-1 me-3">
+              <i class="fas fa-bell fa-lg"></i>
+              </button>
+              <button type="button" class="btn btn-link p-1 me-3">
+              <i class="fas fa-user-circle fa-2x"></i>
+              </button>
+              <button type="button" class="btn btn-link p-1 me-3">
+              <i class="fas fa-ellipsis-v fa-lg"></i>
+              </button>
+              
+            </div>
+          </div>
+        </div>
+      </nav>
+    </>
   );
-}
+};
+
+export default AdminNav;

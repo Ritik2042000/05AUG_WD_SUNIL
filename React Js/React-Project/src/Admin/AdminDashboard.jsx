@@ -1,19 +1,19 @@
 import React from 'react';
 import Adminpanel from './Slidenav';
-import {Chart} from './charts/charts';
+import Header from './header'
+import MainContent from "./AdminContent.jsx";
+
 const AdminDashboard = () => {
     return (
         <>
-        <div className="container">
-            <div className="row">
-            <div className="col">
-                {/* <Chart/> */}
+            <div className="d-flex">
+                <Adminpanel />
+                <div className="d-flex flex-column container-fluid m-0 p-0">
+                    <Header />
+                    <MainContent />
+                    
+                </div>
             </div>
-
-            </div>
-        </div>
-            <Adminpanel/>
-
         </>
     );
 };
