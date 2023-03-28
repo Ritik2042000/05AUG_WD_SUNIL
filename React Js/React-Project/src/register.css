@@ -6,14 +6,15 @@
 h2{
     text-align: center;
 }
-table{
+.table2{
     width: 400px ;
     margin: 0 auto;
-    
     border-radius: 20px;
+    background-color: rgba(143, 255, 218, 0.666);
 }
-tr{
-    /* display: block; */
+.tablerow
+{
+    display: block;
     margin: 20px 50px;
 }
 td{
@@ -40,12 +41,12 @@ input::placeholder{
     border: none;
     border-bottom:1px solid #000;
 }
-button{
+.submitbtn{
     display: inline-block;
     padding: 5px 15px;
     background-color: transparent;
     border-radius: 10px;
 }
-button:hover{
+.submitbtn:hover{
     background-color: rgba(145, 129, 246, 0.737) ;
 }

@@ -3,6 +3,9 @@ import "./AdminContent.css";
 import Chart from './charts/charts';
 import Chart2 from './charts/chart2';
 import Alluser from "./Alluser";
+import Chart3 from "./charts/chart3";
+import Chart4 from "./charts/Chart4";
+import Chart5 from "./charts/Chart5";
 
 
 const AdminContent = () => {
@@ -28,9 +31,9 @@ return (
         <div className="col-5">
           <div className="row">
             <div className="col-6"> <div className="box2 mb-4"><Chart /></div></div>
-            <div className="col-6"><div className="box2 mb-4" ></div></div>
-            <div className="col-6"><div className="box2 mb-4"></div></div>
-            <div className="col-6"><div className="box2 mb-4"></div></div>
+            <div className="col-6"><div className="box2 mb-4" ><Chart3/></div></div>
+            <div className="col-6"><div className="box2 mb-4"><Chart4/></div></div>
+            <div className="col-6"><div className="box2 mb-4"><Chart5/></div></div>
           </div>
         </div>
       </div>

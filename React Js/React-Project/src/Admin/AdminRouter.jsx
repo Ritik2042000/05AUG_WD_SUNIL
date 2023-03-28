@@ -9,7 +9,7 @@ class AdminRouter extends Component {
             <Routes>
                 <Route path='/' element={<AdminDashboard/>}>
                 <Route path='dashboard' element={<AdminDashboard />}/>
-                <Route path='edituser' element={<Edituser />}/>
+                <Route path='edituser/:userId' element={<Edituser />}/>
 
                 </Route>
             </Routes>

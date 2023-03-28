@@ -4,6 +4,7 @@ const Customhook = (intVal,initError) => {
     const [inps, setInps] = useState(intVal);
     const [errors, setErrors] = useState(initError);
     const inputHandleChange = (e) => {
+        // e.prevent.defualt
         // console.log("called inputHandleChange Hook",e);
         // console.log("called inputHandleChange Hook",e.target.name);
         // console.log("called inputHandleChange Hook",e.target.value);

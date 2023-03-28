@@ -6,16 +6,16 @@ const Register = () => {
     const { inputHandleChange, inps, errors } = Customhook({}, { usernameError: "", passwordError: "", mobileError: "", birthdayError: "", emailError: "" })
     const checkLogin = () => {
         console.log("inp from Hook", inps, errors);
-        // alert(("inp from Hook", inps,errors))
+        alert(("inp from Hook", inps,errors))
     };
 
     return (
         <>
             <form>
                 <h2 >Fill The Details</h2>
-                <table >
+                <table className='table2'>
                     <tbody>
-                        <tr >
+                        <tr className='tablerow' >
                             <td>
                                 First Name:
                                 <input className='form-control' type="text" placeholder="Name" name="username" id="firstname" onChange={inputHandleChange} onBlur={inputHandleChange} /><br />
@@ -23,7 +23,7 @@ const Register = () => {
                             </td>
                         </tr>
 
-                        <tr >
+                        <tr className='tablerow' >
                             <td>
                                 Last Name:
                                 <input className='form-control' type="text" placeholder="Surname" name="username" onChange={inputHandleChange} onBlur={inputHandleChange} /><br />
@@ -31,7 +31,7 @@ const Register = () => {
                             </td>
                         </tr>
 
-                        <tr >
+                        <tr className='tablerow' >
                             <td>
                                 Gender:
                                 <input type="radio" name="Gender" />Male
@@ -40,7 +40,7 @@ const Register = () => {
                             </td>
                         </tr>
 
-                        <tr >
+                        <tr className='tablerow' >
                             <td>
                                 Birth Date:
                                 <input className='form-control' type="date" name="birthday" onChange={inputHandleChange} onBlur={inputHandleChange} />
@@ -48,16 +48,15 @@ const Register = () => {
                             </td>
                         </tr>
 
-                        <tr >
+                        <tr className='tablerow' >
                             <td>
-                                
-                                    Email:
-                                    <input className='form-control' type="email" name='email' placeholder="XYZ@mail.com" onChange={inputHandleChange} onBlur={inputHandleChange} /><br />
-                                     {errors.emailError}
+                                Email:
+                                <input className='form-control' type="email" name='email' placeholder="XYZ@mail.com" onChange={inputHandleChange} onBlur={inputHandleChange} /><br />
+                                {errors.emailError}
                             </td>
                         </tr>
 
-                        <tr >
+                        <tr className='tablerow' >
                             <td>
                                 Password:
                                 <input className='form-control' type="password" placeholder="Password" name='password' onChange={inputHandleChange} onBlur={inputHandleChange} /><br />
@@ -65,24 +64,25 @@ const Register = () => {
                             </td>
                         </tr>
 
-                        <tr >
+                        <tr className='tablerow' >
                             <td>
                                 Mobile No. :
                                 <input className='form-control' type="tel" placeholder="99321*****"
                                     minLength="10" maxLength="10"
                                     name="mobile" id="tel" onChange={inputHandleChange} onBlur={inputHandleChange} /><br />
-                                     {errors.mobileError}
+                                     {`${errors.mobileError}`}
                             </td>
                         </tr>
 
-                        <tr>
+                        <tr className='tablerow'>
                             <td >
-                                <button onClick={checkLogin}>Submit</button>
+                            <button className='submitbtn' onClick={checkLogin} >Submit</button>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </form>
+            
         </>
     );
 };

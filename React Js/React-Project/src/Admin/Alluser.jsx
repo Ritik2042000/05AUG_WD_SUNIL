@@ -14,21 +14,19 @@ const Alluser = () => {
     }, [loader])
 
     const editdata = (event) => {
-        // console.log(event);  
-    //   console.log(event.currentTarget);
-    //   console.log(event.currentTarget.dataset);
-    //   console.log(event.currentTarget.dataset.id);
-      navigate(`/admin/edituser/${event.currentTarget.dataset.id}`)
-    //   console.log("called edit Data");
+          console.log(event.currentTarget.dataset.id);
+        navigate(`/admin/edituser/${event.currentTarget.dataset.id}`)
+        //   console.log("called edit Data");
     }
-    // const HTMLList =""
+
     async function fetchAllPostApi(params) {
 
         const fetchData = await axios.get('https://jsonplaceholder.typicode.com/posts')
             .then(function (response) {
                 setLoader(true)
                 const HTMLList = response.data.map((item, val) => {
-                    return <tr> <td>{item.id}</td> <td>{item.title}</td> <td> <i class="fas fa-edit" data-id={item.id} onClick={editdata}> </i> &nbsp; <i class="fa-sharp fa-solid fa-trash"></i></td> </tr>
+                    return <tr key={item.id}> <td>{item.id}</td> <td>{item.title}</td> <td><i className="fas fa-edit" data-id={item.id} onClick={editdata}></i> &nbsp; <i className="fa-sharp fa-solid fa-trash"></i></td></tr>
+
                 }).slice(0, 20)
                 setAllPosts(HTMLList)
             })
@@ -56,7 +54,6 @@ const Alluser = () => {
                             </thead>
                             <tbody className="w-100">
                                 {allPosts}
-                                <input type="text" placeholder={allPosts.title} />
                             </tbody>
                         </table>
                     </div>

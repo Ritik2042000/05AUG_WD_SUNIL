@@ -7,7 +7,7 @@ import Slidenav from '../Admin/Slidenav';
 
 function Form() {
   const [form, setForm] = useState({});
-  const [cookies, setCookies,removeCookies] = useCookies([]);
+  const [cookies, setCookies] = useCookies([]);
   const navigate = useNavigate();
 
   const validation = () => {
@@ -27,11 +27,7 @@ function Form() {
         alert('invalid username or password')
       }
     })}
-    const handleLogout = () => {
-      removeCookies(response.Data)
-      console.log(removeCookies);
-      
-    }
+    
   return (
     <div className="main">
       <p className="sign" >

@@ -4,15 +4,27 @@ const Apidata = () => {
     const [data, setData] = useState([])
     useEffect(() => {
         fetch("https://jsonplaceholder.typicode.com/posts").then((result) => {
-            result.json().then((respon) => {
-                console.log(respon);
-                setData(respon);
+            result.json().then((data) => {
+                setData(data);
             })
         })
     }, [])
+    // fetch('https://jsonplaceholder.typicode.com/posts/1', {
+    //     method: 'PUT',
+    //     body: JSON.stringify({
+    //       id: 1,
+    //       title: 'foo',
+    //       body: 'bar',
+    //       userId: 1,
+    //     headers: {
+    //       'Content-type': 'application/json; charset=UTF-8',
+    //     },
+    //   })
+    //     .then((response) => response.json())
+    //     .then((json) => console.log(json));
     return (
         <>
-            <div className="container">
+            <div className="container"  >
                 <div className="row">
                     <h1>Posts</h1>
                     {
@@ -27,8 +39,8 @@ const Apidata = () => {
                                 </div>
                             </div>
                         </div>
-                            )
-                        }
+                        )
+                      }
                 </div>
             </div>
         </>
