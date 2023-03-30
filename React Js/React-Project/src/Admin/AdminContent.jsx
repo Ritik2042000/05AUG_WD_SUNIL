@@ -6,6 +6,7 @@ import Alluser from "./Alluser";
 import Chart3 from "./charts/chart3";
 import Chart4 from "./charts/Chart4";
 import Chart5 from "./charts/Chart5";
+import { Outlet } from "react-router-dom";
 
 
 const AdminContent = () => {
@@ -30,10 +31,10 @@ return (
         </div>
         <div className="col-5">
           <div className="row">
-            <div className="col-6"> <div className="box2 mb-4"><Chart /></div></div>
+            {/* <div className="col-6"> <div className="box2 mb-4"><Chart /></div></div>
             <div className="col-6"><div className="box2 mb-4" ><Chart3/></div></div>
             <div className="col-6"><div className="box2 mb-4"><Chart4/></div></div>
-            <div className="col-6"><div className="box2 mb-4"><Chart5/></div></div>
+            <div className="col-6"><div className="box2 mb-4"><Chart5/></div></div> */}
           </div>
         </div>
       </div>
@@ -46,7 +47,7 @@ return (
           </div>
         </div> */}
 
-
+        <Outlet></Outlet>
     </div>
   </>
 );

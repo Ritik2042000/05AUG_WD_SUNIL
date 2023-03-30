@@ -2,7 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import { useLayoutEffect } from 'react';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 
 const Alluser = () => {
     const [allPosts, setAllPosts] = useState({});
@@ -14,9 +14,13 @@ const Alluser = () => {
     }, [loader])
 
     const editdata = (event) => {
-          console.log(event.currentTarget.dataset.id);
+        //   console.log(event.currentTarget.dataset.id);
         navigate(`/admin/edituser/${event.currentTarget.dataset.id}`)
         //   console.log("called edit Data");
+    }
+    const deletedata = () => {
+        
+        
     }
 
     async function fetchAllPostApi(params) {
@@ -25,7 +29,7 @@ const Alluser = () => {
             .then(function (response) {
                 setLoader(true)
                 const HTMLList = response.data.map((item, val) => {
-                    return <tr key={item.id}> <td>{item.id}</td> <td>{item.title}</td> <td><i className="fas fa-edit" data-id={item.id} onClick={editdata}></i> &nbsp; <i className="fa-sharp fa-solid fa-trash"></i></td></tr>
+                    return <tr key={item.id}> <td>{item.id}</td> <td>{item.title}</td> <td><i className="fas fa-edit" data-id={item.id} onClick={editdata}></i> &nbsp; <i className="fa-sharp fa-solid fa-trash" onClick={deletedata}></i></td></tr>
 
                 }).slice(0, 20)
                 setAllPosts(HTMLList)
@@ -59,7 +63,7 @@ const Alluser = () => {
                     </div>
                 </div>
                 : "Loading..."}
-
+                <Outlet></Outlet>
         </>
     );
 };

@@ -36,11 +36,7 @@ const MainRouter = createBrowserRouter([
       {
         path: "/admin/*",
         element: <><Suspense fallback={<h2>Loading...</h2>}><AdminRouter/></Suspense></>
-        // children: [
-        //     {
-        //       path: "classcompo/*",
-        //       // element:<Suspense fallback={<h3>Loading Please Wait.....</h3>}><ClassCompoRouter/></Suspense>,
-        //     }],
+        
       },
       {
         path: "/Example",
