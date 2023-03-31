@@ -1,8 +1,6 @@
 .backgroundHalf{
     display: block;
     width: 100%;
-    /* float: left; */
-    /* clear: both; */
     background: #25476a;
     height: 360px;
     border-radius: 0 0 0px 00px;
@@ -15,8 +13,7 @@
     top: -370px;    
     color: white;
 }
-.dashboardText{
-}
+
 .dashboardText p{
     padding: 0px;
     margin: 0;
@@ -28,13 +25,14 @@
     line-height: 2;
     font-weight: bold;
     font-size: 16px;
+    
 }
 .box1{
     width: 100%;
     height: 420px;
     background: white;
     box-shadow: 0 10px 20px #00000061;
-    border-radius: 15px;
+    border-radius: 15px 15px 15px 15px;
     color: #000;
 }
 .box2{

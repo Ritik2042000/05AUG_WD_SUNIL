@@ -24,7 +24,8 @@ const chart = () => {
     <Chart
       chartType="ScatterChart"
       width="100%"
-      height="400px"
+      height="300px"
+      margin="10px auto"
       data={data}
       options={options}
     />

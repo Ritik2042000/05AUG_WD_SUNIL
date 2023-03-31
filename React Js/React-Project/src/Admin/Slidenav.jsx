@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './adminpanel.css'
+import { Link } from 'react-router-dom';
 
 const Adminpanel = () => {
     const [height, setHegit] = useState('drop-down');
@@ -32,9 +33,10 @@ const Adminpanel = () => {
                     <div className="col poi-rel ">
                         <div className="navigation">
                             <p>Navigation</p>
+                            
                             <ul>
-                                <li><i className="fa-solid fa-table-columns"></i><a href="#/">Dashboard</a></li>
-                                <li><i className="fa-solid fa-layer-group"></i><a href="#/">Layout</a> </li>
+                                <li><i className="fa-solid fa-table-columns"></i><Link to="dashboard">Dashboard</Link></li>
+                                <li><i className="fa-solid fa-layer-group"></i><Link to="alluser">All User Data</Link></li>
                                 <li> <i className="fa-solid fa-gear"></i><a href="#/">Widget</a> </li>
                             </ul>
                         </div>

@@ -11,7 +11,7 @@ const AdminDashboard = () => {
                 <Adminpanel />
                 <div className="d-flex flex-column container-fluid m-0 p-0">
                     <Header />
-                    <MainContent />                                  
+                    <Outlet />                                  
                 </div>
             </div>
         </>

@@ -18,8 +18,15 @@ const Alluser = () => {
         navigate(`/admin/edituser/${event.currentTarget.dataset.id}`)
         //   console.log("called edit Data");
     }
-    const deletedata = () => {
-        
+     const deletedata = (event) => {
+          axios.get(`https://jsonplaceholder.typicode.com/${event.currentTarget.dataset.id}`)
+            .then(function (response) {
+                console.log(response.data.id);
+    
+            })       
+            
+
+            
         
     }
 
@@ -29,7 +36,7 @@ const Alluser = () => {
             .then(function (response) {
                 setLoader(true)
                 const HTMLList = response.data.map((item, val) => {
-                    return <tr key={item.id}> <td>{item.id}</td> <td>{item.title}</td> <td><i className="fas fa-edit" data-id={item.id} onClick={editdata}></i> &nbsp; <i className="fa-sharp fa-solid fa-trash" onClick={deletedata}></i></td></tr>
+                    return <tr key={item.id}> <td>{item.id}</td> <td>{item.title}</td> <td><i className="fas fa-edit" data-id={item.id} onClick={editdata}></i> &nbsp; <i className="fa-sharp fa-solid fa-trash" data-id={item.id} onClick={deletedata}></i></td></tr>
 
                 }).slice(0, 20)
                 setAllPosts(HTMLList)
@@ -63,7 +70,7 @@ const Alluser = () => {
                     </div>
                 </div>
                 : "Loading..."}
-                <Outlet></Outlet>
+                {/* <Outlet></Outlet> */}
         </>
     );
 };

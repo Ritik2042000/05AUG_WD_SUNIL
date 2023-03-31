@@ -40,7 +40,7 @@ p{
 }
 .poi-fx{
     position: fixed;
-    bottom:  10px;
+    bottom:  2px;
     /* left: 30px; */
 }
 .widthofsidnav{
@@ -96,22 +96,24 @@ p{
     margin: 0px 0px 20px 0px;
 }
 .logout{
-    width: 235px;
+    width: 205px;
     background-color: rgb(223, 238, 251);
+    border-radius: 8px;
     padding: 0px 5px 0px 0px;
     margin: 0px 0px 0px -34px;
     transition: all 0.5s ;
 }
 .logout:hover{
     cursor: pointer;
-    color: #2f5aa2;
+    color: #184aa0;
+    background-color: rgb(187, 220, 249);
 }
 .logout p{
     font-size: 16px;
-    border-top: 1px solid black; 
-    border-bottom: 1px solid black; 
+    /* border-top: 1px solid black; 
+    border-bottom: 1px solid black;  */
     border-radius: 5px;
-    padding: 0px 0px 0px 35px ;
+    padding: 3px 0px 3px 35px ;
 }
 .pad{
     display: inline-block;
