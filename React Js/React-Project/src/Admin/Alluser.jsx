@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 
 const Alluser = () => {
-    const [allPosts, setAllPosts] = useState({});
+    const [allPosts, setAllPosts] = useState([]);
     const [loader, setLoader] = useState(false);
     const navigate = useNavigate();
 
@@ -32,11 +32,12 @@ const Alluser = () => {
 
     async function fetchAllPostApi(params) {
 
-        const fetchData = await axios.get('https://jsonplaceholder.typicode.com/posts')
+        const fetchData = await axios.get('http://justjayapi.000webhostapp.com/allusers')
             .then(function (response) {
                 setLoader(true)
-                const HTMLList = response.data.map((item, val) => {
-                    return <tr key={item.id}> <td>{item.id}</td> <td>{item.title}</td> <td><i className="fas fa-edit" data-id={item.id} onClick={editdata}></i> &nbsp; <i className="fa-sharp fa-solid fa-trash" data-id={item.id} onClick={deletedata}></i></td></tr>
+                // console.log(response.data.Data);
+                const HTMLList = response.data.Data.map((item, val) => {
+                    return <tr key={item.id}> <td>{item.id}</td> <td>{item.username}</td> <td>{item.gender}</td><td>{item.fullname}</td> <td><i className="fas fa-edit" data-id={item.id} onClick={editdata}></i> &nbsp; <i className="fa-sharp fa-solid fa-trash" data-id={item.id} onClick={deletedata}></i></td></tr>
 
                 }).slice(0, 20)
                 setAllPosts(HTMLList)
@@ -59,7 +60,9 @@ const Alluser = () => {
                             <thead className='bg-dark text-light'>
                                 <tr className="table-row">
                                     <th>User Name</th>
-                                    <th className="text-center">Titles</th>
+                                    <th className="text-center">Usename</th>
+                                    <th className="text-center">Gender</th>
+                                    <th className="text-center">Fullname</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
