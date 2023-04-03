@@ -21,9 +21,9 @@ const Edituser = () => {
     function updatedata(e) {
         e.preventDefault()
         console.log(data);
-        fetch(`http://justjayapi.000webhostapp.com/userdatabyidgetmethod?id=${data.id}&username=${data.username}&password=${data.password}&gender=${data.gender}&email=${data.email}`).then((res) => res.json()).then((response) => {
-                console.log(response.Data[0]);
-                if (response.Data[0] === 1) {
+        fetch(`http://justjayapi.000webhostapp.com/userdatabyidgetmethod?id=${data.id}&username=${data.username}&password=${data.password}&gender=${data.gender}&mobile=${data.mobile}&fullname=${data.fullname}`).then((res) => res.json()).then((response) => {
+                console.log(response.Data);
+                if (response.Code === 1) {
                 navigate('/admin/alluser')
 
                 } else {
@@ -56,7 +56,7 @@ const Edituser = () => {
             <div className="container-fulid">
                 <div className="row mx-0"  >
                     <form onSubmit={updatedata} method='post' className='text-center my-3'>
-                        <input type="text" placeholder='Enter ur Data' value={data.username} className='form-control w-100' name='username' id='title' onChange={(e) => { setData({ ...data, [e.target.name]: e.target.value }) }}
+                        <input type="text" placeholder='Enter ur Data' value={data.fullname} className='form-control w-100' name='fullname' id='title' onChange={(e) => { setData({ ...data, [e.target.name]: e.target.value }) }}
                         />
                         <div className='row mt-3'>
                             <div className="col-12">

@@ -18,12 +18,17 @@ const Alluser = () => {
         navigate(`/admin/edituser/${event.currentTarget.dataset.id}`)
         //   console.log("called edit Data");
     }
-     const deletedata = (event) => {
-          axios.get(`https://jsonplaceholder.typicode.com/${event.currentTarget.dataset.id}`)
-            .then(function (response) {
-                console.log(response.data.id);
-    
-            })       
+     const deletedata = async (event) => {
+        const fetchData = await axios.get(`http://justjayapi.000webhostapp.com/userdatabyidgetmethod?id=${event.currentTarget.dataset.id}`)
+        .then(function (response) {
+            if (response.data.Code === 1) {
+                setLoader(false)
+                navigate('/admin/alluser')
+                
+            } else {
+                alert('unable to delete data')
+            }
+        });       
             
 
             
@@ -59,7 +64,7 @@ const Alluser = () => {
                         <table className='table table-borderd table-striped '>
                             <thead className='bg-dark text-light'>
                                 <tr className="table-row">
-                                    <th>User Name</th>
+                                    <th>User Id</th>
                                     <th className="text-center">Usename</th>
                                     <th className="text-center">Gender</th>
                                     <th className="text-center">Fullname</th>
