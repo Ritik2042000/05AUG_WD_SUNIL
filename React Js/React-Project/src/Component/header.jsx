@@ -18,7 +18,6 @@ import { Link } from 'react-router-dom';
 
 export default function App() {
   const [showBasic, setShowBasic] = useState(false);
-  
   const [cookies, setCookie, removeCookie] = useCookies(["cookieName"]);
   // const history = useHistory();
 

@@ -12,11 +12,9 @@ function Form() {
   const navigate = useNavigate();
 
   const validation = () => {
-    fetch(`https://justjayapi.000webhostapp.com/login? username=${form.username} & 
-      password=${form.password}`).then((res) => res.json()).then((response) => {
+    fetch(`https://justjayapi.000webhostapp.com/login?username=${form.username}&password=${form.password}`).then((res) => res.json()).then((response) =>{
       console.log(response.Data)
       if (response.Code == 1) {
-        alert('sucess')
         setCookies('userid', response.Data[0].id)
         setCookies('username', response.Data[0].username)
         if (response.Data[0].role_id == 1) {
@@ -27,10 +25,11 @@ function Form() {
       } else {
         alert('invalid username or password')
       }
-    })}
+    })
+  }
 
 
-    
+
   return (
     <div className="main">
       <p className="sign" >
@@ -48,7 +47,7 @@ function Form() {
           {/* {cookies} */}
         </p>
       </form>
-     
+
     </div >
   );
 }
