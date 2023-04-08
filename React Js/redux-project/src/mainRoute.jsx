@@ -12,15 +12,16 @@ const MainRoutes = createBrowserRouter([
     },{
         path: "/home",
         element: <HomePage />,
-    },  {
-        path: "/about",
-        element: <AboutUsPage />,
-    }, {
-        path: "/contactus",
-        element: <ContactUsCompo />,
-    }, {
-        path: "/features",
-        element: <Features />,
     }
+    // ,  {
+    //     path: "/about",
+    //     element: <AboutUsPage />,
+    // }, {
+    //     path: "/contactus",
+    //     element: <ContactUsCompo />,
+    // }, {
+    //     path: "/features",
+    //     element: <Features />,
+    // }
 ]);
 export default MainRoutes;
