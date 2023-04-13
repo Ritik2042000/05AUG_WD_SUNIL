@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import HomePage from "./HomePage.jsx";
 // import AboutUsPage from "./AboutUsPage.jsx";
-// import Features from "./Features.jsx";
+import Features from "./Features.jsx";
 // import ContactUsCompo from "./ContactUsCompo.jsx";
 
 const MainRoutes = createBrowserRouter([
@@ -23,5 +23,9 @@ const MainRoutes = createBrowserRouter([
     //     path: "/features",
     //     element: <Features />,
     // }
+    , {
+        path: "/getStoreData",
+        element: <Features />,
+    }
 ]);
 export default MainRoutes;
