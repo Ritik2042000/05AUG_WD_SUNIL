@@ -1,5 +1,5 @@
-
 import { RETRIVE_ALL_USERS, RETRIVE_LOGIN_USERS } from "../actions/type.js"
+
 const initialState = {}
 const userReducer = (users = initialState, action) => {
     const { type, payload } = action

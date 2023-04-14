@@ -1,8 +1,9 @@
 import React, { useLayoutEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { retierverUsers } from './actions/users.jsx'
+import { Link } from 'react-router-dom';
 const HomePage = () => {
-    
+
     const dispatch = useDispatch()
     useLayoutEffect(() => {
         console.log("useLayouteffect")
@@ -13,9 +14,18 @@ const HomePage = () => {
     }
 
     return (
-        <div>
-            <h1>HomePage</h1>
-        </div>
+        <>
+            <div className="container">
+                <div className="row">
+                    <div className="col-6">
+
+                        <Link to="/getStoreData">Store Data</Link>
+                        {/* <Link to="/login">Login</Link> */}
+                        HomePage
+                    </div>
+                </div>
+            </div>
+        </>
     );
 };
 

@@ -3,6 +3,7 @@ import { createBrowserRouter, Navigate } from "react-router-dom";
 import HomePage from "./HomePage.jsx";
 // import AboutUsPage from "./AboutUsPage.jsx";
 import Features from "./Features.jsx";
+import GetStoreData from './GetStoreData.jsx';
 // import ContactUsCompo from "./ContactUsCompo.jsx";
 
 const MainRoutes = createBrowserRouter([
@@ -25,7 +26,7 @@ const MainRoutes = createBrowserRouter([
     // }
     , {
         path: "/getStoreData",
-        element: <Features />,
+        element: <GetStoreData />,
     }
 ]);
 export default MainRoutes;
