@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.container{
+    width: 100%;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col{
+    width: 70%;
+    /* height: 80vh; */
+    margin: 50px auto;
+    background-color: aliceblue;
+}
+.col h1{
+    /* margin: 0px ; */
+    width: 90%;
+    margin: 10px auto;
+}
+
+.adress{
+    width: 90%;
+    margin: 20px auto;
+    background-color:#fff;
+}
+.adress h3{
+    margin: 5px;
+}
+
+.detalis{
+    width: 100%;
+    display: flex;
+}
+.detalis p{
+    margin: 5px;
+}
+
+.ph-em {
+    margin: 0px 80px;
+}
+.ph-em :nth-child(1){
+    color: red;
+}
+.ph-em :nth-child(2){
+    color: rgb(0, 255, 234);
+}
+.box{
+    width: 90%;
+    margin: 10px auto;
+    background-color:#fff;
+    display: flex;
+}
+tr{
+    display: inline-block;
+    margin: 10px;
+}
+td{
+    display: inline-block;
+    margin: 0px 20px;
+}
+td input{
+    width: 200px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+td textarea{
+    padding: 5px;
+}
+.btn{
+    display: block;
+}
+.btn button{
+    background-color: red;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+map iframe{
+    margin: 10px auto;
+}
