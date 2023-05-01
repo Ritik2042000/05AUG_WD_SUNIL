@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.accordion{
+    width: 100%;
+    margin: 10px auto;
+}
+.accordion-header{
+    width: 80%;
+    margin: 0 auto;
+    background-color: rgb(206, 227, 246);
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid black;
+    border-radius:5px ;
+}
+.accordion-body{
+    background-color: aliceblue;
+    text-align: center;
+}
