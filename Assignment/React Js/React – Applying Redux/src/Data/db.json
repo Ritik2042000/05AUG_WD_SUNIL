@@ -1,0 +1,12 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "json-server",
+      "role": "typicode",
+      "email": "admin@admin.com",
+      "phone": "8562314978"
+    }
+  ]
+  
+}
