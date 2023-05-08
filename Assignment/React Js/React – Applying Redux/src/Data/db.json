@@ -2,10 +2,31 @@
   "user": [
     {
       "id": 1,
-      "name": "json-server",
-      "role": "typicode",
+      "name": "Admin-User",
+      "role": "admin",
       "email": "admin@admin.com",
       "phone": "8562314978"
+    },
+    {
+      "id": 2,
+      "name": "json-server",
+      "role": "admin",
+      "email": "admin2@admin124.com",
+      "phone": "8955628978"
+    },
+    {
+      "id": 3,
+      "name": "json-server",
+      "role": "admin",
+      "email": "admin@admin.com",
+      "phone": "8866314978"
+    },
+    {
+      "id": 4,
+      "name": "json-server",
+      "role": "admin",
+      "email": "admin@admin.com",
+      "phone": "85623138716"
     }
   ]
   
