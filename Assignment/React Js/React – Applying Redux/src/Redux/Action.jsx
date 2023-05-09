@@ -28,9 +28,20 @@ export const deleteUser= () => {
 export const  FeatchUserList=()=>{
     return (dispatch)=>{
         dispatch(makeRequest());
-        axios.get('http://localhost:3001/user').then(res=>{
+        axios.get('http://localhost:3004/user/').then(res=>{
             const userlist=res.data;
             dispatch(getUserList(userlist))
+        }).catch(err=>{
+            dispatch(failRequest(err.message))
+        })
+    }
+}
+export const  RemoveUser=(code)=>{
+    return (dispatch)=>{
+        dispatch(makeRequest());
+        axios.delete('http://localhost:3004/user/'+code).then(res=>{
+            dispatch(deleteUser());
+            // dispatch(getUserList(userlist))
         }).catch(err=>{
             dispatch(failRequest(err.message))
         })

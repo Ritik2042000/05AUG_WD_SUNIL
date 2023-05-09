@@ -7,6 +7,7 @@ import Updateuser from './Components/Updateuser';
 import Header from './Components/Header';
 import { Provider } from 'react-redux';
 import Store from './Redux/Store';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         <Route path='/user/edit/:code' element={<Updateuser></Updateuser>}></Route>
       </Routes>
       </BrowserRouter>
-      {/* <ToastContainer> </ToastContainer> */}
+      <ToastContainer className='toast-position' position='bottom-right'></ToastContainer>
     </div>
     </Provider>
   );

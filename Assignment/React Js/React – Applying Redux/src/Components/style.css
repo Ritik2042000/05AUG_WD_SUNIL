@@ -3,4 +3,9 @@
     background-color: rgb(161, 161, 243);
     color: white;
     text-align: center;
+    margin: 10px auto;
+}
+.link{
+    font-size: 20px;
+    margin: 0px 20px;
 }

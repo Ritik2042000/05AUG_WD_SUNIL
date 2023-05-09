@@ -1,16 +1,19 @@
 import React, { useEffect } from 'react';
-import { FeatchUserList } from '../Redux/Action';
+import { FeatchUserList, RemoveUser } from '../Redux/Action';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const Userlist = (props) => {
     useEffect (()=>{
         props.loaduser();
     },[])
 
-    const handleclickdelete = () => {
+    const handleclickdelete = (code) => {
         if(window.confirm ('Do You Want Delete?')) {
-
+            props.removeuser(code);
+            props.loaduser();
+            toast.success('User removed successfully.')
         }
     }
     return (
@@ -20,7 +23,7 @@ const Userlist = (props) => {
             <div className="card">
 
                 <div className="card-header text-end">
-                    <Link  to={'/user/'}className='btn btn-success'>Add User +</Link>
+                    <Link  to={'/user/Adduser'}className='btn btn-success'>Add User +</Link>
                 </div>
 
                 <div className="card-body"> 
@@ -67,7 +70,8 @@ const mapStoreToprops = (state) =>{
 }
 const mapDispatchToprops = (dispatch) =>{
     return {
-        loaduser :()=> dispatch(FeatchUserList())
+        loaduser :()=> dispatch(FeatchUserList()),
+        removeuser :(code)=> dispatch(RemoveUser(code))
     }
 }
 

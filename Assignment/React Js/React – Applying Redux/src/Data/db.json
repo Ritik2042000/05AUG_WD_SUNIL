@@ -9,25 +9,38 @@
     },
     {
       "id": 2,
-      "name": "json-server",
+      "name": "Admin-User",
       "role": "admin",
-      "email": "admin2@admin124.com",
-      "phone": "8955628978"
+      "email": "admin@admin.com",
+      "phone": "8562314978"
     },
     {
       "id": 3,
-      "name": "json-server",
+      "name": "Admin-User",
       "role": "admin",
       "email": "admin@admin.com",
-      "phone": "8866314978"
+      "phone": "8562314978"
     },
     {
-      "id": 4,
-      "name": "json-server",
+      "id": 5,
+      "name": "Admin-User",
       "role": "admin",
       "email": "admin@admin.com",
-      "phone": "85623138716"
+      "phone": "8562314978"
+    },
+    {
+      "id": 6,
+      "name": "Admin-User",
+      "role": "admin",
+      "email": "admin@admin.com",
+      "phone": "8562314978"
+    },
+    {
+      "id": 8,
+      "name": "Admin-User",
+      "role": "admin",
+      "email": "admin@admin.com",
+      "phone": "8562314978"
     }
   ]
-  
 }
