@@ -36,7 +36,21 @@
       "phone": "8562314978"
     },
     {
+      "id": 7,
+      "name": "Admin-User",
+      "role": "admin",
+      "email": "admin@admin.com",
+      "phone": "8562314978"
+    },
+    {
       "id": 8,
+      "name": "Admin-User",
+      "role": "admin",
+      "email": "admin@admin.com",
+      "phone": "8562314978"
+    },
+    {
+      "id": 10,
       "name": "Admin-User",
       "role": "admin",
       "email": "admin@admin.com",
