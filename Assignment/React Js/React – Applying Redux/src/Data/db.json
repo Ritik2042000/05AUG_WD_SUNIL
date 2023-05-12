@@ -43,18 +43,18 @@
       "phone": "8562314978"
     },
     {
-      "id": 8,
+      "id": 10,
       "name": "Admin-User",
       "role": "admin",
       "email": "admin@admin.com",
       "phone": "8562314978"
     },
     {
-      "id": 10,
-      "name": "Admin-User",
-      "role": "admin",
-      "email": "admin@admin.com",
-      "phone": "8562314978"
+      "name": "mohan",
+      "email": "mohan@gamil.com",
+      "phone": "785624123",
+      "role": "user",
+      "id": 11
     }
   ]
 }
