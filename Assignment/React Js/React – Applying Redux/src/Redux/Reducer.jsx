@@ -47,7 +47,7 @@ export const Reducer=(state=intialstate,action)=>{
             return{
                 ...state,
                 loading:false,
-                userobj:action.payload
+                userobj:action.payload,
             }
         default : return state
     }

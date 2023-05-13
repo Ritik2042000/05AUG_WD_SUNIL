@@ -33,7 +33,7 @@ const Updateuser = () => {
         e.preventDefault();
         const userobj = {id,name, email, phone, role};
         // console.log(userobj);
-        dispatch(FunctionUpdateUser(userobj))
+        dispatch(FunctionUpdateUser(userobj,id))
         navigatae('/user/')
     } 
     return (
@@ -47,32 +47,32 @@ const Updateuser = () => {
                         <div className="row m-0" >
                             <div className="col-lg-10 m-auto" >
                                 <div className="form-group">
-                                    <label htmlFor="">Name</label>
-                                    <input value={id} disabled='disabled' className='form-control' />
+                                    <label htmlFor="">Id</label>
+                                    <input value={id || ''} disabled='disabled' className='form-control' />
                                 </div>
                             </div>
                             <div className="col-lg-10 m-auto" >
                                 <div className="form-group">
                                     <label htmlFor="">Name</label>
-                                    <input value={name} onChange={e => setName(e.target.value)} type="text" className='form-control' />
+                                    <input value={name || ''} onChange={e => setName(e.target.value)} type="text" className='form-control' />
                                 </div>
                             </div>
                             <div className="col-lg-10 m-auto">
                                 <div className="form-group">
                                     <label htmlFor="">Email</label>
-                                    <input type="text" value={email} onChange={e => setEmail(e.target.value)} className='form-control' />
+                                    <input type="text" value={email || ''} onChange={e => setEmail(e.target.value)} className='form-control' />
                                 </div>
                             </div>
                             <div className="col-lg-10 m-auto">
                                 <div className="form-group">
                                     <label htmlFor="">Phone</label>
-                                    <input type="text" value={phone} onChange={e => setPhone(e.target.value)} className='form-control' />
+                                    <input type="text" value={phone || ''} onChange={e => setPhone(e.target.value)} className='form-control' />
                                 </div>
                             </div>
                             <div className="col-lg-10 m-auto">
                                 <div className="form-group">
                                     <label htmlFor="">Role</label>
-                                    <select value={role} onChange={e => setRole(e.target.value)} className='form-control'>
+                                    <select value={role || ''} onChange={e => setRole(e.target.value)} className='form-control'>
                                         <option value="admin" className='form-control'>Admin</option>
                                         <option value="user" className='from-control'>User</option>
                                     </select>

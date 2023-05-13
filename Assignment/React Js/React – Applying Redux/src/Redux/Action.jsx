@@ -38,7 +38,7 @@ export const updateUser = () => {
     }
 }
 
-export const getUserObj= (data) => {
+export const getUserObj= ( data) => {
     return{
         type:GET_USER_OBJ,
         payload:data
@@ -79,7 +79,7 @@ export const FunctionAddUser=(data)=>{
 export const FunctionUpdateUser=(data,code)=>{
     return (dispatch)=>{
         dispatch(makeRequest());
-        axios.pull('http://localhost:3004/user/'+code,data).then(res=>{
+        axios.put('http://localhost:3004/user/'+code,data).then(res=>{
             dispatch(updateUser());
             toast.success('User Updated Successfully.')
         }).catch(err=>{
@@ -90,7 +90,7 @@ export const FunctionUpdateUser=(data,code)=>{
 export const  FeatchUserObj=(code)=>{
     return (dispatch)=>{
         dispatch(makeRequest());
-        axios.get('http://localhost:3004/user/').then(res=>{
+        axios.get('http://localhost:3004/user/'+code).then(res=>{
             const userlist=res.data;
             dispatch(getUserObj(userlist))
         }).catch(err=>{
