@@ -3,13 +3,17 @@ import Resturent from './Components/Basic/Resturent';
 import Usestate from './Components/Hooks/usestate';
 import Usereducer from './Components/Hooks/Usereducer';
 import Todo from './Components/TodoList/Todo';
+import Weather from './Components/Weather-app/Weather';
+import ApiExample from './Components/ApiData/ApiExample';
 const App = () => {
   return (
     <div>
-      <Resturent/>
+      {/* <Resturent/> */}
       {/* <Usestate/> */}
       {/* <Usereducer/> */}
-      {/* <Todo/> */}
+      {/* <Todo/> */}/\
+      {/* <Weather/> */}
+      <ApiExample/>
       
     </div>
   );
