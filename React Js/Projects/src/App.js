@@ -11,9 +11,9 @@ const App = () => {
       {/* <Resturent/> */}
       {/* <Usestate/> */}
       {/* <Usereducer/> */}
-      {/* <Todo/> */}/\
-      {/* <Weather/> */}
-      <ApiExample/>
+      {/* <Todo/> */}
+      {/* <ApiExample/> */}
+      <Weather/>
       
     </div>
   );

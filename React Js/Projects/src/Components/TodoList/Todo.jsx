@@ -46,7 +46,7 @@ const Todo = () => {
             }
             setItems([...items, myNewId])
             setInputData('')
-            console.log(myNewId);
+            // console.log(myNewId);
         }
     }
 

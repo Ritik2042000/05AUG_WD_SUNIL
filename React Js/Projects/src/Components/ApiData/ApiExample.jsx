@@ -5,12 +5,12 @@ const ApiExample = () => {
     const [data, setData] = useState('')
 
     useEffect(() => {
-        fetch('https://justjayapi.000webhostapp.com/alluser').then((res) => res.json()).then((result) => {
+        fetch('https://justjayapi.000webhostapp.com/alluser').then((res) =>res.json()).then((result) => {
             setData(result)
             console.log(result);
         })
     })
-    const MenuData = Object.Entries(data)
+    // const MenuData = Object.Entries(data)
 
     return (
         <>
