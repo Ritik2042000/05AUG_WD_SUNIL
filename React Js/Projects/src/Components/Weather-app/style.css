@@ -53,6 +53,19 @@ body {
   justify-content: space-around;
   font-size: 100px;
 }
+  
+.suggestions{
+  height: 30px;
+  overflow: hidden;
+  color: #fff;
+  position: relative;
+  top: 50px;
+  /* left: 50px; */
+  bottom: 50px;
+  right: 330px;
+  margin: 10px auto;
+  /* border: 1px solid black; */
+}
 
 .widget .weatherInfo {
   flex: 0 0 70%;
