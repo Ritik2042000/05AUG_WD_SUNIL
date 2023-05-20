@@ -3,7 +3,7 @@ import React from 'react';
 const Navbar = ({filteritem , navdata}) => {
     return (
         <>
-             <nav className="navbar" >
+             <nav className="navbar html" >
                 <div className="btn-group">
                     {
                         navdata.map((curElem)=>{

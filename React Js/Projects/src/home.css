@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    background-color: rgb(138, 188, 233);
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+}
+.logo{
+    padding: 20px 30px;
+
+}
+
+.header ul li{
+    display:inline-block ;
+}
+.link{
+    display:inline-block;
+    padding: 20px 30px;
+    text-decoration: none;
+
+}
+.bg-clr{
+    background-color: black;
+    height: 89vh;
+}

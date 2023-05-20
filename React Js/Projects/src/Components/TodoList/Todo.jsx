@@ -89,7 +89,7 @@ const Todo = () => {
                         <figcaption>Add Your List(Data) Here ✌ </figcaption>
                     </figure>
                     <div className="addItems">
-                        <input type="text" placeholder='📝 Add Item' className='form-control' value={inputdata} onChange={(e) => setInputData(e.target.value)} />
+                        <input type="text" placeholder='📝 Add Item' className='form-control input' value={inputdata} onChange={(e) => setInputData(e.target.value)} />
                         {toggleButton ? (<i className="far fa-edit add-btn" onClick={addItem}></i>) : (<i className="fa fa-plus add-btn" onClick={addItem}></i>)}
 
                         {/* Show List Item */}

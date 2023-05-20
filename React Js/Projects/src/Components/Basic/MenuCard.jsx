@@ -6,7 +6,7 @@ const MenuCard = ({ data }) => {
     // const [data,setData] = useState(Menu)
     return (
         <>
-            <section className="main-card--cointainer">
+            <section className="main-card--cointainer html">
                 {
                     data.map((curelement) => {
                        const {id,category,name,description,image,price} =curelement
