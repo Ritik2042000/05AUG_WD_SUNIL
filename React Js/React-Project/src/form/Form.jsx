@@ -8,16 +8,33 @@ import Slidenav from '../Admin/Slidenav';
 
 function Form() {
   const [form, setForm] = useState({});
-  const [cookies, setCookies] = useCookies();
+  const [cookies, setCookies] = useCookies([]);
   const navigate = useNavigate();
 
+  // const validation = () => {
+  //   fetch(`https://justjayapi.000webhostapp.com/login?username=${form.username}&password=${form.password}`).then((res) => res.json()).then((response) =>{
+  //     console.log(response.Data)
+  //     if (response.Code === 1) {
+  //       setCookies('userid', response.Data[0].id)
+  //       setCookies('username', response.Data[0].username)
+  //       if (response.Data[0].role_id === 1) {
+  //         navigate('/Admin')
+  //       } else {
+  //         navigate('/')
+  //       }
+  //     } else {
+  //       alert('invalid username or password')
+  //     }
+  //   })
+  // }
+
   const validation = () => {
-    fetch(`https://justjayapi.000webhostapp.com/login?username=${form.username}&password=${form.password}`).then((res) => res.json()).then((response) =>{
-      console.log(response.Data)
-      if (response.Code == 1) {
-        setCookies('userid', response.Data[0].id)
-        setCookies('username', response.Data[0].username)
-        if (response.Data[0].role_id == 1) {
+    fetch(`http://localhost:3004/posts?username=${form.username}&password=${form.password}`).then((res) => res.json()).then((response) => {
+    console.log(response[0]);  
+    if (response[0]) {
+        setCookies('userid', response[0].id)
+        setCookies('username', response[0].username)
+        if (response[0].username === 'admin') {
           navigate('/Admin')
         } else {
           navigate('/')
@@ -26,8 +43,15 @@ function Form() {
         alert('invalid username or password')
       }
     })
-  }
+    // fetch("http://localhost:3004/posts")
+    //   .then(response => {
+    //     return response.json()
+    //   })
+    //   .then(data => {
+    //     console.log(data);
+    //   })
 
+  }
 
 
   return (

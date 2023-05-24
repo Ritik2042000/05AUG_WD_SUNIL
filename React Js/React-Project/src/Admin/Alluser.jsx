@@ -43,7 +43,6 @@ const Alluser = () => {
                 // console.log(response.data.Data);
                 const HTMLList = response.data.Data.map((item, val) => {
                     return <tr key={item.id}> <td>{item.id}</td> <td>{item.username}</td> <td>{item.gender}</td><td>{item.fullname}</td> <td><i className="fas fa-edit" data-id={item.id} onClick={editdata}></i> &nbsp; <i className="fa-sharp fa-solid fa-trash" data-id={item.id} onClick={deletedata}></i></td></tr>
-
                 }).slice(0, 20)
                 setAllPosts(HTMLList)
             })
