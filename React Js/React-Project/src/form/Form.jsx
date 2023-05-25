@@ -28,8 +28,8 @@ function Form() {
   //   })
   // }
 
-  const validation = () => {
-    fetch(`http://localhost:3004/posts?username=${form.username}&password=${form.password}`).then((res) => res.json()).then((response) => {
+  const  validation = () => {
+     fetch(`http://localhost:3004/posts?username=${form.username}&password=${form.password}`).then((res) => res.json()).then((response) => {
     console.log(response[0]);  
     if (response[0]) {
         setCookies('userid', response[0].id)

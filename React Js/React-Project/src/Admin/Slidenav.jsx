@@ -34,6 +34,7 @@ const Adminpanel = () => {
         removeCookie('username')
         removeCookie('userid')
         navigate('/login')
+        window.confirm('Are You Sure Want To Logout? ')
     }
 
 
