@@ -25,19 +25,20 @@ export default function App() {
     removeCookie("usename");
     removeCookie("userid");
     // console.log();
+    window.confirm('Are You sure want Logout?')
     navigate("/login");
     
   };
   const renderLoginButton = () => {
     if (cookies.username && cookies.userid) {
       return (
-        <MDBBtn onClick={handleLogout} className='nav-link'>
+        <MDBBtn onClick={handleLogout} className='nav-link btn-danger'>
           Logout
         </MDBBtn>
       );
     } else {
       return (
-        <MDBBtn href='/login' className='nav-link'>
+        <MDBBtn href='/login' className='nav-link' >
           Login
         </MDBBtn>
       );
