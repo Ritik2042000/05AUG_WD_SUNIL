@@ -25,7 +25,7 @@ export default function App() {
     removeCookie("usename");
     removeCookie("userid");
     // console.log();
-    window.confirm('Are You sure want Logout?')
+    window.confirm('Are you sure you want to Logout?')
     navigate("/login");
     
   };
