@@ -1,0 +1,72 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-hue: 210;
+    --gray-hue: 240;
+    --color-primary: hsl(var(--primary-hue), 100%, 50%);
+    --color-primary-variant: hsl(var(--primary-hue), 100%, 65%);
+    --color-secondary: #ffb116;
+    --color-grey-100: hsl(var(--gray-hue), 47%, 94%);
+    --color-grey-200: hsl(var(--gray-hue), 26%, 75%);
+    --color-grey-300: hsl(var(--gray-hue), 24%, 64%);
+    --color-grey-400: hsl(var(--gray-hue), 16%, 41%);
+    --color-grey-500: hsl(var(--gray-hue), 44%, 25%);
+    --color-grey-600: hsl(var(--gray-hue), 48%, 15%);
+
+    --container-width-lg: 80%;
+    --container-width-md: 90%;
+
+    --transition: all 500ms ease;
+
+}
+
+body {
+    background: var(--color-grey-600);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-grey-200);
+    line-height: 1.7;
+    overflow: hidden;
+}
+
+.container {
+    /* width: 100%; */
+    width: var(--container-width-md);
+    max-width: 1920px;
+    margin-inline: auto;
+}
+
+h1,
+h2.h3,
+h4,
+h5 {
+    line-height: 1.2;
+    color: var(--color-grey-100);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+a {
+    color: var(--color-grey-100);
+}
+
+img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+}
