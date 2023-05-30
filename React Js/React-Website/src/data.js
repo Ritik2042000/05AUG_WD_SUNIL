@@ -1,4 +1,4 @@
-import {SiOpenaigym} from 'react-icons/si'
+import { SiOpenaigym } from 'react-icons/si'
 
 
 
