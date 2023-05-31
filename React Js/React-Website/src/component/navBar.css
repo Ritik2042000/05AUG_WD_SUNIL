@@ -36,7 +36,7 @@ nav {
 }
 
 .nav__links a {
-    transition: (--transition);
+    transition: var(--transition);
 }
 
 .nav__links a:hover {
@@ -80,6 +80,7 @@ nav {
         right: 0;
         flex-direction: column;
         gap: 0;
+        perspective: 400px;
     }
 
     .active-nav,.active-nav::after{
@@ -117,7 +118,7 @@ nav {
 
 @keyframes navanimation {
     to{
-        transform: rotate(0);
+        transform: rotateX(0);
         opacity: 1;
     }
 }
