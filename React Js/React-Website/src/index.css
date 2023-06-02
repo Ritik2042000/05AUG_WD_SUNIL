@@ -113,8 +113,6 @@ img {
 
 
 
-
-
 section {
     margin-top: 10rem;
 }
@@ -124,7 +122,8 @@ section {
     align-items: center;
     gap: 1rem;
 }
-.section__head span{
+
+.section__head span {
     background-color: var(--color-grey-500);
     padding: 0.8rem;
     border-radius: 1rem;
@@ -137,9 +136,7 @@ section {
 
 
 
-
-
-.card{
+.card {
     background: var(--color-grey-500);
     border: 2px solid transparent;
     text-align: center;
@@ -148,12 +145,13 @@ section {
     transition: var(--transition);
 }
 
-.card:hover{
+.card:hover {
     background: transparent;
     border-color: var(--color-grey-400);
     cursor: default;
 }
-.card span{
+
+.card span {
     width: 3rem;
     height: 3rem;
     background: var(--color-primary);
@@ -164,7 +162,7 @@ section {
     place-items: center;
     margin-bottom: 1.5rem;
     margin-inline: auto;
-    border-radius:1rem ;
+    border-radius: 1rem;
     transition: var(--transition);
 }
 
@@ -177,4 +175,36 @@ section {
     margin-top: 1rem;
     display: block;
     font-weight: 300;
+}
+
+
+/*-------- MEDIA QUEARY (medium screens) ----------- */
+
+@media (max-width:1024px) {
+    .container {
+        width: var(--container-width-md);
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width:600px) {
+    .container {
+        width: var(--container-width-md);
+    }
+
+    h1 {
+        font-size: 2rem;
+        line-height: 1.3;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
 }
