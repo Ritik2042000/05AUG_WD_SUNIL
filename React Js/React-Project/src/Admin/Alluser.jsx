@@ -29,10 +29,6 @@ const Alluser = () => {
                 alert('unable to delete data')
             }
         });       
-            
-
-            
-        
     }
 
     async function fetchAllPostApi(params) {

@@ -30,13 +30,13 @@ const Adminpanel = () => {
         }
     };
     const Logout = () => {
-        window.confirm('Are you sure you want to Logout? ')
-        if (true) {
+        
+        if (window.confirm('Are you sure you want to Logout? ') === true) {
             removeCookie('username')
             removeCookie('userid')
             navigate('/login')
         } else {
-            
+            return false
         }
     }
 

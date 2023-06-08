@@ -5,7 +5,6 @@ import { useCookies } from "react-cookie";
 // import Hooks from "..CustomHooks/CustomHooks"
 import Slidenav from '../Admin/Slidenav';
 /* eslint-disable jsx-a11y/anchor-is-valid */
-
 function Form() {
   const [form, setForm] = useState({});
   const [cookies, setCookies] = useCookies([]);
@@ -28,10 +27,10 @@ function Form() {
   //   })
   // }
 
-  const  validation = () => {
-     fetch(`http://localhost:3004/posts?username=${form.username}&password=${form.password}`).then((res) => res.json()).then((response) => {
-    console.log(response[0]);  
-    if (response[0]) {
+  const validation = () => {
+    fetch(`http://localhost:3004/posts?username=${form.username}&password=${form.password}`).then((res) => res.json()).then((response) => {
+      console.log(response[0]);
+      if (response[0]) {
         setCookies('userid', response[0].id)
         setCookies('username', response[0].username)
         if (response[0].username === 'admin') {
@@ -55,6 +54,7 @@ function Form() {
 
 
   return (
+
     <div className="main">
       <p className="sign" >
         Sign in
