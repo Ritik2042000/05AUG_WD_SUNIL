@@ -18,28 +18,33 @@ const Alluser = () => {
         navigate(`/admin/edituser/${event.currentTarget.dataset.id}`)
         //   console.log("called edit Data");
     }
-     const deletedata = async (event) => {
-        const fetchData = await axios.get(`http://justjayapi.000webhostapp.com/userdatabyidgetmethod?id=${event.currentTarget.dataset.id}`)
-        .then(function (response) {
-            if (response.data.Code === 1) {
+    const deletedata = async (event) => {
+        const PostId = event.currentTarget.dataset.id
+        try {
+            const fetchData = await axios.delete(`http://localhost:3004/posts/${PostId}`)
+            if (fetchData.status === 200) {
                 setLoader(false)
                 navigate('/admin/alluser')
-                
             } else {
-                alert('unable to delete data')
+                alert('Unable to delete data');
             }
-        });       
-    }
+        }
 
+        catch (error) {
+            console.error(error);
+            alert('An error occurred while deleting data');
+
+        }
+    }
     async function fetchAllPostApi(params) {
 
-        const fetchData = await axios.get('http://justjayapi.000webhostapp.com/allusers')
+        const fetchData = await axios.get('http://localhost:3004/posts')
             .then(function (response) {
                 setLoader(true)
                 // console.log(response.data.Data);
-                const HTMLList = response.data.Data.map((item, val) => {
-                    return <tr key={item.id}> <td>{item.id}</td> <td>{item.username}</td> <td>{item.gender}</td><td>{item.fullname}</td> <td><i className="fas fa-edit" data-id={item.id} onClick={editdata}></i> &nbsp; <i className="fa-sharp fa-solid fa-trash" data-id={item.id} onClick={deletedata}></i></td></tr>
-                }).slice(0, 20)
+                const HTMLList = response.data.map((item, val) => {
+                    return <tr key={item.id}> <td>{item.id}</td> <td>{item.username}</td> <td>{item.gender}</td><td>{item.fullname}</td> <td><i className="fas fa-edit" data-id={item.id} onClick={editdata}></i>&nbsp;<i className="fa-sharp fa-solid fa-trash" data-id={item.id} onClick={deletedata}></i></td></tr>
+                })
                 setAllPosts(HTMLList)
             })
             .catch(function (error) {
@@ -66,14 +71,12 @@ const Alluser = () => {
                                     <th>Action</th>
                                 </tr>
                             </thead>
-                            <tbody className="w-100">
-                                {allPosts}
-                            </tbody>
+                            <tbody className="w-100">{allPosts}</tbody>
                         </table>
                     </div>
                 </div>
                 : "Loading..."}
-                {/* <Outlet></Outlet> */}
+            {/* <Outlet></Outlet> */}
         </>
     );
 };

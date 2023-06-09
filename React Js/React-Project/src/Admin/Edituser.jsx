@@ -1,6 +1,10 @@
 import axios from 'axios';
 import React, { useLayoutEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+
+
+
+
 const Edituser = () => {
 
     const [loader, setLoader] = useState(false);
@@ -10,65 +14,63 @@ const Edituser = () => {
     useLayoutEffect(() => {
         fetchUserDataByIdApi()
     }, [loader])
+
+
+
     async function fetchUserDataByIdApi() {
-        const fetchData = await axios.get(`http://justjayapi.000webhostapp.com/userdatabyidgetmethod?id=${userId}`)
+        const fetchData = await axios.get(`http://localhost:3004/posts?id=${userId}`)
             .then(function (response) {
                 setLoader(true)
-                console.log(response.data.Data[0]);
-                setData(response.data.Data[0])
+                console.log(response.data[0].username);
+                setData(response.data[0])
             });
     }
-    function updatedata(e) {
-        e.preventDefault()
-        console.log(data);
-        fetch(`http://justjayapi.000webhostapp.com/userdatabyidgetmethod?id=${data.id}&username=${data.username}&password=${data.password}&gender=${data.gender}&mobile=${data.mobile}&fullname=${data.fullname}`).then((res) => res.json()).then((response) => {
-                console.log(response.Data);
-                if (response.Code === 1) {
-                navigate('/admin/alluser')
+  
+    async function updatedata(e) {
+        e.preventDefault();
+        try {
+            const response = await axios.put(`http://localhost:3004/posts/${data.id}`, {
+                username: data.username
+            });
 
-                } else {
-                    alert('fali to update data')
-                }
-            })
+            console.log(response.data);
+
+            if (response.data.username) {
+                navigate('/admin/alluser');
+            } else {
+                alert('Failed to update data');
+            }
+        } catch (error) {
+            console.error(error);
+            alert('An error occurred while updating data');
+        }
     }
 
 
-    // fetch(`https://jsonplaceholder.typicode.com/posts/${data}`,{
-    //     method:'PUT',
-    //     body:JSON.stringify({
-    //         id:data.id,
-    //         title:data.title,
-    //         body:data.body,
-    //         userId:data.userId,
-    //     })
-    //     // headers: {
-    //     //     'Content-type': 'application/json',
-    //     // },
-    // }).then((res) => res.json()).then((json)=> {
-    //     console.log(json ,'called res');
-    //     navigate('/admin/alluser')
-    // })
 
 
-    return (
-        <>
-            {JSON.stringify(data)}
-            <div className="container-fulid">
-                <div className="row mx-0"  >
-                    <form onSubmit={updatedata} method='post' className='text-center my-3'>
-                        <input type="text" placeholder='Enter ur Data' value={data.fullname} className='form-control w-100' name='fullname' id='title' onChange={(e) => { setData({ ...data, [e.target.name]: e.target.value }) }}
-                        />
-                        <div className='row mt-3'>
-                            <div className="col-12">
-                                <input type="submit" value="Update" className='btn btn-primary' name="btn-update" id="btn-update" />
-                            </div>
+
+
+
+return (
+    <>
+        {JSON.stringify(data)}
+        <div className="container-fulid">
+            <div className="row mx-0"  >
+                <form onSubmit={updatedata} method='post' className='text-center my-3'>
+                    <input type="text" placeholder='Enter ur Data' value={data.username} className='form-control w-100' name='username' id='title' onChange={(e) => { setData({ ...data, [e.target.name]: e.target.value }) }}
+                    />
+                    <div className='row mt-3'>
+                        <div className="col-12">
+                            <input type="submit" value="Update" className='btn btn-primary' name="btn-update" id="btn-update" />
                         </div>
-                    </form>
+                    </div>
+                </form>
 
-                </div>
             </div>
-        </>
-    );
+        </div>
+    </>
+);
 };
 
 export default Edituser;

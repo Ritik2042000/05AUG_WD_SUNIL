@@ -8,14 +8,17 @@ import Apidata from "./Apidata";
 import Register from "./Register";
 // import Subscribe from "./Subscribe.jsx";
 import React, { Suspense } from "react";
+import Checklogin from "./checklogin";
+import AdminDashboard from "./Admin/AdminDashboard";
 
 const AdminRouter = React.lazy(()=> import('./Admin/AdminRouter'))
 // const ClassCompoRouter = React.lazy(()=> import('./Type of Component/Class Component/ClassCompoRouter'))
 // const FunctionalCompoRouter = React.lazy(()=> import('./Type of Component/Functional Component/FunctionalcompoRouter'))
 const MainRouter = createBrowserRouter([
     {
-        path: "/",
-        element: <><HeaderComponent/><Home/></>,
+       
+      path: "/",
+      element: <><HeaderComponent/><Home/></>,
       },
       {
         path: "/About",
@@ -33,9 +36,9 @@ const MainRouter = createBrowserRouter([
         path: "/Login",
         element:<><Login/></>,
       },
-      {
+      {  
         path: "/admin/*",
-        element: <><Suspense fallback={<h2>Loading...</h2>}><AdminRouter/></Suspense></>
+        element: <><Suspense fallback={<h2>Loading...</h2>}><AdminRouter/></Suspense></>,
         
       },
       {
