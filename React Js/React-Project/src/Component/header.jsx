@@ -79,6 +79,9 @@ export default function App() {
             <MDBNavbarItem>
               <Link to='/Apidata' className='nav-link'>Data</Link>
             </MDBNavbarItem>
+            <MDBNavbarItem>
+              <Link to='/TimeTracker' className='nav-link'>Time Tracker</Link>
+            </MDBNavbarItem>
           </MDBNavbarNav>
           <p>{cookies.username}</p>
           {renderLoginButton()}

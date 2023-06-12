@@ -29,8 +29,9 @@ const Edituser = () => {
     async function updatedata(e) {
         e.preventDefault();
         try {
-            const response = await axios.put(`http://localhost:3004/posts/${data.id}`, {
-                username: data.username
+            const response = await axios.put(`http://localhost:3004/posts/${data.id}&${data.password}`,{
+                username: data.username,
+                password : data.password,
             });
 
             console.log(response.data);
@@ -59,6 +60,8 @@ return (
             <div className="row mx-0"  >
                 <form onSubmit={updatedata} method='post' className='text-center my-3'>
                     <input type="text" placeholder='Enter ur Data' value={data.username} className='form-control w-100' name='username' id='title' onChange={(e) => { setData({ ...data, [e.target.name]: e.target.value }) }}
+                    />
+                    <input type="password" placeholder='Enter Your Password' value={data.password} className='form-control w-100' name='password' id='' onChange={(e) => { setData({ ...data, [e.target.name]: e.target.value }) }}
                     />
                     <div className='row mt-3'>
                         <div className="col-12">

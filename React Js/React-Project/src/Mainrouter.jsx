@@ -10,6 +10,7 @@ import Register from "./Register";
 import React, { Suspense } from "react";
 import Checklogin from "./checklogin";
 import AdminDashboard from "./Admin/AdminDashboard";
+import TimeTrecker from "./TimeTrecker";
 
 const AdminRouter = React.lazy(()=> import('./Admin/AdminRouter'))
 // const ClassCompoRouter = React.lazy(()=> import('./Type of Component/Class Component/ClassCompoRouter'))
@@ -27,6 +28,10 @@ const MainRouter = createBrowserRouter([
       {
         path: "/Apidata",
         element:<><HeaderComponent/><Apidata/></>,
+      },
+      {
+        path: "/TimeTracker",
+        element:<><HeaderComponent/><TimeTrecker/></>,
       },
       {
         path: "/Register",
