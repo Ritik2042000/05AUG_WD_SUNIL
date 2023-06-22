@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>In JavaScript, a Promise is an object that represents the eventual completion or failure of an asynchronous
+        operation and its resulting value. It is used to handle asynchronous operations in a more organized and readable
+        manner, avoiding the "callback hell" problem.
+        rejection.</h2>
+
+    <h3>
+        A Promise can be in one of three states:
+            <br><br>
+        Pending: The initial state. The Promise is still undergoing the asynchronous operation and has not yet been
+        fulfilled or rejected. <br><br>
+        Fulfilled: The asynchronous operation completed successfully, and the Promise is fulfilled. It contains the
+        resulting value. <br><br>
+        Rejected: The asynchronous operation encountered an error or failure, and the Promise is rejected. It contains
+        the reason for the rejection. <br><br>
+    </h3>
+    Promises provide a way to handle the result of an asynchronous operation using the then() method. The then()
+    method takes two callback functions as arguments: one for the fulfillment of the Promise and another for the
+    
+
+    <script>
+       const myPromise = new Promise((resolve, reject) => {
+  // Perform an asynchronous operation
+  const result = doSomethingAsynchronous();
+
+  if (result) {
+    resolve(result); // Fulfill the Promise
+  } else {
+    reject('Error'); // Reject the Promise
+  }
+});
+
+myPromise
+  .then((fulfilledValue) => {
+    console.log('Promise fulfilled:', fulfilledValue);
+  })
+  .catch((rejectionReason) => {
+    console.log('Promise rejected:', rejectionReason);
+  });
+
+    </script>
+</body>
+
+</html>
