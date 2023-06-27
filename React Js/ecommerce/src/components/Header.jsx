@@ -4,12 +4,14 @@ import styled from 'styled-components';
 import Nav from './Nav'
 
 const Header = () => {
-    return (
-      <MainHeader>
-            <NavLink to='/'></NavLink>
-            <Nav></Nav>
-      </MainHeader>
-    );
+  return (
+    <MainHeader>
+      <NavLink to='/'>
+        {/* <img src="./logo.png" alt="logo" /> */}
+      </NavLink>
+      <Nav />
+    </MainHeader>
+  );
 };
 
 
