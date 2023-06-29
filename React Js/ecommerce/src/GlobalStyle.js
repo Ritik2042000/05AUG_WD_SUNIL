@@ -49,8 +49,8 @@ h4 {
 
 h1 {
   color: ${({ theme }) => theme.colors.heading};
-  font-size: 6rem;
-  font-weight: 900;
+  font-size: 5rem;
+  font-weight: 700;
 }
 
  h2 {
