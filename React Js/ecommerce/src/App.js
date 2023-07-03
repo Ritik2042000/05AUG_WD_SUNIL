@@ -11,6 +11,7 @@ import SingleProduct from './SingleProduct';
 import { GlobalStyle } from './GlobalStyle';
 import { ThemeProvider } from 'styled-components';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 
 
@@ -56,6 +57,7 @@ const App = () => {
           <Route path='/singleproduct/:id' element={<SingleProduct />} />
           <Route path='*' element={<ErrorPage />} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </ThemeProvider>
   );
