@@ -1,33 +1,50 @@
+import { createContext, useContext, useEffect, useReducer } from 'react';
+import reducer from '../Reducer/productReducer';
 import axios from 'axios';
-import { createContext, useContext, useEffect } from 'react';
 
 const AppContext = createContext();
 
-const API = 'https://api.pujakaitem.com/api/products'
+const API = "https://api.pujakaitem.com/api/products";
+
+const initialState = {
+      isLoading: false,
+      isError: false,
+      products: [],
+      featureProducts: [],
+    };
+    
 
 const AppProvider = ({ children }) => {
-    
-    const getProducts = async(url) => {
-        const res = await axios.get(url);
-        const  products = await res.data
-        console.log(products);
-    } 
 
-    useEffect (()=> {
+    const [state, dispatch] = useReducer(reducer, initialState);
+
+    const getProducts = async (url) => {
+        dispatch({ type: 'SET_LOADING' });
+        
+        try {
+            const res = await axios.get(url);
+            const products = await res.data;
+            // console.log(products);
+            dispatch({ type: 'SET_API_DATA', payload: products });
+        } catch (error) {
+            dispatch({ type: 'API_ERROR' });
+
+        }
+    };
+
+    useEffect(() => {
         getProducts(API);
-    },[])
-    
-    return (<AppContext.Provider value={{myName : 'some'}}>
-        {children}
-    </AppContext.Provider>
+    }, [])
 
+    return (<AppContext.Provider value={{ ...state }}>{children}</AppContext.Provider>
     );
 };
-
+    
 // Custom hook
 
 const useProductContext = () => {
-    return  useContext (AppContext);
+    return useContext(AppContext);
 }
 
-export { AppProvider, AppContext, useProductContext}
+export { AppProvider, AppContext, useProductContext };
+
