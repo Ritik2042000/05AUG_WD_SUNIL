@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import FormatePrice from '../Helper/FormatePrice';
 
 const Product = (CurElm) => {
 
@@ -18,7 +19,7 @@ const Product = (CurElm) => {
                     <div className="card-data-flex">
                         <h3>{name}</h3>
                         <p className="card-data--price">
-                            {price}
+                            {<FormatePrice price={price}/>}
                         </p>
                     </div>
                 </div>

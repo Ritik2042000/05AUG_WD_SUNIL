@@ -138,7 +138,7 @@ const Footer = () => {
                 <div className="footer-bottom--section">
                     <hr />
                     <div className="container grid grid-two-column">
-                        <p>@{new Date().getFullYear()}ThapaTechnical. All Rights Reserved</p>
+                        <p>@{new Date().getFullYear()}Ecommerce-App. All Rights Reserved</p>
 
                         <div>
                             <p>PRIVACY POLICY</p>
