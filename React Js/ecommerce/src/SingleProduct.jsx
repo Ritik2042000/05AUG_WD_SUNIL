@@ -8,6 +8,9 @@ import { Container } from '../src/styles/Container'
 import FormatePrice from './Helper/FormatePrice';
 import { MdSecurity } from "react-icons/md";
 import { TbTruckDelivery, TbReplace } from "react-icons/tb";
+import Star from './components/Star';
+import AddToCart from './components/AddToCart';
+
 // import 
 
 
@@ -24,7 +27,7 @@ const SingleProduct = () => {
     }, [])
 
     if (isSingleLoading) {
-        return <div className="page_loading">Loading.....</div>;
+        return <div className="page_loading"><h1>Loading....</h1></div>;
     }
 
 
@@ -38,8 +41,7 @@ const SingleProduct = () => {
                     </div>
                     <div className="product-data">
                         <h2>{name}</h2>
-                        <p>{stars}</p>
-                        <p>{reviews}reviews</p>
+                        <Star stars={stars} reviews={reviews}/>
                         <p className="product-data-price">
                             MRP:
                             <del>
@@ -84,6 +86,8 @@ const SingleProduct = () => {
                                 Brand :<span> {company} </span>
                             </p>
                         </div>
+                        <hr/>
+                        {stock > 0 && <AddToCart product={singleProduct}/>}
                     </div>
                 </div>
             </Container>
@@ -93,6 +97,11 @@ const SingleProduct = () => {
 const Wrapper = styled.section`
 .container {
     padding: 9rem 0;
+  }
+
+  .product_images{
+    display:flex,
+    align-item:center,
   }
   .product-data {
     display: flex;
