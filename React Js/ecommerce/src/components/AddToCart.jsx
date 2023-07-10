@@ -1,25 +1,44 @@
 import React, { useState } from 'react';
 import { FaCheck } from 'react-icons/fa';
 import { styled } from 'styled-components';
+import CartAmountToggle from './CartAmountToggle';
+import { NavLink } from 'react-router-dom';
+import { Button } from '../styles/Button';
 
 
-const AddToCart = ({product}) => {
-    const {id,colors,stock} = product
-    const [color,setColor] = useState(colors[0]);
-    
-    return (
-        <Wrapper>
-            <div className="colors">
-                <p>
-                    colors:
-                    {colors .map((curColor,index)=> {
-                        return <button key={index} style={{background : curColor}} className={color === curColor ? 'btnStyle active' : 'btnStyle'}onClick={()=> setColor(curColor)}> {color === curColor ? <FaCheck className='checkStyle'/>: null}
-                        </button>
-                    })}
-                </p>
-            </div>
-        </Wrapper>
-    );
+const AddToCart = ({ product }) => {
+  const { id, colors, stock } = product;
+  console.log(stock);
+  const [color, setColor] = useState(colors[0]);
+  const [amount, setAmount] = useState(1);
+
+  const setDecrease = () => {
+    amount > 1 ? setAmount(amount - 1) : setAmount(1);
+    console.log('called dec');
+  };
+  const setIncrease = () => {
+    amount < stock ? setAmount(amount + 1) : setAmount(stock);
+    console.log('called Iec');
+  };
+
+  return (
+    <Wrapper>
+      <div className="colors">
+        <p>
+          colors:
+          {colors.map((curColor, index) => {
+            return <button key={index} style={{ background: curColor }} className={color === curColor ? 'btnStyle active' : 'btnStyle'} onClick={() => setColor(curColor)}> {color === curColor ? <FaCheck className='checkStyle' /> : null}
+            </button>
+          })}
+        </p>
+      </div>
+
+      <CartAmountToggle amount={amount} setDecrease={setDecrease} setIncrease={setIncrease} />
+      <NavLink to='/cart' >
+        <Button className='btn'>Add To Cart</Button>
+        </NavLink>
+    </Wrapper>
+  );
 };
 const Wrapper = styled.section`
 .colors p {
