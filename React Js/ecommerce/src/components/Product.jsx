@@ -19,7 +19,7 @@ const Product = (CurElm) => {
                     <div className="card-data-flex">
                         <h3>{name}</h3>
                         <p className="card-data--price">
-                            {<FormatePrice price={price}/>}
+                            <FormatePrice price={price}/>
                         </p>
                     </div>
                 </div>

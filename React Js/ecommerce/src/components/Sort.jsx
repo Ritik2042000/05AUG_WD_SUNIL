@@ -8,18 +8,18 @@ const Sort = () => {
     return (
         <Wrapper className='sort-section'>
             <div className="sorting-list--grid">
-            <button className={grid_view ? 'active sort-btn': 'sort-btn'}  onClick={setGridView}>
+            <button className={grid_view ? 'active sort-btn': 'sort-btn'}  onClick={setGridView} title='Gridview'>
                 <BsFillGridFill className='icon'/>
             </button>
-            <button className={grid_view ? 'sort-btn': ' active sort-btn'} onClick={setListView}>
+            <button className={grid_view ? 'sort-btn': ' active sort-btn'} onClick={setListView} title='Listview'>
                 <BsList className='icon'/>
             </button>
             </div>
-            {/* <div className="product-data"><p>{`${filter_products.length} Products Available`}</p> </div> */}
+            <div className="product-data"><p>{`${filter_products.length} Products Available`}</p> </div>
             <div className="sort-selection">
                 <form action="#">
                     <label htmlFor="sort"></label>
-                    <select name="sort" id="sort" className='.sort-selection--style' onClick={sortingItems}>
+                    <select name="sort" id="sort" className='.sort-selection--style' onClick={sortingItems} title='Sort Options'>
                         <option value="highest">Price(highest)</option>
                         <option value="lowest">Price(lowest)</option>
                         <option value="a-z">Price(a-z)</option>

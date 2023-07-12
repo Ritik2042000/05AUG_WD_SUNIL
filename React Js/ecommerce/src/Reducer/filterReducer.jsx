@@ -25,44 +25,67 @@ const filterReducer = (state, action) => {
             }
 
         case 'GET_SORT_VALUE':
-            let userSortValue = document.getElementById('sort');
-            let sort_value = userSortValue.options[userSortValue.selectedIndex].value
-            console.log(sort_value);
+            // let userSortValue = document.getElementById('sort');
+            // let sort_value = userSortValue.options[userSortValue.selectedIndex].value
+            // console.log(sort_value);
             return {
                 ...state,
-                sorting_value: sort_value
+                sorting_value: action.payload
             }
 
         case 'SORTING_PRODUCTS':
+            const { filter_products, sorting_value } = state
             let newSortData;
-            let temSortProduct = [...action.payload];
+            let temSortProduct = [...filter_products];
 
-            if (state.sorting_value === 'lowest') {
-                const sortProductsByPrice = (a, b) => {
+            const sortProductsByPrice = (a, b) => {
+
+                if (sorting_value === 'lowest') {
                     return a.price - b.price;
                 }
-                newSortData = temSortProduct.sort(sortProductsByPrice)
-            }
-            if (state.sorting_value === 'highest') {
-                const sortProductsByPrice = (a, b) => {
+
+                if (sorting_value === 'highest') {
                     return b.price - a.price;
                 }
-                newSortData = temSortProduct.sort(sortProductsByPrice)
-            }
-            if (state.sorting_value === 'a-z') {
-                newSortData = temSortProduct.sort((a, b) =>
-                    a.name.localeCompare(b.name)
-                );
-            }
-            if (state.sorting_value === 'z-a') {
-                newSortData = temSortProduct.sort((a, b) =>
-                    b.name.localeCompare(a.name)
-                );
-            }
 
+                if (sorting_value === 'a-z') {
+                    return a.name.localeCompare(b.name)
+                }
+                if (sorting_value === 'z-a') {
+                    return b.name.localeCompare(a.name)
+                }
+            }
+            newSortData = temSortProduct.sort(sortProductsByPrice)
             return {
                 ...state,
                 filter_products: newSortData,
+            }
+
+        case 'SEARCH_BAR_VALUE':
+            const { searchItemName, searchItemValue } = action.payload
+
+
+            return {
+                ...state,
+                filters: {
+                    ...state.filters,
+                    [searchItemName]: [searchItemValue]
+                }
+            }
+
+        case 'SEARCH_FILTER_PRODUCTS':
+
+            let { all_products } = state;
+            let temFilterProducts = [...all_products]
+
+            const { text } = state.filters
+
+            temFilterProducts = temFilterProducts.filter((curElm)=>{
+                return curElm.name.toLowerCase().includes(text);
+            })
+            return {
+                ...state,
+                filter_products: temFilterProducts,
             }
 
         default:
