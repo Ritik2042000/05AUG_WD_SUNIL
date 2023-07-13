@@ -3,7 +3,7 @@ import { styled } from 'styled-components';
 import Product from './Product'
 
 const GridView = ({ products }) => {
-    console.log(products , 'grid view');
+    // console.log(products , 'grid view');
 
     return (
         <Wrapper className='section'>

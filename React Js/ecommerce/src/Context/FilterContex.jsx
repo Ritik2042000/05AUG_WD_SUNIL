@@ -11,9 +11,11 @@ const initialState = {
     grid_view: true,
     sorting_value: 'lowest',
     filters: {
-        text: '',
-
-    }
+        text: "",
+        category: "all",
+        company: "all",
+        color: "all",
+      },
 };
 
 export const FilterContextProvider = ({ children }) => {
@@ -42,11 +44,16 @@ export const FilterContextProvider = ({ children }) => {
     }
     
     //for search bar in filtersection
-    const updateFilterValue = (e) => {
-        let searchItemName = e.target.name;
-        let searchItemValue = e.target.value;
-        return dispatch({ type: 'SEARCH_BAR_VALUE', payload: {searchItemName,searchItemValue} });
-    }
+    const updateFilterValue = (event) => {
+        // let name = e.target.name;
+        // let value = e.target.value;
+        // return dispatch({ type: 'SEARCH_BAR_VALUE', payload: {name,value} });
+        let name = event.target.name;
+        let value = event.target.value;
+        return dispatch({ type: "SEARCH_BAR_VALUE", payload: { name, value } });
+    
+      
+    };
 
 
     //<--------- USE EFFECT HOOKS --------->
@@ -75,3 +82,6 @@ export const FilterContextProvider = ({ children }) => {
 export const useFilterContext = () => {
     return useContext(FilterContex)
 }
+
+
+

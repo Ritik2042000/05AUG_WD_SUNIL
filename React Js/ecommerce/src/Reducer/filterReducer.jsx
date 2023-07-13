@@ -62,34 +62,46 @@ const filterReducer = (state, action) => {
             }
 
         case 'SEARCH_BAR_VALUE':
-            const { searchItemName, searchItemValue } = action.payload
-
-
+            const { name, value } = action.payload;
             return {
                 ...state,
                 filters: {
                     ...state.filters,
-                    [searchItemName]: [searchItemValue]
+                    [name]: value
                 }
             }
 
         case 'SEARCH_FILTER_PRODUCTS':
 
             let { all_products } = state;
-            let temFilterProducts = [...all_products]
+            let temFilterProduct = [...all_products];
 
-            const { text } = state.filters
+            const { text, category, company } = state.filters;
 
-            temFilterProducts = temFilterProducts.filter((curElm)=>{
-                return curElm.name.toLowerCase().includes(text);
-            })
-            return {
-                ...state,
-                filter_products: temFilterProducts,
+            if (text) {
+                temFilterProduct = temFilterProduct.filter((curElem) => {
+                    return curElem.name.toLowerCase().includes(text);
+                })
+            }
+            if (category !== "all") {
+                temFilterProduct = temFilterProduct.filter((curElm) => {
+                    return curElm.category === category
+                })
+            }
+            if (company !== "all") {
+                temFilterProduct = temFilterProduct.filter((curElm) => {
+                    return curElm.company.toLowerCase() === company.toLowerCase()
+                })
             }
 
+            return {
+                ...state,
+                filter_products: temFilterProduct,
+            }
+
+
         default:
-            return state
+            return state;
 
     }
 
