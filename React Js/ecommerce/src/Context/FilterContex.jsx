@@ -14,7 +14,10 @@ const initialState = {
         text: "",
         category: "all",
         company: "all",
-        color: "all",
+        colors: "all",
+        maxPrice: 0,
+        price : 0,
+        minPrice : 0,
       },
 };
 
@@ -38,8 +41,8 @@ export const FilterContextProvider = ({ children }) => {
     }
 
     //for sorting function
-    const sortingItems = (e) => {
-        let userData = e.target.value
+    const sortingItems = (event) => {
+        let userData = event.target.value;
         return dispatch({ type: 'GET_SORT_VALUE', payload: userData });
     }
     
@@ -50,10 +53,13 @@ export const FilterContextProvider = ({ children }) => {
         // return dispatch({ type: 'SEARCH_BAR_VALUE', payload: {name,value} });
         let name = event.target.name;
         let value = event.target.value;
-        return dispatch({ type: "SEARCH_BAR_VALUE", payload: { name, value } });
-    
-      
+        return dispatch({ type: "SEARCH_BAR_VALUE", payload: { name, value } });      
     };
+
+    //for Clear The Filters 
+    const clearFilters = () => {
+        dispatch({type:'CLEAR_FILTERS'})
+    }
 
 
     //<--------- USE EFFECT HOOKS --------->
@@ -73,7 +79,7 @@ export const FilterContextProvider = ({ children }) => {
 
 
     return (
-        <FilterContex.Provider value={{ ...state, setGridView, setListView, sortingItems,updateFilterValue }}>
+        <FilterContex.Provider value={{ ...state, setGridView, setListView, sortingItems,updateFilterValue,clearFilters }}>
             {children}
         </FilterContex.Provider>
     );

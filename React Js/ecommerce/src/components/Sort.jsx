@@ -20,8 +20,8 @@ const Sort = () => {
                 <form action="#">
                     <label htmlFor="sort"></label>
                     <select name="sort" id="sort" className='.sort-selection--style' onClick={sortingItems} title='Sort Options'>
-                        <option value="highest">Price(highest)</option>
                         <option value="lowest">Price(lowest)</option>
+                        <option value="highest">Price(highest)</option>
                         <option value="a-z">Price(a-z)</option>
                         <option value="z-a">Price(z-a)</option>
                     </select>
