@@ -5,7 +5,7 @@ import FormatePrice from '../Helper/FormatePrice';
 const Product = (CurElm) => {
 
     const { id, image, name, price, category } = CurElm;
-    // console.log(CurElm);
+    console.log('price of card ',CurElm.price);
 
     return (
         <NavLink to={`/singleproduct/${id}`}>

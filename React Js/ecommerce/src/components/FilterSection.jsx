@@ -29,7 +29,7 @@ const FilterSection = () => {
     <Wrapper>
       <div className="filter-search">
         <form onSubmit={(e) => e.preventDefault()} >
-          <input type="text" name='text' value={text} onChange={updateFilterValue} />
+          <input type="text" name='text' value={text} onChange={updateFilterValue}  placeholder='Search Products '/>
         </form>
         <div className='filter-category'>
           <h3>Category</h3>
