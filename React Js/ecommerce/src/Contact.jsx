@@ -1,3 +1,4 @@
+import { useAuth0 } from '@auth0/auth0-react';
 import React from 'react';
 import { styled } from 'styled-components'
 
@@ -34,6 +35,7 @@ const Contact = () => {
     }
   `;
    
+  const {user, isAuthenticated} = useAuth0();
     return (
         < Wrapper >
             <h2 className='common-heading'>Contact Page</h2>    
@@ -42,8 +44,9 @@ const Contact = () => {
             <div className="container">
                 <div className="contact-form">
                     <form action="" method='POST' className='contact-inputs'>
-                        <input type="text" placeholder='username' name='username' required autoComplete='off' />
-                        <input type="email" placeholder='Email' name='Email' required autoComplete='off' />
+                        <input type="text" placeholder='username' name='username' required autoComplete='off' value={isAuthenticated ? user.name : ''} />
+                        <input type="email" placeholder='Email' name='Email' required autoComplete='off'
+                        value={isAuthenticated ? user.email : ''} />
                         <textarea name="Messages" id="" cols="30" rows="10" placeholder='Enter your Message'></textarea>
                         <input type="submit"  name='Submit'  />
                     </form>

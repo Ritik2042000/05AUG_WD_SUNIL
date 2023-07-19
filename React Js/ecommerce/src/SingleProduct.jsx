@@ -10,6 +10,7 @@ import { MdSecurity } from "react-icons/md";
 import { TbTruckDelivery, TbReplace } from "react-icons/tb";
 import Star from './components/Star';
 import AddToCart from './components/AddToCart';
+import Loader from './components/Loader';
 
 // import 
 
@@ -24,10 +25,11 @@ const SingleProduct = () => {
 
     useEffect(() => {
         getSingleProducts(`${API}?id=${id}`)
+        window.scrollTo({top:0,behavior:"auto"})
     }, [])
 
     if (isSingleLoading) {
-        return <div className="page_loading"><h1>Loading....</h1></div>;
+        return <Loader/>;
     }
 
 

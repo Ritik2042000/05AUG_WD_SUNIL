@@ -56,7 +56,7 @@ const cartReducer = (state,action) => {
         let decraesProduct = state.cart.map((curElem)=> {
             if (curElem.id === action.payload) {
                 let decAmount = curElem.amount - 1;
-                console.log(decAmount);
+                // console.log(decAmount);
                 if (decAmount <= 1) {
                     decAmount = 1
                 }
@@ -113,6 +113,33 @@ const cartReducer = (state,action) => {
             cart:[],
         }
 
+            case 'CART_TOTAL_PRICE_ITMES' :
+                let {total_price,total_item} = state.cart.reduce((accum,curElem)=>{
+                    let { price,amount } = curElem;
+                    accum.total_item += amount;
+                    accum.total_price += price*amount;
+                    
+                    return accum
+                },
+                {
+                    total_price : 0,   
+                    total_item : 0,   
+                    
+                })
+                
+                return {
+                    ...state,
+                    total_price,
+                    total_item,
+                }
+                
+                default:
+                    return state;     
+            }
+            
+        }
+        export default cartReducer;
+        
         // case 'CART_TOTAL_ITEMS' :
         //     let cartitemsvalues = state.cart.reduce((accum , curElem)=> {
         //         let  {amount} = curElem;
@@ -139,45 +166,3 @@ const cartReducer = (state,action) => {
         //         ...state,
         //         total_price: totalPrice,
         //     }
-            
-            
-            case 'CART_TOTAL_PRICE_ITMES' :
-                let {total_price,total_item} = state.cart.reduce((accum,curElem)=>{
-                    let { price,amount } = curElem;
-                    accum.total_item += amount;
-                    accum.total_price += price*amount;
-                    
-                    return accum
-                },
-                {
-                    total_price : 0,   
-                    total_item : 0,   
-                
-                })
-                
-                return {
-                    ...state,
-                    total_price,
-                    total_item,
-                }
-                
-                default:
-                return state;     
-            }
-
-        }
-        export default cartReducer;
-        // if(action.type === 'ADD_TO_CART') {
-            //     let {id, color, amount, product} = action.payload;
-            //     console.log(product); 
-            // }
-            
-            // return state;
-            // if (action.type === REMOVE_FROM_CART) {
-            //     let updatedCart = state.cart.filter((curElem) =>  curElem.id !== action.payload)
-                
-            // }
-            // return {
-            //     ...state,
-            //     cart: updatedCart ,
-            // }

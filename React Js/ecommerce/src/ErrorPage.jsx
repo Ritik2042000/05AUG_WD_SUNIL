@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { styled } from 'styled-components';
 import { Button } from './styles/Button';
 import { NavLink } from 'react-router-dom';
 
 const ErrorPage = () => {
+    
+    useEffect (()=> {
+        window.scrollTo({top:0,behavior:"auto"})
+    })
+    
     return (
         <Wrapper>
             <div className="container">

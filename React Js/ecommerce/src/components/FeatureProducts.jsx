@@ -133,12 +133,13 @@
 import { useProductContext } from '../Context/ProductContext';
 import styled from "styled-components";
 import Product from "./Product";
+import Loader from './Loader';
 
 const FeatureProduct = () => {
   const { isLoading, featureProducts } = useProductContext();
 
   if (isLoading) {
-    return <div> ......Loading </div>;
+    return <Loader/>;
   }
 
   return (

@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from "styled-components"
 import FilterSection from './components/FilterSection';
 import Sort from './components/Sort';
 import ProductList from './components/ProductList';
 
 const Products = () => {
-    return (
+    
+  useEffect (()=> {
+    window.scrollTo({top:0,behavior:"auto"})
+})
+  
+  
+  return (
         <Wrapper>
           <div className="container grid grid-filter-column">
             <div>
