@@ -6,9 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    
+  <pre id="star">
+  </pre>
 </body>
 <script>
+  let triangle = document.getElementById('star')
     let n = 5;
 let string = "";
 for (let i = 1; i <= n; i++) {
@@ -23,5 +25,7 @@ for (let i = 1; i <= n; i++) {
   string += "\n";
 }
 console.log(string);
+
+triangle.innerHTML = string
 </script>
 </html>
