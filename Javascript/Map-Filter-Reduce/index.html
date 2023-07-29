@@ -1,43 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
 </body>
 <script>
-    const nums=[1,2,3,4,5,6]
-// <-----map------>
-    
+    const nums = [1, 2, 3, 4, 5, 6]
+    // <-----map------>
+
     // const sum = nums.map((curElem,index,arr)=>{
-    //         return curElem[0] + 3;
+    //         return curElem + 3;
     // })
     // console.log(sum);
-// <--------------------------------->
+    // <--------------------------------->
 
-// <-----Filter--------->
+    // <-----Filter--------->
 
-// const showFiltered = nums.filter((curElem,i)=>{
+    // const showFiltered = nums.filter((curElem,i)=>{
 
     //    if (curElem<6) {
-        //     return curElem;
-        //    } 
-        // })
-        // console.log(showFiltered);
-        
-// <---------------------------------> 
-        
-// <----Reduce------>
+    //     return curElem;
+    //    } 
+    // })
+    // console.log(showFiltered);
 
-// const reduce = nums.reduce((accum,curElem)=>{
-         //         return accum + curElem
+    // <---------------------------------> 
+
+    // <----Reduce------>
+
+    // const reduce = nums.reduce((accum,curElem)=>{
+    //         return accum + curElem
     // },0)
     // console.log(reduce);
 
-// <--------------------------------->
+    // <--------------------------------->
+
+    // <---------------Polyfill of Map------>
+
+    Array.prototype.myMap = function (callback) {
+        let temp = [];
+        for (let i = 0; i < this.length; i++) {
+            temp.push(callback(this[i], i, this));
+        }
+        return temp;
+    };
+
+    const sum = nums.myMap((curElem, index, arr) => {
+        return curElem + 3;
+    })
+    console.log(sum);
+
+    // <--------------------------------->
+
+    // <---------------Polyfill of Filter------>
+    Array.prototype.myFilter = function (callback) {
+        let temp = [];
+        for (let i = 0; i < this.length; i++) {
+            if (callback(this[i], i, this)) temp.push(this[i]);
+        }
+        return temp;
+    };
+
+    const showFiltered = nums.myFilter((curElem, i) => {
+
+        if (curElem < 6) {
+            return curElem;
+        }
+    })
+    console.log(showFiltered); // [1,2,3,4,5]
+
+    // <--------------------------------->
+
+    // <---------------Polyfill of Reduce------>
+
+    Array.prototype.myReduce = function (callback, initialValue) {
+        var accumaulator = initialValue
+        for (let i = 0; i < this.length; i++) {
+            accumaulator = accumaulator ? callback(accumaulator, this[i], i, this) : this[i];
+        }
+        return accumaulator;
+    }
+
+    const reduce = nums.myReduce((accum, curElem) => {
+        return accum + curElem
+    }, 0)
+    console.log(reduce); //21
+
+    // <--------------------------------->
+
+    // <---------------Map vs ForEach ------>
+
+    //    1) map return new array 
+    //    1) forEach doesn't return new array
+
+    //    2) in map function we can chain anthor function 
+    //    2) in for Each function we can't do that bcz it doesn't not retun new array 
+
+    // <--------------------------------->
+
+
+    let students = [
+        { name: 'rohan', rollNumber: 31, marks: 80 },
+        { name: 'soham', rollNumber: 2, marks: 85 },
+        { name: 'mohan', rollNumber: 13, marks: 70 },
+        { name: 'jenny', rollNumber: 18, marks: 90 },
+        { name: 'kaushal', rollNumber: 21, marks: 80 }
+    ]
+
+    // get names from this Arrary in capital Letter
+    // <---------------Using For Loop ------>
+
+    // let names = [];
+    // for (let i = 0; i < students.length; i++) {
+    //     names.push(students[i].name.toUpperCase());
+    // }
+    // console.log(names);
+
+    // <--------------------------------->
+    // <---------------Using For map ------>
+
+    let names = students.map((curElem) => {
+        return curElem.name.toUpperCase()
+    })
+    console.log(names);
+
+    // <--------------------------------->
+
+    // get students detalis whose markes is grether than 80 
+    // <---------------Use of filter------> 
+    const Result = students.filter((curElem) => {
+        if (curElem.marks > 80) {
+            return curElem
+        }
+    })
+    console.log(Result);
+    // get students detalis whose markes is grether than 80  and rollnummber 
+    const Result2 = students.filter((curElem) => {
+        if (curElem.marks > 80 && curElem.rollNumber > 15) {
+            return curElem;
+        }
+    })
+    console.log(Result2);
+    // <--------------------------------->
+    // get students marks sum
+
+    // <---------------Use of filter------> 
+    const Total = students.reduce((accum, curElem) => {
+        return accum + curElem.marks
+    }, 0)
+    console.log(Total);
+
 
 </script>
+
 </html>
