@@ -5,15 +5,18 @@ import Header from './headerofsub.jsx'
 const Subscribe = () => {
     const [superback, setSuperback] = useState('blue')
     const [premiumback, setPremiumback] = useState('black')
+    const [premiumyellow, setPremiumyellow] = useState('clr-chng')
 
     const changeThemenormal = () => {
         setSuperback((color) => (color = 'blue'));
         setPremiumback((color) => (color = 'black'))
+        setPremiumyellow((color)=>(color = 'clr-chng'))
         console.log('blue');
     };
     const changeTheme = () => {
         setSuperback((color) => (color = 'black'));
         setPremiumback((color) => (color = 'blue'))
+        // setPremiumyellow((color)=>(color = 'clr-chng'))
         console.log('black');
     };
     return (
@@ -27,8 +30,8 @@ const Subscribe = () => {
                             <table>
                                 <tr>
                                     <td colSpan={1}></td>
-                                    <td className={`mid clr-chng ${superback}`} > Super</td>
-                                    <td className={`back-chnge mid ${premiumback}`}>Premium</td>
+                                    <td className={`mid  ${superback} ${premiumyellow} `} > Super</td>
+                                    <td className={`back-chnge mid ${premiumback} ${premiumyellow}`}>Premium</td>
                                 </tr>
                                 <tr>
                                     <td rowSpan={1} className='lef'>All contect
@@ -61,7 +64,7 @@ const Subscribe = () => {
                                 <tr>
                                     <td className='lef'>Max audio quality</td>
                                     <td className={`back-chnge bor-rad ${superback}`}>Dolby 5.1</td>
-                                    <td className={`back-chnge ${premiumback}`}>Dolby 5.1</td>
+                                    <td className={`back-chnge  bor-rad ${premiumback}`}>Dolby 5.1</td>
                                 </tr>
                             </table>
                             <div className="plans">

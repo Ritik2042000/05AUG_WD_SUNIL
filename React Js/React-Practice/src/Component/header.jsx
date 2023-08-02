@@ -23,7 +23,7 @@ export default function App() {
   return (
     <MDBNavbar expand='lg' light bgColor='light'>
       <MDBContainer fluid>
-        <MDBNavbarBrand href='#'>Project</MDBNavbarBrand>
+        <MDBNavbarBrand href='#'>React</MDBNavbarBrand>
 
         <MDBNavbarToggler
           aria-controls='navbarSupportedContent'
@@ -45,10 +45,22 @@ export default function App() {
               <Link to='/About' className='nav-link'>About</Link>
             </MDBNavbarItem>
             <MDBNavbarItem>
+              <Link to='/Example' className='nav-link'>Example</Link>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+              <Link to='/Login' className='nav-link'>Login</Link>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
               <Link to='/Subscribe' className='nav-link'>Subscribe</Link>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <Link to='/Apidata' className='nav-link'>Data</Link>
+              <Link to='/Pagination' className='nav-link'>Pagination</Link>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+              <Link to='/Fileexplorer' className='nav-link'>File Explorer</Link>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+              <Link to='/crud' className='nav-link'>CURD </Link>
             </MDBNavbarItem>
 
             <MDBNavbarItem>
@@ -64,7 +76,11 @@ export default function App() {
               </MDBDropdown>
             </MDBNavbarItem>
           </MDBNavbarNav>
-               <MDBBtn href='/Login' className='nav-link'> Login</MDBBtn>
+
+          <form className='d-flex input-group w-auto'>
+            <input type='search' className='form-control' placeholder='Type query' aria-label='Search' />
+            <MDBBtn color='primary'>Search</MDBBtn>
+          </form>
         </MDBCollapse>
       </MDBContainer>
     </MDBNavbar>
