@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 const EmpCreate = () => {
-    const navigate = useNavigate()
     const [updateData, setUpdateData] = useState({
         'id': '',
         'phone': '',
@@ -11,6 +10,7 @@ const EmpCreate = () => {
         'isactive': 'true',
         'name': '',
     });
+    const navigate = useNavigate()
     
     
     const changeData = (e) => {
@@ -24,13 +24,13 @@ const EmpCreate = () => {
     const handleSubmit = (e) => {
         const emptyFields = Object.keys(updateData).filter((key) => {
             const value = updateData[key];
-            return key !== 'id'&& typeof value === 'string' && value.trim() === ''; // Check if the value is an empty string
+            return key !== 'id'&& typeof value === 'string' && value.trim() === ''; 
         });
     
         if (emptyFields.length > 0) {
-            // Display error message for empty fields
+            
             alert(`Please fill in the following fields: ${emptyFields.join(', ')}`);
-            return; // Prevent form submission if any field is empty
+            return; 
         }
         e.preventDefault();
         fetch('http://localhost:5000/employee', {
@@ -52,7 +52,7 @@ const EmpCreate = () => {
                     <form className="container" onSubmit={handleSubmit}>
                         <div className="card" style={{ 'textAlign': 'left' }}>
                             <div className="card-title" style={{ 'textAlign': 'center' }}>
-                                <h2>Employ Create</h2>
+                                <h2>Employ Edit</h2>
                             </div>
                             <div className="card-body">
                                 <div className="row">

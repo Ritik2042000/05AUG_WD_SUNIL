@@ -65,17 +65,18 @@ const MainRouter = createBrowserRouter([
     element: <><Employ /></>,
   },
   {
-    path: '/empcreate/empid:',
-    element: <EmpCreate />
+    path: '/empcreate',
+    element:<><EmpCreate /></>,
   },
   {
-    path: '/empdetalis/empid:',
-    element: <EmpDetalis />
+    path: "/employedit/:id",
+    element: <><EmpEdit/></>,
   },
   {
-    path: '/empedit/empid:',
-    element: <EmpEdit />
-  }
+    path: "/employdetalis/:id",
+    element: <><EmpDetalis/></>,
+  },
+  
 
 
 ]);

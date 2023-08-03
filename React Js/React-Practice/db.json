@@ -4,7 +4,7 @@
       "id": 1,
       "name": "json-server",
       "email": "json-server@mail.com",
-      "phone": "9863214572"
+      "phone": "9863214573"
     },
     {
       "id": 2,
@@ -12,14 +12,6 @@
       "email": "ddsdsds@ddddddd.com",
       "isactive": "false",
       "name": "soham"
-    },
-    {
-      "id": 3,
-      "phone": "265897423",
-      "email": "rohan@rohan.com",
-      "isactive": "true",
-      "name": "Rohan"
     }
-    
   ]
 }
