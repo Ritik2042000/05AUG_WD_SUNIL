@@ -2,13 +2,13 @@ import React from 'react';
 import { styled } from 'styled-components';
 import NuberSelector from './Components/NuberSelector';
 
-const TotalScore = () => {
+const TotalScore = ({score}) => {
     return (
 
         <Container>
-            <h2>0</h2>
+            <h2>{score}</h2>
             <p>Total Score</p>
-            <NuberSelector/>
+            
         </Container>
 
     );
