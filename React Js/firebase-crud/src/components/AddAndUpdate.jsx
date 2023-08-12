@@ -26,7 +26,7 @@ const AddAndUpdate = ({ isOpen, onClose, isUpdate, contact }) => {
     }
     const updateContact = async (contact, id) => {
         try {
-            const contactRef = (db, 'contacts', id);
+            const contactRef = doc(db, 'contacts', id);
             await updateDoc(contactRef, contact);
             onClose();
             toast.success('Contact Updated SuccessFully');

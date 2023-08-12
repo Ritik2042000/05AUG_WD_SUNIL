@@ -8,7 +8,7 @@ const Modal = ({ isOpen, onClose, children }) => {
             {
                 isOpen && (
                     <>
-                        <div className=' relative  bottom-60  m-auto z-30 min-h-[200px] max-w-[50%] bg-white p-4 rounded-lg'>
+                        <div className=' relative  bottom-32  z-30 min-h-[200px] max-w-[90%] m-auto bg-white p-4 rounded-lg'>
                             <div className='flex justify-end'>
                                 <AiOutlineClose className='text-2xl cursor-pointer' onClick={onClose} />
                             </div>
