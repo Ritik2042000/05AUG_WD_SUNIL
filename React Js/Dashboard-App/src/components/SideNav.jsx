@@ -22,10 +22,10 @@ const SideNav = () => {
 
     return (
         <>
-            <Stack justify="space-between" boxShadow="lg" maxWidth="16rem" height="100vh" >
+            <Stack justify="space-between" boxShadow={{base:"none",lg:"lg"}}  w={{base:"full",}} height="100vh" bg="white" >
                 <Box>
-                    <Heading textAlign="center" fontSize="20px" as='h1' pt="56px">@Admin DashBoard</Heading>
-                    <Box mt="6" mx="12px">
+                    <Heading textAlign="center" fontSize="20px" as='h1' pt="3.6rem">@Admin DashBoard</Heading>
+                    <Box mt="6" mx="3">
                         {
                             navLinks.map((nav) => (
                                 <HStack borderRadius="10px" key={nav.text} py="3" px="4" color="#797E82" _hover={{
@@ -39,7 +39,7 @@ const SideNav = () => {
                         }
                     </Box>
                 </Box>
-                <Box mt="6" mx="12px" mb="6">
+                <Box mt="6" mx="3" mb="6">
                     <HStack borderRadius="10px" py="3" px="4" color="#797E82" _hover={{
                         bg: "#F3F3F7",
                         color: "#171717",
