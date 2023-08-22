@@ -24,7 +24,7 @@ const SideNav = () => {
         <>
             <Stack justify="space-between" boxShadow={{base:"none",lg:"lg"}}  w={{base:"full",}} height="100vh" bg="white" >
                 <Box>
-                    <Heading textAlign="center" fontSize="20px" as='h1' pt="3.6rem">@Admin DashBoard</Heading>
+                    <Heading textAlign="center" fontSize="20px" as='h1' pt="3.5rem">@Admin DashBoard</Heading>
                     <Box mt="6" mx="3">
                         {
                             navLinks.map((nav) => (
