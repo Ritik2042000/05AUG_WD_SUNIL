@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaCrown } from 'react-icons/fa'
-import SectionOfPrograms from './SectionOfPrograms';
+import SectionOfPrograms from './CommonSection';
 import { programs } from '../data';
 import Card from '../UI/Card';
 import { Link } from 'react-router-dom';

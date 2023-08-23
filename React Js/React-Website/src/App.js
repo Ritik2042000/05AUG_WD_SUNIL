@@ -5,9 +5,10 @@ import Contact from './pages/contact/Contact';
 import Gallery from './pages/gallery/Gallery';
 import NotFound from './pages/notFound/NotFound';
 import About from './pages/about/About';
-import Trainer from './pages/trainers/Trainer';
 import Plans from './pages/plans/Plans';
 import NavBar from './component/NavBar';
+import Footer from './component/Footer';
+import Trainers from './pages/trainers/Trainers';
 
 
 const App = () => {
@@ -21,18 +22,10 @@ const App = () => {
         <Route path='contact' element={ <Contact />}/>
         <Route path='gallery' element={<Gallery />}/>
         <Route path='plans' element={ <Plans />}/>
-        <Route path='trainer' element={<Trainer />}/>
+        <Route path='trainers' element={<Trainers />}/>
         <Route path='*' element={ <NotFound />}/>
       </Routes>
-
-
-      
-     
-      
-      
-      
-      
-     
+      <Footer/>
     </BrowserRouter>
 
   );

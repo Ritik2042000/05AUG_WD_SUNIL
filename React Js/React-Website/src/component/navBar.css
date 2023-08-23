@@ -1,6 +1,6 @@
 nav {
     height: 5rem;
-    width: 100vw;
+    width: 100%;
     background: var(--color-primary);
     display: grid;
     place-items: center;

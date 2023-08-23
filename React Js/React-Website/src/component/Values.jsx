@@ -3,7 +3,7 @@ import Image from '../images/values.jpg'
 import { GiCutDiamond } from 'react-icons/gi'
 import { values } from '../data';
 import Card from '../UI/Card';
-import SectionOfPrograms from './SectionOfPrograms';
+import CommonSection from './CommonSection';
 
 
 const Values = () => {
@@ -16,7 +16,7 @@ const Values = () => {
                     </div>
                 </div>
                 <div className="values__right">
-                    <SectionOfPrograms icon={<GiCutDiamond />} title='values' />
+                    <CommonSection icon={<GiCutDiamond />} title='values' />
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem est quod quia eaque, ex maxime quam soluta tenetur ratione  explicabo et fuga consectetur unde necessitatibus quaerat voluptate voluptatem quos culpa.
                     </p>

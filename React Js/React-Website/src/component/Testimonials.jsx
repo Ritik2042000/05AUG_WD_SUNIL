@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import SectionOfPrograms from "./SectionOfPrograms";
+import SectionOfPrograms from "./CommonSection";
 import Card from '../UI/Card';
 import { ImQuotesLeft } from 'react-icons/im';
 import { IoIosArrowDropleftCircle, IoIosArrowDroprightCircle } from 'react-icons/io';
@@ -9,7 +9,7 @@ import { testimonials } from '../data';
 
 const Testimonials = () => {
 
-    const [index, setIndex] = useState(2)
+    const [index, setIndex] = useState(0)
     const { name, quote, job, avatar } = testimonials[index];
 
     const PrevslideBtn = () => {
