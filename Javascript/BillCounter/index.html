@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BillCounter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="container">
+    <h1>Bill Calculator</h1>
+
+    <div id="calculator">
+        <form>
+            <label for="">
+                How Much was Your Bill?
+                <input type="text" id="billamount" ><br>
+            </label>
+            <label>
+                what was your discount? <br>
+                <input type="text" id="discount" min="1" max="100"  required><br>
+                <!-- <select  id="servicesQuality">
+                    <option disabled selected value="0">-- Choose an output --  </option>
+                    <option value="0.8">80% - Super</option>
+                    <option value="0.6">60% - outstanding</option>
+                    <option value="0.5">50% - Best  </option>
+                    <option value="0.3">30% - Better</option>
+                    <option value="0.2">20% - Good</option>
+                    <option value="0.15">15% - It Was Okay</option>
+                    <option value="0.1">10% - Bad</option>
+                    <option value="0.05">5% - Terrible</option>
+                </select> -->
+            </label><br>
+            <label>
+                How many people sharing this bill?<br>
+                <input type="text"  id="totalPeople"> People
+            </label><br>
+            <button type="button" id="calculate" >Calculate!</button>
+        </form>
+    </div>
+
+    <div id="totaltip">
+        <span id="tip">0.00</span>
+        <small id="each">each</small>
+    </div>
+</div>
+
+<script src="./index.js"></script>
+</body>
+</html>
