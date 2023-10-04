@@ -1,0 +1,234 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url(./assets/fonts/Poppins/Poppins-Regular.ttf);
+}
+
+body {
+  font-family: 'Poppins' !important;
+  background-color: #F5F8F8 !important;
+}
+
+p,
+ul {
+  list-style: none;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* <-----RiteekLoginpage-----> */
+/* <---inputs----> */
+.form-control.form-control-solid {
+  font-size: 16px;
+}
+
+.form-control.form-control-solid.active,
+.form-control.form-control-solid.focus,
+.form-control.form-control-solid:active,
+.form-control.form-control-solid:focus {
+  background-color: #eef3f7 !important;
+  border-color: #eef3f7 !important;
+  color: #5e6278 !important;
+  outline: none !important;
+  box-shadow: none;
+  /* transition: color 0.2s ease background-color 0.2s ease; */
+}
+
+.bg-login {
+  background-color: #eff6ff;
+  min-height: 100vh;
+}
+
+/* <-----Riteek Loginpage-----> */
+.bg {
+  background-color: #0b3856;
+}
+
+.p-15 {
+  padding: 3.58rem 0;
+}
+
+/* <-----Riteekslidenav-----> */
+.nav-logo img {
+  width: 80%;
+}
+
+.nav-wapper {
+  width: 280px;
+  height: 100vh;
+  position: fixed;
+  overflow-y: auto;
+  z-index: 1;
+  background-color: #fff;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.nav-links{
+ margin: 0 0 60px 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-links li {
+  font-size: 17px;
+  padding: 10px 0px;
+  
+}
+
+.nav-links li i {
+  font-size: 20px;
+}
+
+.nav-wapper::-webkit-scrollbar {
+  display: none;
+}
+
+.icon_size {
+  font-size: 25px;
+  margin: 5px 10px;
+  
+}
+
+.bg-nav {
+  box-shadow: 5px 5px 5px #eef3f7;
+}
+
+.drop-down {
+  display: none;
+  position: relative;
+}
+
+.drop-down ul li a {
+  display: inline-block;
+
+}
+
+.abc {
+  height: 100%;
+  padding: 0px 20px;
+}
+
+.active li {
+  color: #2449ee;
+}
+
+.nav-wapper li:hover {
+  color: #2449ee;
+}
+
+.admin_detalis {
+  border-top: 1px solid #F5F8F8;
+  position: fixed;
+  z-index: 2;
+  bottom: 0;
+  background-color: #fffF;
+}
+
+.rounded_img {
+  width: 30%;
+}
+
+.rounded_img img {
+  width: 90%;
+  border-radius: 50%;
+}
+
+/* <---Riteek-dasboard---> */
+.main-wrapper {
+  padding-left: 282px;
+  padding-top: 70px;
+}
+
+
+@media screen and (max-width:767px) {
+  /* <-----logingpage------> */
+
+  .bg-login {
+    min-height: 100%;
+  }
+
+  .logo {
+    width: 40%;
+  }
+
+  .p-15 {
+    padding: 0;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .close-button {
+    display: block;
+  }
+}
+
+@media screen and (max-width:475px) {
+
+  /* <-----logingpage------> */
+  .bg-login {
+    /* width: 75%; */
+    min-height: 100%;
+  }
+
+  .logo {
+    width: 60%;
+  }
+
+}
+
+
+@media screen and (max-width: 992px) {
+
+  .menu-button,
+  .close-button {
+    display: block;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .close-button {
+    display: none;
+    /* Initially hidden */
+  }
+
+  .nav-wapper.open {
+    width: 250px;
+    /* Adjust the width as needed */
+  }
+
+  .nav-links {
+    transition: transform 0.3s ease-in-out;
+    /* Add a smooth transition effect */
+    transform: translateX(0);
+  }
+
+}
+
+/* Additional styling for the closed sidebar */
+.menu-button {
+  display: none;
+  /* Initially hidden */
+}
+
+.close-button {
+  display: none;
+}
