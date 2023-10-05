@@ -5,17 +5,13 @@ const User = () => {
     return (
         <>
             <SideNav />
-            <div className="main-wrapper  ">
-                <div className="container-fluid  ">
-                    <div className="row py-2">
-                        <p>User</p>
-
+            <div className="main-wrapper">
+                <div className="container">
+                    <div className="page-title">
+                        <h1 className="page-heading mb-0">User</h1>
                     </div>
-
-
                 </div>
             </div>
-
 
         </>
     );

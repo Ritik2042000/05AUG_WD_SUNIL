@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Poppins';
-  src: url(./assets/fonts/Poppins/Poppins-Regular.ttf);
+  src: url(../fonts/Poppins/Poppins-Regular.ttf);
 }
 
 body {
@@ -88,11 +88,39 @@ a {
   height: 100vh;
   position: fixed;
   overflow-y: auto;
-  z-index: 1;
+  /* z-index: ; */
   background-color: #fff;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
+
+/* Styles for screens larger than 992px */
+.nav-wrapper {
+  width: 280px;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  overflow-y: auto;
+  z-index: 90;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  background-color: #fff;
+  transition: left 0.3s;
+}
+
+#menu-button {
+  display:none;
+  position: fixed; 
+  transition: left 0.3s;
+}
+
+#close-button{
+  display:none;
+  position: fixed; 
+  transition: left 0.3s;
+
+}
+
 .nav-links{
  margin: 0 0 60px 0;
 }
@@ -112,7 +140,7 @@ a {
   font-size: 20px;
 }
 
-.nav-wapper::-webkit-scrollbar {
+.nav-wrapper::-webkit-scrollbar {
   display: none;
 }
 
@@ -152,7 +180,7 @@ a {
 .admin_detalis {
   border-top: 1px solid #F5F8F8;
   position: fixed;
-  z-index: 2;
+  z-index: 100;
   bottom: 0;
   background-color: #fffF;
 }
@@ -186,7 +214,30 @@ a {
     padding: 1rem 0;
     /* height: 100vh; */
   }
-  
+  .nav-wrapper {
+    left:-280px; /* Initially hidden on smaller screens */
+  }
+  .open{
+    /* to open the slide nav */
+    left: 0px; 
+  }
+
+  #menu-button {
+    z-index: 200;
+    display: block;
+    top:20px;
+    left: 20px;
+  }
+  #close-button{
+    top:20px;
+    z-index: 200;
+    display: block;
+    left: 230px !important;
+  }
+  .main-wrapper {
+    padding-left: 2px;
+    padding-top: 70px;
+  }
 }
 
 @media screen and (max-width:767px) {
@@ -213,13 +264,7 @@ a {
     padding: 50px 0;
     min-height:50vh ;
   }
-  .menu-button {
-    display: block;
-  }
-
-  .close-button {
-    display: block;
-  }
+  
 }
 
 @media screen and (max-width:475px) {
@@ -252,12 +297,10 @@ a {
   box-shadow: 0 10px 30px 0 rgba(82, 63, 105, 0.05);
 }
 .fixed-top,.fixed-bottom{
-  z-index: -0 !important;  
+  z-index: 10 !important;  
 
 } 
-.dashbord-header-content{
-  z-index: 10;
-}
+
 .dashbord-header-content .rounded-circle {
   padding: 0.5rem 1rem;
   cursor: pointer;
