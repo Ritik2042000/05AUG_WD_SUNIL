@@ -8,7 +8,7 @@ import {
   Form,
   Button,
 } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   // Profile Update OffCanvas Hide Show
@@ -70,7 +70,7 @@ function Header() {
               </NavDropdown>
 
               <span className="menu-icon">
-                <NavLink to="/notificationbell" activeClassname='active'>
+                <NavLink to="/notificationbell" activeClassname="active">
                   <i className="fa-regular fa-bell" />
                 </NavLink>
               </span>
@@ -83,14 +83,13 @@ function Header() {
           show={prifleShow}
           onHide={handleProfileClose}
           placement="end"
-          scroll={true}
+          // scroll={true}
         >
-          
           <Offcanvas.Body>
-          <Offcanvas.Header closeButton>
-            <Offcanvas.Title className="fw-bold">Profile</Offcanvas.Title>
-          </Offcanvas.Header>
-          <hr />
+            <Offcanvas.Header closeButton>
+              <Offcanvas.Title className="fw-bold">Profile</Offcanvas.Title>
+            </Offcanvas.Header>
+            <hr />
             <div
               className="profileImgUpload text-center mt-3"
               onClick={handleImgClick}
@@ -150,16 +149,15 @@ function Header() {
           show={passwordShow}
           onHide={handlePasswordClose}
           placement="end"
-          scroll={true}
+          // scroll={true}
         >
-          
           <Offcanvas.Body className="mt-3 px-0">
-          <Offcanvas.Header closeButton>
-            <Offcanvas.Title className="fw-bold">
-              Change Password
-            </Offcanvas.Title>
-          </Offcanvas.Header>
-          <hr />
+            <Offcanvas.Header closeButton>
+              <Offcanvas.Title className="fw-bold">
+                Change Password
+              </Offcanvas.Title>
+            </Offcanvas.Header>
+            <hr />
             <Form>
               <Form.Group className="mb-10" controlId="formBasicName">
                 <Form.Label>

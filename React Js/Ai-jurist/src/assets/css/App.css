@@ -1,19 +1,24 @@
-@font-face {
-  font-family: 'Poppins';
-  src: url(../fonts/Poppins/Poppins-Regular.ttf);
-}
-
 body {
-  font-family: 'Poppins' !important;
-  background-color: #F5F8F8 !important;
+  font-family: "Montserrat" !important;
+  background-color: #f5f8f8 !important;
 }
 
 /* same for all pages  */
-p,
-ul {
-  list-style: none;
-  padding: 0 !important;
+p{
+  font-size: 18px;
+  line-height: 25px;
+  font-family: 'Montserrat', sans-serif;
   margin: 0 !important;
+}
+ul {
+  font-size: 18px;
+  line-height: 25px;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0 !important;
+}
+h3{
+  font-size: 20px;
+
 }
 
 li {
@@ -22,42 +27,63 @@ li {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .main-wrapper {
   padding-left: 282px;
   padding-top: 70px;
+  padding-bottom: 70px;
 }
+
 .container {
   padding: 0 30px !important;
+  max-width: 900px;
 }
+
 .page-title {
+  font-size: 18px;
+  line-height: 25px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  color: #021823 !important;
   padding: 30px 0;
 }
-.page-title .page-heading {
-  font-size: 1.15rem;
+
+/* <---forms inputs----> */
+.form-control,.form-select{
+  background-color: #f5f8fa !important;
+  border-color: #f5f8fa !important;
+  color: #5e6278 !important;
 }
-/* /////////////////////////// */
 
-
-/* <-----RiteekLoginpage-----> */
-/* <---inputs----> */
 .form-control.form-control-solid {
-  font-size: 16px;
+  font-size: 16px;  
 }
 
 .form-control.form-control-solid.active,
 .form-control.form-control-solid.focus,
 .form-control.form-control-solid:active,
-.form-control.form-control-solid:focus {
-  background-color: #eef3f7 !important;
-  border-color: #eef3f7 !important;
-  color: #5e6278 !important;
+.form-control.form-control-solid:focus
+.form-select.active,
+.form-select.focus,
+.form-select:active,
+.form-select:focus
+  {
   outline: none !important;
-  box-shadow: none;
-  /* transition: color 0.2s ease background-color 0.2s ease; */
+  box-shadow: none !important;
+  background-color: #f5f8fa !important;
+  border-color: #f5f8fa !important;
+  color: #5e6278 !important;
 }
+
+.page-title .page-heading {
+   font-size: 18px; 
+}
+
+/* /////////////////////////// */
+
+/* <-----Riteek-Loginpage-----> */
 
 .bg-login {
   background-color: #eff6ff;
@@ -72,29 +98,26 @@ a {
   padding: 2rem 0;
 }
 
-.p-btn{
+.p-btn {
   padding: 1.5rem 0;
 }
-.login_page-form{
+
+.login_page-form {
   width: 80%;
 }
+.border-das{
+  border:1px dashed #a1a1a4 !important;
+}
+
 /* <-----Riteekslidenav-----> */
-.nav-logo img {
-  width: 80%;
-}
-
-.nav-wapper {
-  width: 280px;
-  height: 100vh;
-  position: fixed;
-  overflow-y: auto;
-  /* z-index: ; */
+.nav-logo{
+  width: 255px;
   background-color: #fff;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+}
+.nav-logo img {
+  width: 70%;
 }
 
-/* Styles for screens larger than 992px */
 .nav-wrapper {
   width: 280px;
   height: 100%;
@@ -109,20 +132,19 @@ a {
 }
 
 #menu-button {
-  display:none;
-  position: fixed; 
+  display: none;
+  position: fixed;
   transition: left 0.3s;
 }
 
-#close-button{
-  display:none;
-  position: fixed; 
+#close-button {
+  display: none;
+  position: fixed;
   transition: left 0.3s;
-
 }
 
-.nav-links{
- margin: 0 0 60px 0;
+.nav-links {
+  margin: 60px 0 60px 0;
 }
 
 .nav-links a {
@@ -133,7 +155,6 @@ a {
 .nav-links li {
   font-size: 17px;
   padding: 10px 0px;
-  
 }
 
 .nav-links li i {
@@ -147,11 +168,10 @@ a {
 .icon_size {
   font-size: 25px;
   margin: 5px 10px;
-  
 }
 
 .bg-nav {
-  box-shadow: 2px 2px 2px #eef3f7;
+  box-shadow: 0 10px 30px 0 rgba(82, 63, 105, 0.05);
 }
 
 .drop-down {
@@ -161,28 +181,28 @@ a {
 
 .drop-down ul li a {
   display: inline-block;
-
 }
 
-.abc {
+.drop-down_open {
   height: 100%;
   padding: 0px 20px;
 }
 
 .active li {
-  color: #2449ee;
+  color: #2274c3;
 }
 
-.nav-wapper li:hover {
-  color: #2449ee;
+.nav-wrapper li:hover {
+  color: #2274c3;
 }
 
 .admin_detalis {
-  border-top: 1px solid #F5F8F8;
+  width: 250px;
+  border-top: 1px solid #f5f8f8;
   position: fixed;
   z-index: 100;
   bottom: 0;
-  background-color: #fffF;
+  background-color: #ffff;
 }
 
 .rounded_img-sidenav {
@@ -195,124 +215,57 @@ a {
 }
 
 /* <---Riteek-dasboard---> */
-.main-wrapper {
-  padding-left: 282px;
-  padding-top: 70px;
+.dashboard_title{
+  font-size: 25px;
+  font-weight: 600;
 }
-/* <-----------------------------------> */
-
-
-@media screen and (max-width:1200px){
-  
+.dashboard_title span{
+  color: #2274c3;
 }
-@media screen and (max-width:992px){
-  h4{
-    font-size:24px !important;
-    margin-bottom: 0rem;
-  }
-  .login_page-form-wrapper{
-    padding: 1rem 0;
-    /* height: 100vh; */
-  }
-  .nav-wrapper {
-    left:-280px; /* Initially hidden on smaller screens */
-  }
-  .open{
-    /* to open the slide nav */
-    left: 0px; 
-  }
-
-  #menu-button {
-    z-index: 200;
-    display: block;
-    top:20px;
-    left: 20px;
-  }
-  #close-button{
-    top:20px;
-    z-index: 200;
-    display: block;
-    left: 230px !important;
-  }
-  .main-wrapper {
-    padding-left: 2px;
-    padding-top: 70px;
-  }
+.progress{
+  height: 7px !important;
 }
-
-@media screen and (max-width:767px) {
-  /* <-----logingpage------> */
-  h4{
-    font-size:18px !important ;
-    margin-bottom: 0rem;
-  }
-  .bg-login {
-    min-height:100%;
-  }
-
-  .jus-c-cent{
-    justify-content: initial !important;
-  }
-  .logo {
-    width: 40%;
-  }
-
-  .p-15 {
-    padding: 5rem 0;
-  }
-  .login_page-form-wrapper{
-    padding: 50px 0;
-    min-height:50vh ;
-  }
-  
+.card-header{
+  padding: 0 1.3rem !important;
 }
-
-@media screen and (max-width:475px) {
-
-  /* <-----logingpage------> */
-  .bg-login {
-    /* width: 75%; */
-    min-height: 100%;
-  }
-  .w-75{
-    width: 100% !important;
-  }
-  .logo {
-    width: 60%;
-  }
-  .jus-c-cent{
-    justify-content: initial !important;
-  }
-  .login_page-form-wrapper{
-    padding: 50px 0;
-    /* min-height:80vh ; */
-  }
-  .login_wrapper{
-    height: 100vh;
-  }
+.card-header span{
+  font-size: 18px;
 }
+.card_of_sales-fs p{
+  font-size: 16px !important;
+  line-height: 18px !important;
+}
+/* <----------Riteek Css End-----------------------> */
+
+/* Hunain CSS Start */
 
 /* <----dashboard-header-Hunain-----> */
 .dashbord-header .bg_header {
   box-shadow: 0 10px 30px 0 rgba(82, 63, 105, 0.05);
 }
-.fixed-top,.fixed-bottom{
-  z-index: 10 !important;  
-
-} 
+.fixed-top,
+.fixed-bottom {
+  z-index: 10 !important;
+}
+.dashbord-header-content {
+  z-index: 10;
+}
 
 .dashbord-header-content .rounded-circle {
   padding: 0.5rem 1rem;
   cursor: pointer;
 }
+
 .rounded-circle .rounded-img {
   width: 30px;
   border-radius: 50%;
 }
+
 .dashbord-header-content .menu-icon {
   padding: 0.5rem 1rem 0.5rem 0.5rem;
   font-size: 1.6rem;
 }
+
 .dashbord-header-content .menu-icon i {
   color: #181c32;
 }
@@ -320,16 +273,20 @@ a {
 .dashbord-footer-content .text-muted {
   color: #d0a407 !important;
 }
+
 .dashbord-footer-content {
   font-size: 13px;
 }
+
 .dashbord-footer-content .text-dark:hover {
   color: #0071b2 !important;
   transition: color 0.2s ease;
 }
+
 .dashbord-header-content .dropdown-toggle::after {
   display: none;
 }
+
 .dashbord-header-content .dropdown-menu[data-bs-popper] {
   font-size: 13px;
   border: none;
@@ -337,22 +294,28 @@ a {
   box-shadow: 0 0 50px 0 rgba(82, 63, 105, 0.1);
   padding: 10px 15px;
 }
+
 .dashbord-header-content .header-dropdown-items {
   color: #5c5e6c;
 }
+
 .dashbord-header-content .header-dropdown-items:active {
   color: #5c5e6c;
   background-color: #f8f9fa;
 }
+
 .offCanvas {
   width: 500px !important;
 }
+
 .offCanvas .profileImgUpload {
   cursor: pointer;
 }
+
 .offCanvas .inputImg {
   display: none;
 }
+
 .offCanvas .profileImg {
   border-radius: 50%;
   transition: 0.4s;
@@ -360,33 +323,37 @@ a {
   width: 100px;
   height: 100px;
 }
+
 .offCanvas .profileImg:hover {
   border: 5px solid #3ca7f7;
 }
+
 .mb-10 {
   margin-bottom: 2rem;
-}
-.form-control {
-  background-color: #f5f8fa !important;
-  border-color: #f5f8fa !important;
-  color: #5e6278 !important;
-  /* padding: 0.5rem 1rem !important; */
 }
 .form-control:focus {
   box-shadow: none !important;
 }
+
 .btn-primary {
-  background-color: #0b3856 !important;
-  border: none !important;
+  background-color: #0D222C !important;
+  color: white;
+  font-size: 14px;
+  line-height: 25px;
+  border: #0D222C !important;
 }
+
 .btn-primary:hover {
-  background-color: #3295e8 !important;
+  background-color: #ced2d4 !important;
+  color: #0D222C !important;
 }
+
 .form-label {
-  font-size: 1.05rem;
+  /* font-size: 1.05rem; */
   font-weight: 500;
   color: #3f4254;
 }
+
 /* <--notificationbelll-----/> */
 .notification-card {
   border: none !important;
@@ -394,8 +361,85 @@ a {
   margin-top: 20px;
   padding: 0 10px;
 }
+
 .notification-card .notification-card-body {
   margin: 20px 0;
   padding: 30px;
 }
+.notification-user-icon {
+  color: #a1a5b7;
+  border-radius: 50%;
+}
+.notification-block-heading h5 {
+  font-size: 16px;
+  padding-right: 10px;
+}
+.notification-block-date p,
+.notification-block-date span,
+.notification-block-description {
+  font-size: 14px;
+}
+.notification-block-delete i {
+  cursor: pointer;
+}
+.notification-block-description {
+  padding-top: 10px;
+}
+.card {
+  border: none !important;
+}
+.searchInput {
+  padding: 9px 12px;
+  font-size: 13px;
+  border-radius: 8px;
+  border: 1px solid #e4e6ef;
+}
+.searchInput:focus {
+  outline: 1px solid #a1a1a4;
+}
 
+/* Table CSS Start  */
+.table-responsive .table tbody tr td a {
+  font-size: 15px;
+  line-height: 25px;
+  color: #021823;
+}
+.table-responsive .table tbody tr td {
+  font-size: 15px;
+  line-height: 25px;
+  color: #021823 !important;
+}
+.table-responsive .table tbody tr td .badge {
+  font-size: 15px;
+  line-height: 25px;
+  height: 35px !important;
+  width: 120px !important;
+  text-align: left;
+}
+.table-responsive .table tr th {
+  font-size: 15px;
+  line-height: 25px;
+  background-color: rgba(13, 34, 44, 1);
+  color: white;
+}
+.table-responsive
+  .table
+  tbody
+  tr
+  td
+  .form-check.form-check-solid
+  .form-check-input {
+  background-color: #00de78;
+}
+.table.gs-0 td:first-child,
+.table.gs-0 th:first-child {
+  padding-left: 1.5rem !important;
+}
+.table.gy-3 td,
+.table.gy-3 th {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+/* Table CSS End  */
+
+/* Hunain CSS end  */
