@@ -1,0 +1,15 @@
+
+// import './App.css'
+import  Router  from './Routes/Router'
+
+
+const App = () => {
+
+  return (
+    <>
+      <Router/>
+    </>
+  )
+}
+
+export default App
