@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Login page css */
+#login {
+    height: 100vh;
+    background-image: url(./Pictures/BgLogin.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: "Familjen Grotesk", sans-serif
+}
+
+.login_page-form-title p {
+    font-size: 25px;
+}
+
+#login_signup {
+    height: 100vh;
+    background-image: url(./Pictures/BgSignup.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: "Familjen Grotesk", sans-serif
+}
+
+.company_logo img {
+    width: 10%;
+    padding-right: 3px;
+    padding-bottom: 10px;
+}
+
+.company_slogan {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.form_page-detalis p {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.otp_message p {
+    font-size: 20px;
+}
+
+.otp_message a {
+    color: orange;
+}
+
+.signup_iphone {
+    padding: 10px 0px 0px 0px;
+}
+
+.signup_iphone img {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#register {
+    /* height: 100vh; */
+    background-image: url(./Pictures/BgRegister.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: "Familjen Grotesk", sans-serif
+}
+
+.company_logo_register img {
+    width: 24%;
+}
+
+.ad_text p {
+    font-size: 20px;
+}
+
+.register-form form label {
+    font-size: 20px;
+    padding: 5px;
+}
+
+#registerImg img {
+    width: 90%;
+}
+
+
+
+.how_its_work {
+    color: #EC7100 !important;
+}
+
+/* register section2 */
+.icons-detalis p {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+#how_its_work .register-form {
+    border-radius: 24px;
+    background: #FFF;
+    box-shadow: 4px 4px 23.6px 0px rgba(0, 0, 0, 0.12);
+}

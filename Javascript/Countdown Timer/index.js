@@ -66,10 +66,10 @@
         stopInterval('pause')
     })
 
-    resetBtn.addEventListener('click',function(){
-        sec.value= '';
-        min.value= '';
-        hours.value= '';
+    resetBtn.addEventListener('click', function () {
+        sec.value = '';
+        min.value = '';
+        hours.value = '';
 
         stopInterval()
     })
