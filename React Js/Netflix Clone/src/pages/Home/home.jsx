@@ -1,6 +1,7 @@
 import React from 'react';
 import './home.css'
 import Navbar from '../../components/Navbar/navbar';
+import Footer from '../../components/Footer/footer';
 import heroBanner from '../../assets/hero_banner.jpg'
 import heroTitle from '../../assets/hero_title.png'
 import playIcon from '../../assets/Play_icon.png'
@@ -17,7 +18,7 @@ const home = () => {
                 <img src={heroBanner} alt="" className='banner-img' />
                 <div className="hero-caption">
                     <img src={heroTitle} alt="" className='caption-img' />
-                    <p>Discovering his ties to a secret ancient order, a young man thing in modern Istanbul embarks on a quest to save the city from an immortal enemy.</p>
+                    <p className='caption'>Discovering his ties to a secret ancient order, a young man thing in modern Istanbul embarks on a quest to save the city from an immortal enemy.</p>
                     <div className="hero-btns">
                         <button className='btn'><img src={playIcon} alt="" />Play</button>
                         <button className='btn dark-btn'><img src={infoIcon} alt="" />More Info</button>
@@ -27,11 +28,12 @@ const home = () => {
             </div>
 
             <div className="more-cards">
-                <TitleCards />
-                <TitleCards />
-                <TitleCards />
-                <TitleCards />
+                <TitleCards title={'Blockbluster Movies'}  category={'top_rated'}/>
+                <TitleCards  title={'Only on Netflix'} category={'popular'}/>
+                <TitleCards title={'Upcoming'} category={'upcoming'}/>
+                <TitleCards  title={'Top Pic For You'} category={'now_playing'}/>
             </div>
+            <Footer/>
         </div>
     );
 };
