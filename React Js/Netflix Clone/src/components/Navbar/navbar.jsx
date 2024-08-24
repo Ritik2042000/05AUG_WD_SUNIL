@@ -5,14 +5,18 @@ import searchIcon from '../../assets/search_icon.svg'
 import bellIcon from '../../assets/bell_icon.svg'
 import profilePic from '../../assets/profile_img.png'
 import caretIcon from '../../assets/caret_icon.svg'
+import { logout } from '../../auth/firebase';
+import { useLocation } from 'react-router-dom';
 
 const navbar = () => {
     const navRef = useRef();
+    const location = useLocation()
 
 
     useEffect(()=>{
+
         window.addEventListener('scroll',()=>{
-            if (window.scrollY >=80) {
+            if (location === '/' && window.scrollY >=80) {
                 navRef.current.classList.add('nav-dark')
             }else{
                 navRef.current.classList.remove('nav-dark')
@@ -41,7 +45,7 @@ const navbar = () => {
                 <img src={caretIcon} alt=""  />
                 <img src={profilePic} alt="" className='profile' />
                 <div className="dropdown">
-                    <p>Sign Out Of Netflix</p>
+                    <p onClick={() => logout() }>Sign Out Of Netflix</p>
                 </div>
                 </div>
             </div>
