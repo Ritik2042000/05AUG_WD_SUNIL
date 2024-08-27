@@ -214,7 +214,7 @@
 
     <section class="section-products">
       <div class="container">
-        <div class="section-common-heading">checkout Ecommerce Store</div>
+        <h2 class="section--common--heading">checkout Ecommerce Store</h2>
       </div>
     </section>
     <section class="container">
@@ -222,36 +222,41 @@
     </section>
     <template id="productTemplate">
       <div class="cards" id="cardValue">
-        <article class="information">
+        <article class="information [card]">
           <span class="category"></span>
           <div class="imageContainer">
-            <img src="" alt="" class="productImage" />
+            <img class="productImage" src="" alt="" />
           </div>
           <h2 class="productName"></h2>
+
           <div class="productRating">
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
           </div>
+
           <p class="productDescription"></p>
+
           <div class="productPriceElement">
             <p class="productPrice"></p>
             <p class="productActualPrice"></p>
           </div>
+
           <div class="productStockElement">
             <p class="productProperty">Total Stocks Available:</p>
             <p class="productStock"></p>
           </div>
 
-          <div class="productQuntityElement">
+          <div class="productQuantityElement">
             <p class="productProperty">Quantity(Pieces)</p>
             <div class="stockElement">
               <button class="cartIncrement">+</button>
-              <p class="productQuntity">1</p>
+              <p class="productQuantity">1</p>
               <button class="cartDecrement">-</button>
             </div>
           </div>
+
           <button class="add-to-cart-button">
             <i class="fa-solid fa-cart-shopping"></i> Add To Cart
           </button>
