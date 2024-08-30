@@ -3,6 +3,8 @@ import { fetchQuantityFromCart } from './fetchQuantityFromCart';
 import { getCartProductFromLocalStorage } from './getCartProductFromLocalStorage';
 import { incrementDecrement } from './incrementDecrement';
 import { removeProductFromCart } from './removeProductFromCart';
+import { updateCartProductTotal } from './updateCartProductTotal';
+
 
 
 let cartProductsLS = getCartProductFromLocalStorage()
@@ -45,4 +47,5 @@ const showCartProduct = () => {
 
 showCartProduct()
 
+updateCartProductTotal()
 // console.log(filterProducts,'inside addToCart ');

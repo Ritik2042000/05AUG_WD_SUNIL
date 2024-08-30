@@ -1,4 +1,5 @@
 import { getCartProductFromLocalStorage } from "./getCartProductFromLocalStorage";
+import { showToast } from "./showToast";
 import { updateCart } from "./updateCart";
 
 getCartProductFromLocalStorage()
@@ -24,6 +25,7 @@ export const addToCart = (event, id, stock) => {
         updateCart = arrLocalStorgeProduct.map((currElem) => currElem.id === id ? updateCart : currElem)
 
         localStorage.setItem('cartProductsLocalStorage', JSON.stringify(updateCart));
+        showToast('add',id)
     }
 
     if (existingProduct) {
@@ -38,4 +40,7 @@ export const addToCart = (event, id, stock) => {
 
     // update cartbutton value
     updateCart(arrLocalStorgeProduct);
+
+    // show pop funcation
+    showToast('add',id) 
 }

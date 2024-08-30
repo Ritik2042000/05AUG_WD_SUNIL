@@ -1,5 +1,7 @@
 import { getCartProductFromLocalStorage } from "./getCartProductFromLocalStorage";
+import { showToast } from "./showToast";
 import { updateCart } from "./updateCart";
+import { updateCartProductTotal } from "./updateCartProductTotal";
 
 
 export const removeProductFromCart = (id) => {
@@ -19,7 +21,9 @@ export const removeProductFromCart = (id) => {
     let removeDiv = document.querySelector(`#card${id}`);
 
     if (removeDiv) {
-        removeDiv.remove()
+        removeDiv.remove();
+        showToast('delete',id)
     }
     updateCart(cartProducts)
+    updateCartProductTotal()
 }
