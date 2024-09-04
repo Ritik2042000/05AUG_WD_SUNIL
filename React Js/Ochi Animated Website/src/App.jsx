@@ -2,6 +2,8 @@
 import About from './components/About'
 import EyeTracking from './components/EyeTracking'
 import Featured from './components/Featured'
+import Footer from './components/Footer'
+import InfoCards from './components/InfoCards'
 import LandingPage from './components/LandingPage'
 import Marquee from './components/Marquee'
 import Navbar from './components/Navbar'
@@ -15,6 +17,8 @@ const App = () => {
         <About />
         <EyeTracking/>
         <Featured/>
+        <InfoCards/>
+        <Footer/>
       </div>
     </>
   )
