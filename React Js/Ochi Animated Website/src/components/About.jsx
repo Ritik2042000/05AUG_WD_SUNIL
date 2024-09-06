@@ -11,7 +11,9 @@ const About = () => {
                         <div className="w-5 h-5 bg-zinc-300 rounded-full"></div>
                     </button>
                 </div>
-                <div className='w-1/2 h-[70vh] rounded-3xl bg-[#637131]'></div>
+                <div className='w-1/2 '>
+                    <img src="https://ochi.design/wp-content/uploads/2022/05/Homepage-Photo-663x469.jpg" alt="" className='rounded-3xl' />
+                </div>
             </div>
         </div>
     );

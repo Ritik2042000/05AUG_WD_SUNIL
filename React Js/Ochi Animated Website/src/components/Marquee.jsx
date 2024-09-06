@@ -9,12 +9,12 @@ const Marquee = () => {
                 <motion.h1
                     initial={{ x: 0 }}
                     animate={{ x: '-100%' }}
-                    transition={{ ease: 'linear', repeat: Infinity, duration: 5 }}
-                    className='text-[24vw] leading-none font-["FoundersGrotesk"] uppercase font-semibold mb-8 pt-2 pr-20'>We are ochi</motion.h1>
+                    transition={{ ease: 'linear', repeat: Infinity, duration: 6 }}
+                    className='text-[24vw] leading-none font-["FoundersGrotesk"] uppercase font-semibold mb-8 pt-2 pr-24'>We are ochi</motion.h1>
                 <motion.h1
                     initial={{ x: 0 }}
                     animate={{ x: '-100%' }}
-                    transition={{ ease: 'linear', repeat: Infinity, duration: 5 }} className='text-[24vw] leading-none font-["FoundersGrotesk"] uppercase font-semibold mb-8 pt-2 pr-20'>We are ochi</motion.h1>
+                    transition={{ ease: 'linear', repeat: Infinity, duration: 6 }} className='text-[24vw] leading-none font-["FoundersGrotesk"] uppercase font-semibold mb-8 pt-2 pr-24'>We are ochi</motion.h1>
                 
             </div>
         </div>
