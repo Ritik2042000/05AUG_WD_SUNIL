@@ -10,5 +10,12 @@ function isEven(a: number): boolean {
 console.log(isEven(7));
 
 function isDiviedBy4and8(a: number): boolean {
-    return a/4 && a/8 ;
+    if (a/8 && a/4) {
+      return true
+    }else{
+      return false
+    }
   }
+
+  console.log(isDiviedBy4and8(16));
+  
