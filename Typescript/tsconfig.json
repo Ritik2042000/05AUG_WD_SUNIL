@@ -1,0 +1,5 @@
+{
+    "compilerOptions": {
+      "target": "ES6" // or ES2015 or later
+    }
+  }
