@@ -24,6 +24,8 @@ const myPesonalInfo: PersonOne = {
   age: 23,
 };
 
+// second Example of this
+
 type User = {
   name: string;
   age: number;

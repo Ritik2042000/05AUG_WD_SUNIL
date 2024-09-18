@@ -7,7 +7,7 @@
 
 type PersomDetalis = [string,number,boolean]
 
-const personOne:PersomDetalis = ['Shoam',25,true]
+const personOne: PersomDetalis = ['Shoam',25,true]
 const personTwo:PersomDetalis = ['Moham',15,false]
 
 const displayUserInfo = (person:PersomDetalis) => {
