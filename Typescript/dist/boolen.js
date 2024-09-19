@@ -1,5 +1,6 @@
-var isStared = true;
-var isEnded = false;
+"use strict";
+let isStared = true;
+let isEnded = false;
 // function which is return a boolen value
 // which take numbar as parameter and return boolean value
 function isEven(a) {

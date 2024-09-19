@@ -1,6 +1,7 @@
+"use strict";
 // Generics allow creating 'type variables' which can be used to create classes, functions & type aliases that don't need to explicitly define the types that they use.
 // Generics makes it easier to write reusable code.
-var logAndReturn = function (value) {
+const logAndReturn = (value) => {
     return value;
 };
 // at function call we can define the type
@@ -8,7 +9,7 @@ console.log(logAndReturn(42));
 console.log(logAndReturn("Hello"));
 console.log(logAndReturn(true));
 /// when function have many parameter we have to pass two or three generix <T,U,V> like this
-var add = function (a, b) {
+const add = (a, b) => {
     console.log(a);
     console.log(b);
 };
