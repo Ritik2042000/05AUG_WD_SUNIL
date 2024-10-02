@@ -7,6 +7,7 @@ import Link from "next/link";
 // import {Roboto} from 'next/font/google'
 import Loader from "@/components/Loader";
 import { Suspense } from "react";
+import apiCall from "./apicall";
 
 
 // font func 
@@ -18,11 +19,6 @@ import { Suspense } from "react";
 
 // Api with server components
 
-const apiCall = async (url) => {
-    let data = await fetch(url);
-    data = await data.json();
-    return data.products
-}
 
 
 
@@ -47,7 +43,7 @@ const ProductList = async () => {
 
 
 
-    console.log(product);
+    // console.log(product);
 
 
 
@@ -59,17 +55,17 @@ const ProductList = async () => {
                     {
 
                         product.map((data) => {
-                            return <Link href={`/productlist/${data.description}`} className="w-[31%] py-2 m-2  border-gray-200 border-2 rounded-xl " key={data.id} >
-                                <div >
-                                    <div className="mx-auto w-[65%]">
-                                        <p className="pe-6"  >{data.title}</p>
-                                        <div className=" items-center mt-3 mb-2 w-100">
-                                            <span className="text-gray-400 pe-4">Category : {data.category}</span>
-                                            <Image src={data.thumbnail} width={150} height={150} />
-                                            <Button data={data.price} btnName={'Click Me'} className={'bg-lime-700 p-3 rounded-md cursor-pointer mt-2'} />
-                                        </div>
+                            return <Link href={`/productlist/${data.id}`} className="w-[31%] py-2 m-2  border-gray-200 border-2 rounded-xl " key={data.id} >
+
+                                <p className="pe-6 text-center" >{data.title}</p>
+                                <div className="mx-auto w-[40%]">
+                                    <div className=" items-center mt-3 mb-2 w-100">
+                                        <span className="text-gray-400 pe-4">Category : {data.category}</span>
+                                        <Image src={data.thumbnail} width={150} height={150} />
+                                        <Button data={data.price} btnName={'Click Me'} className={'bg-lime-700 p-3 rounded-md cursor-pointer mt-2'} />
                                     </div>
                                 </div>
+
                             </Link>
                         })
                     }

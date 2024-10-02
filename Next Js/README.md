@@ -35,6 +35,15 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
+## layout
+
+in ths layout.js file we have to create our application common layout which is show commonly in application
+Also for specific routes we can make layout for that we have to create this file in that folder
+
+## not-found
+
+Using this name we can make file which is used to make 404 page
+
 ## Script tag
 
 <!-- <Script> by next js which is used to add script to the to the specific component for not the application loaded by using this tag we can add to different script to componentns   -->
@@ -58,3 +67,15 @@ in this dynamic page we want to get data from the using params which we can add 
 ## generateMetadata
 
 It is Used for the add dynamic title and description to the website using that funcation which is return object with title and description
+
+## generateStaticParams
+
+It is used to make static page (which is create at bulid time and benefits the webistie loading speed ) using this function name 'generateStaticParams' in this we have pass which folder of pages you want to make static
+
+## redirect
+
+when we want to redirect page we have to used redirect in that page using import it from next/navigation or we can redirect it from next.config.js file pass redirects keys and inside that key pass asyc function and return array of objects in that source:'page name that we want to redirect(for dynamic routes add /:page name ) ', destination : 'where we want to redirect ' , permanent : 'false or true' for shortime or maintaince gave false else gave true
+
+## env
+
+for make env file use env.local
