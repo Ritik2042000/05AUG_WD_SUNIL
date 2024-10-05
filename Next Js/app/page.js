@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Ticket from "./Ticket";
+import Images from "./Images";
 
 
 export default function Home() {
@@ -42,6 +43,7 @@ export default function Home() {
         </main>
       </div>
       <Ticket />
+      <Images/>
     </>
   );
 }
