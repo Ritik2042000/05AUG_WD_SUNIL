@@ -8,6 +8,12 @@ const nextConfig = {
         port: '',
         pathname: '/products/images/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'via.placeholder.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
 
   },
