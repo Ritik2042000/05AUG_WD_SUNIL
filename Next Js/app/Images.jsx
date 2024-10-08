@@ -9,6 +9,7 @@ const Images = () => {
     const [filterData, setFilterData] = useState([]);
     const [isOpen, setIsOpen] = useState(false)
     const [images, setImages] = useState([])
+    const [loading, setLoading] = useState(false)
 
     const fetchData = async () => {
         try {
@@ -18,8 +19,8 @@ const Images = () => {
             setApiData(data)
 
             const uniqueAlbums = data.filter((item, index, self) => {
-                console.log({i:index,item:item.albumId});
-                
+                // console.log({i:index,item:item.albumId});
+
                 return index === self.findIndex((t) => t.albumId === item.albumId);
             });
 
@@ -34,8 +35,9 @@ const Images = () => {
     };
 
     const showPhotos = (id) => {
-        console.log(id, 'albumid');
+        // console.log(id, 'albumid');
         setIsOpen(true)
+        setLoading(true)
         let data = apiData.filter((curElem) => {
             if (curElem.albumId == id) {
                 return curElem
@@ -43,7 +45,7 @@ const Images = () => {
         })
         setImages(data)
         // console.log(data, 'images');
-
+        setLoading(false)
     }
 
     useEffect(() => {
@@ -73,12 +75,13 @@ const Images = () => {
                     >
                         <div className='flex flex-wrap '>
                             {
-
-                                images.map((data) => {
-                                    return <div key={data.id} className='p-4 ' >
-                                        <Image src={data.thumbnailUrl} alt={data.title} width={100} height={100} />
-                                    </div>
-                                })
+                                loading ? <h1>Loading......</h1> :
+                                    images.map((data) => {
+                                        return <div key={data.id} className='p-4 ' >
+                                            {/* <Image src={data.thumbnailUrl}  alt={data.title} width={100} height={100} /> */}
+                                            <Image src={data.thumbnailUrl} alt={data.title} width={100} height={100} onLoadingComplete={() => setLoading(false)} />
+                                        </div>
+                                    })
 
                             }
                             <button

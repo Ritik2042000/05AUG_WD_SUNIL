@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 
-
-
 const Ticket = () => {
 
     const [selectedSeats, setSelectedSeats] = useState([]);
@@ -50,12 +48,15 @@ const Ticket = () => {
     // Function to handle seat selection
     const toggleSeatSelection = (category, rowIndex, seatNumber) => {
         const seatKey = `${category}-Row${rowIndex + 1}-Seat${seatNumber}`;
+        console.log(seatKey,'detalis');
+        console.log(selectedSeats,'state of seats');
+        
 
         // Check if the seat is already selected
         if (selectedSeats.includes(seatKey)) {
             setSelectedSeats((prev) => prev.filter((seat) => seat !== seatKey)); // Deselect seat
         } else {
-            if (selectedSeats.length < 5) {
+            if (selectedSeats.length <= 5) {
                 setSelectedSeats((prev) => [...prev, seatKey]); // Select seat
                 setError(''); // Clear error
             } else {
@@ -71,6 +72,7 @@ const Ticket = () => {
         } else {
             setError('Please select at least one seat.');
         }
+        setSelectedSeats([])
     };
 
 
