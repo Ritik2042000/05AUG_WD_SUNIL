@@ -40,6 +40,7 @@ export default function Home() {
           <button className="btn  bg-slate-300 text-black p-4 rounded-lg hover:bg-slate-400" onClick={() => navigate('/login')}>Go To Loging </button>
           <button className="btn  bg-slate-300 text-black p-4 rounded-lg hover:bg-slate-400" onClick={() => navigate('/about')}>Go To About</button>
           <button className="btn  bg-slate-300 text-black p-4 rounded-lg hover:bg-slate-400" onClick={() => navigate('/productlist')}>Go To Products</button>
+          <button className="btn  bg-slate-300 text-black p-4 rounded-lg hover:bg-slate-400" onClick={() => navigate('/users')}>Reudx Users</button>
         </main>
       </div>
       <Ticket />
