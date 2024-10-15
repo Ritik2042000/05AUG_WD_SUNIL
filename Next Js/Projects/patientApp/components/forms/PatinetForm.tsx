@@ -6,10 +6,11 @@ import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
 import CustomFormField from "../ui/CustomFormField";
-import SubmitButton from "./SubmitButton";
 import { useState } from "react";
 import { UserFormValidation } from "@/lib/Validation";
 import { useRouter } from "next/navigation";
+import { createUser } from "@/lib/actions/patient.actions";
+import SubmitButton from "../SubmitButton";
 
 export enum FormFieldType {
   INPUT = "input",
@@ -23,7 +24,7 @@ export enum FormFieldType {
 
 
 const PatientForm = () => {
-  const router = useRouter()
+  const router = useRouter();
   const [isLoading,setIsLoading] = useState(false)
 
 
@@ -38,18 +39,28 @@ const PatientForm = () => {
   });
 
   // 2. Define a submit handler.
-  function onSubmit({name,email,phone}: z.infer<typeof UserFormValidation>) {
-    setIsLoading(true)
+  const onSubmit = async (values: z.infer<typeof UserFormValidation>) => {
+    setIsLoading(true);
 
     try {
-      // const userData = {name,email,phone}
+      const user = {
+        name: values.name,
+        email: values.email,
+        phone: values.phone,
+      };
 
-      // const user = await createUser(userData);
-      // if (user) router.push(`/patients/${user.id}/register`)
+      const newUser = await createUser(user);
+
+      if (newUser) {
+        router.push(`/patients/${newUser.$id}/register`);
+      }
     } catch (error) {
-      
+      console.log(error);
     }
-  }
+
+    setIsLoading(false);
+  };
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 flex-1">
@@ -81,7 +92,6 @@ const PatientForm = () => {
           name="phone"
           label="Phone Number"
           placeholder="9999999999"
-          
         />
         <SubmitButton isLoading={isLoading} >Get Started</SubmitButton>
       </form>

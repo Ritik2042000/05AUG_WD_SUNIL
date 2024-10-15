@@ -31,7 +31,7 @@ interface CustomProps {
 
 const RenderField = ({ field, props }: { field: any; props: CustomProps }) => {
   const { iconAlt, iconSrc, placeholder, name, label, fieldType } = props;
-  console.log(field, "inside fileds ");
+  // console.log(field, "inside fileds ");
 
   switch (fieldType) {
     case FormFieldType.INPUT:
@@ -58,17 +58,19 @@ const RenderField = ({ field, props }: { field: any; props: CustomProps }) => {
     case FormFieldType.PHONE_INPUT:
       return (
         <FormControl>
-          <PhoneInput 
-          defaultCountry="IN"
-          placeholder={placeholder}
-          international
-          withCountryCallingCode
-          value={field.value as E164Number | undefined}
-          onChange={field.onChange}
-          className="input-phone"
+          <PhoneInput
+            defaultCountry="IN"
+            placeholder={placeholder}
+            international
+            withCountryCallingCode
+            value={field.value as E164Number | undefined}
+            onChange={field.onChange}
+            className="input-phone"
           />
         </FormControl>
       );
+    default:
+      return null;
   }
 };
 
