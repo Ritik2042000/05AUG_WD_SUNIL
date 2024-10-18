@@ -163,13 +163,15 @@ console.log(reverse_Str('hello'));
 const findMedian = (arr) => {
 
     let arrSort = arr.sort((a, b) => a - b)
+    // console.log(arrSort);
+
+    let mid = Math.floor(arr.length / 2)
 
     if (arr.length % 2 === 0) {
-
+        return (arrSort[mid] + arrSort[mid - 1]) / 2
 
     } else {
-
-        return arrSort.reduce((accum, curElm) => accum + curElm, 0) / arr.length
+        return arrSort[mid]
     }
 
 }
@@ -177,3 +179,39 @@ const findMedian = (arr) => {
 console.log(findMedian([1, 5, 4, 8, 6, 2]));
 console.log(findMedian([1, 5, 4, 8, 6, 2, 10]));
 console.log(findMedian([1, 5, 4, 8]));
+
+
+// give the ans how many type given num repeat in array give ans in obj in key give the number which is repted and values as how number repeted    
+
+const number = [1, 2, 3, 4, 4, 1, 5, 6, 7, 8, 9, 8, 7, 2, 1]
+// const alpha = ['a','b','c','a','d','e','d','f','g','h','h','i','j','k','i']
+let counts = {};
+for (const element of number) {
+    // in this first set  key and then it value which is undifed so we plus with 1 
+    // as key is unique second time when the same numbee came it plus the value of it  
+    counts[element] = (counts[element] || 0) + 1
+}
+console.log(counts)
+
+
+// find the mode 
+
+const findMode = (arr) => {
+    let count = {};
+    let maxNumber = 0;
+    let mode;
+    for (const element of arr) {
+        // in this first set  key and then it value which is undifed so we plus with 1 
+        // as key is unique second time when the same numbee came it plus the value of it  
+        count[element] = (count[element] || 0) + 1;
+        if (count[element] > maxNumber) {
+            maxNumber = count[element]
+            // console.log(maxNumber, 'maxnumber');
+            mode = element
+        }
+    }
+    return mode
+
+}
+
+console.log(findMode([1, 2, 3, 4, 4, 1, 4, 4, 4, 5, 6, 7, 8, 9,]))
