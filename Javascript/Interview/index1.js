@@ -215,3 +215,77 @@ const findMode = (arr) => {
 }
 
 console.log(findMode([1, 2, 3, 4, 4, 1, 4, 4, 4, 5, 6, 7, 8, 9,]))
+
+// factorial using recursive method 
+// function has two case  one was base and second was recursive in base can function gave contion to stop the call it self multiple times 
+
+const factorialRecursive = (num) => {
+    if (num === 1) {
+        return 1
+    } else {
+        return num * factorialRecursive(num - 1);
+    }
+}
+
+console.log(factorialRecursive(8));
+
+// fibonacci number 
+
+const fibonacci = (num) => {
+    if (num <= 1) {
+        return num
+    } else {
+        return fibonacci(num - 1) + fibonacci(num - 2)
+    }
+}
+
+console.log(fibonacci(3));
+
+// write program in which it take two parameters in which it take one string and second is is num resulting that string multify by that number
+
+
+const repetingStr = (str, num) => {
+
+    // using string built in method
+    return num > 0 ? str.repeat(num) : str
+
+    // using recursion function
+    // if (num <= 1 ) {
+    //     return str
+    // }else {
+    //     return str + repetingStr(str,num-1)
+    // }
+
+}
+
+console.log(repetingStr('hello', 2));
+
+
+// trunket the string 
+
+const truncateStr = (str, num) => {
+    return num <= 0 ? str : str.slice(0, num).concat('...')
+}
+
+console.log(truncateStr('A-side b-side c-side ab nmv dfffdvcd', 15));
+
+// numberRange 
+
+const numberRange = (a, b, arr = []) => {
+    // using while loop
+    // while (a <= b ) {
+    //     arr.push(a)
+    //     a++
+    // }    
+    // return arr;
+    
+    // using recursion function
+    if (a <= b) {
+        arr.push(a)
+        return numberRange(a + 1, b, arr)
+
+    }
+    return arr
+}
+
+console.log(numberRange(0, 5));
