@@ -1,6 +1,5 @@
 // find the total number of Characte which is repet in word how many times 
 
-
 const totalNumber = (word, char) => {
     word = word.toLowerCase();
     char = char.toLowerCase();
@@ -48,8 +47,8 @@ const factorial = (num) => {
     return fact
 }
 
-console.log(factorial(3));
-console.log(factorial(4));
+// console.log(factorial(3));
+// console.log(factorial(4));
 
 const calculateAvgNum = (num) => {
     let AvgNum = num.reduce((accum, curElm) => {
@@ -58,7 +57,7 @@ const calculateAvgNum = (num) => {
     return AvgNum / num.length
 }
 
-console.log(calculateAvgNum([1, 18, 12, 5, 3]));
+// console.log(calculateAvgNum([1, 18, 12, 5, 3]));
 
 // check arry have same value or not
 
@@ -278,14 +277,105 @@ const numberRange = (a, b, arr = []) => {
     //     a++
     // }    
     // return arr;
-    
+
     // using recursion function
     if (a <= b) {
         arr.push(a)
         return numberRange(a + 1, b, arr)
-
     }
     return arr
 }
 
-console.log(numberRange(0, 5));
+// console.log(numberRange(0, 5));
+
+// password cheaking fun
+
+const passwordCheker = (pass) => {
+    let hasLowercase = false
+    let hasUppercase = false;
+    let hasNumber = false;
+
+
+    for (const element of pass) {
+        if (element.charCodeAt(0) >= 65 && element.charCodeAt(0) <= 90) {
+            hasUppercase = true
+        } else if (element.charCodeAt(0) >= 97 && element.charCodeAt(0) <= 122) {
+            hasLowercase = true
+        } else if (!isNaN(Number(element))) {
+            hasNumber = true
+        }
+    }
+    if (!hasUppercase || !hasLowercase || !hasNumber || pass.length < 8) {
+        return false
+    }
+    return true
+}
+
+// console.log(passwordCheker('amcvdeddl23'));
+// console.log(passwordCheker('amcvdeddlA'));
+// console.log(passwordCheker('amcvdeddSD45l'));
+// console.log(passwordCheker('amc123A'));
+
+
+// gererate rendom hexacode 
+
+const generateHexa = () => {
+    return `#${Math.random().toString(16).slice(2, 8).padEnd(6, 0)}`
+}
+// console.log(generateHexa());
+// console.log(generateHexa());
+// console.log(generateHexa());
+
+// check objectis empty or not 
+
+const isObjectEmpty = (Obj) => {
+
+    // for (const key in Obj) {
+    //     if (Obj.hasOwnProperty(key)) {
+    //         return `it's not empty`
+    //     }
+    // }
+    // return `it's empty`
+
+    // with the object inbuilt function 
+
+    return Object.keys(Obj).length === 0 ? `it's empty` : `it's not empty`
+}
+
+console.log(isObjectEmpty({ 'hello': 'test1' }));
+console.log(isObjectEmpty({ 'key': undefined }));
+console.log(isObjectEmpty({}));
+
+
+// convert the object into array and vice varce arrry to object 
+
+const detalis = {
+    name: 'Mohan',
+    age: 35,
+    city: 'Talod',
+    pin: 383215
+}
+
+let objToArr = Object.entries(detalis)
+console.log(objToArr, 'object convert into array');
+let ArrToObj = Object.fromEntries(objToArr)
+console.log(ArrToObj, 'Array convert into object');
+
+// find the simpleinterest using 
+
+const calculateSimpleInterest = (price, rate, years) => {
+    let amountOfInterest = (price * rate * years) / 100
+    return amountOfInterest
+}
+console.log(calculateSimpleInterest(2000, 12, 5));
+
+// calculate difference between date
+
+const differenceBetDate = (d1, d2) => {
+    let date1 = new Date(d1)
+    let date2 = new Date(d2)
+
+    let differ = Math.abs(date1 - date2)
+    return differ / (24 * 60 * 60 * 1000)
+}
+console.log(differenceBetDate('2024-05-25', '2024-03-31'));
