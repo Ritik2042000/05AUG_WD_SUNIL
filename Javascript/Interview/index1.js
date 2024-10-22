@@ -375,7 +375,82 @@ const differenceBetDate = (d1, d2) => {
     let date1 = new Date(d1)
     let date2 = new Date(d2)
 
-    let differ = Math.abs(date1 - date2)
+    let differ = Math.abs(date2 - date1)
     return differ / (24 * 60 * 60 * 1000)
 }
 console.log(differenceBetDate('2024-05-25', '2024-03-31'));
+
+// make a function find the birthday
+
+const calculateAge = (date) => {
+    let todayDate = new Date();
+    let birthday = new Date(date)
+
+    let year = todayDate.getFullYear() - birthday.getFullYear()
+    let month = todayDate.getMonth() - birthday.getMonth()
+    let day = todayDate.getDay() - birthday.getDay()
+    if (month < 0 || month === 0 && day < 0) {
+        year--
+    }
+
+    console.log({ 'year': year, 'month': month, 'day': day });
+    return `Your age is ${year}`;
+}
+
+console.log(calculateAge('2000-10-22'));
+
+
+// convert the arr number into * 
+const generateBarChart = (arr) => {
+    // const newArr = arr.map((curElem,index) => {
+    //     let star = '';
+    //     let num = 0
+    //     while (num < curElem) {
+    //         star = star + '*'
+    //         num++
+    //         // return star
+    //     }
+    //     return `${index + 1} : ${star}`
+    // })
+    // return newArr.join('\n')
+
+    // by other method using repeat 
+
+    const newArr = arr.map((curElm, index) => {
+        return `${index + 1} : ${'*'.repeat(curElm)}`
+
+    }).join('\n')
+    return newArr
+}
+
+console.log(generateBarChart([5, 4, 9, 2]));
+
+
+//convert curret amount into given currency 
+
+const rate = {
+    'USD': 1,
+    'GMP': 0.77,
+    'EUR': 0.92,
+    'IND': 84.10,
+}
+// for convert first we have convert that currency into usd then covert into youcurrecy
+
+const convertAmountInCurreny = (amount, fc, tc) => {
+    let amountInUsd = 0;
+    if (fc !== 'USD') {
+        amountInUsd = amount / rate[fc]
+    } else {
+        amountInUsd = amount
+    }
+
+    let convertedAmount = 0;
+    if (tc !== 'USD') {
+        convertedAmount = amountInUsd * rate[tc]
+    } else {
+        convertedAmount = amountInUsd
+    }
+    return convertedAmount
+}
+
+console.log(convertAmountInCurreny(100, 'INR', 'GMP'));
