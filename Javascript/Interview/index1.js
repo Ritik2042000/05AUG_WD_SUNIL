@@ -430,27 +430,81 @@ console.log(generateBarChart([5, 4, 9, 2]));
 
 const rate = {
     'USD': 1,
-    'GMP': 0.77,
+    'GBP': 0.77,
     'EUR': 0.92,
-    'IND': 84.10,
+    'INR': 84.10,
 }
 // for convert first we have convert that currency into usd then covert into youcurrecy
 
 const convertAmountInCurreny = (amount, fc, tc) => {
     let amountInUsd = 0;
     if (fc !== 'USD') {
-        amountInUsd = amount / rate[fc]
+        amountInUsd = amount / rate[fc];
     } else {
-        amountInUsd = amount
+        amountInUsd = amount;
     }
 
     let convertedAmount = 0;
     if (tc !== 'USD') {
-        convertedAmount = amountInUsd * rate[tc]
+        convertedAmount = amountInUsd * rate[tc];
     } else {
-        convertedAmount = amountInUsd
+        convertedAmount = amountInUsd;
     }
-    return convertedAmount
+    // console.log(amountInUsd * rate.INR);
+
+    return convertedAmount;
 }
 
-console.log(convertAmountInCurreny(100, 'INR', 'GMP'));
+console.log(convertAmountInCurreny(100, 'INR', 'GBP'));
+
+
+// card number validaion function
+
+const cardNumberValidation = (num) => {
+
+    let number = num.replace(/\D/g, '').split('').reverse()
+    let doubleNum = number.map((curElm, index) => (index + 1) % 2 === 0 ? curElm * 2 : Number(curElm))
+    let makeSingleDigit = doubleNum.map((curElm, index) => curElm > 9 ? curElm - 9 : curElm)
+    let total = makeSingleDigit.reduce((accum, curElm) => accum + curElm, 0)
+    // console.log(total);
+    let isValidNumber = total % 10 === 0 ? true : false
+    return isValidNumber
+
+}
+console.log(cardNumberValidation('4539 1488 0343 6467'));
+console.log(cardNumberValidation('8273 1232 7352 0569'));
+
+// fizzbuzz question in which array value is divided by 3 and 5 print fizzbuzz or only divided by 3 print fizz or divided by 5 print buzz
+
+const fizzbuzz = (firstNum, lastNum) => {
+    let arr = []
+    for (let i = firstNum; i <= lastNum; i++) {
+
+        if (i % 3 === 0 && i % 5 === 0) {
+            arr.push('fizzBuzz')
+        } else if (i % 3 === 0) {
+            arr.push('fizz')
+        } else if (i % 5 === 0) {
+            arr.push('buzz')
+        } else {
+            arr.push(i)
+        }
+        // arr.push(i)
+    }
+    return arr
+}
+
+console.log(fizzbuzz(1, 15));
+console.log(fizzbuzz(12, 25));
+
+// regex (regular expression) function 
+
+const validateEmail = (email) => {
+    return /^[A-Za-z0-9]+(?:[.%_+][A-Za-z0-9]+)*@[A-Za-z0-9]+\.[A-Za-z]{2,}$/.test(email)
+}
+
+console.log(validateEmail('moham@123.com'));
+console.log(validateEmail('moham@dummy.com.in'));
+console.log(validateEmail('dummy.moham@123.com'));
+console.log(validateEmail('@moham@123.com'));
+
