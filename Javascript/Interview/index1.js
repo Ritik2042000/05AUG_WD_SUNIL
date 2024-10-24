@@ -508,3 +508,10 @@ console.log(validateEmail('moham@dummy.com.in'));
 console.log(validateEmail('dummy.moham@123.com'));
 console.log(validateEmail('@moham@123.com'));
 
+const validatePassword = (pass) => {
+    return /^(?=.*[A-Z])(?=.*[a-z])(?=.*[\d])(?=.*[\W_]).{8,}$/.test(pass)
+}
+
+console.log(validatePassword('abc123Q$'));
+console.log(validatePassword('123Avcsd'));
+console.log(validatePassword('abc123Qfsf445'));
