@@ -515,3 +515,34 @@ const validatePassword = (pass) => {
 console.log(validatePassword('abc123Q$'));
 console.log(validatePassword('123Avcsd'));
 console.log(validatePassword('abc123Qfsf445'));
+
+
+const validateNumber = (number) => {
+    return /^[6-9][\d]{9}$/.test(number)
+}
+
+console.log('isnumberValid', validateNumber('5445244125'));
+console.log('isnumberValid', validateNumber('9662441254'));
+console.log('isnumberValid', validateNumber('755244124'));
+
+const extractNumberFromString = (str) => {
+    let regex = /\d+/g;
+    return str.match(regex)
+}
+
+console.log(extractNumberFromString('abc451edf21'));
+console.log(extractNumberFromString('1ad1fdf2a56'));
+console.log(extractNumberFromString('df5454wwffdf44'));
+
+
+const validateHexaCode = (hexa) => {
+    let regex = /^#([A-Fa-f0-9]{3}|[A-Fa-f0-9]{6})$/
+    return regex.test(hexa)
+}
+
+console.log(validateHexaCode('#Ac012e'));
+console.log(validateHexaCode('#121'));
+console.log(validateHexaCode('Ac122'));
+
+
+const validateDate = () => { }
