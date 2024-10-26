@@ -5,41 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Arrow Button</title>
     <style>
-        *{
+      * {
+        box-sizing: border-box;
+      }
+      .arrow-button {
+        display: inline-block;
+        padding: 10px 40px;
+        background-color: #7f9cf5; /* Original background color */
+        color: black; /* Original text color */
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        position: relative;
+        transition: all 0.1s ease; /* Smooth transition */
+      }
+      .one-side-triangle {
+        clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 0% 100%, 0 0%);
+      }
+      .both-side-triangle {
+        clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 20% 50%);
+      }
 
-            box-sizing: border-box;
-        }
-     .arrow-button {
-            display: inline-block;
-            padding: 10px 40px;
-            background-color: #7f9cf5; /* Original background color */
-            color: black; /* Original text color */
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-            text-align: center;
-            position: relative;
-            transition: all 0.1s ease; /* Smooth transition */
-        }
-        .one-side-triangle{
-            clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 0% 100%, 0 0%);
-        }
-        .both-side-triangle{
-            clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 20% 50%);
-        }
-       
-
-        /* Hover effect */
-        .arrow-button:hover {
-            background-color: black;
-            color:blueviolet ; /* Change text color */
-            /* background: linear-gradient(280deg, #ff9a9a, #3f5ebf);  */
-            box-shadow: 10px 1px 1px #ff6b6b;
-        }
+      /* Hover effect */
+      .arrow-button:hover {
+        background-color: black;
+        color: blueviolet; /* Change text color */
+        /* background: linear-gradient(280deg, #ff9a9a, #3f5ebf);  */
+        box-shadow: 10px 1px 1px #ff6b6b;
+      }
     </style>
   </head>
   <body>
-    <a href="#" class="arrow-button  one-side-triangle">Arrow</a>
+    <a href="#" class="arrow-button one-side-triangle">Arrow</a>
     <a href="#" class="arrow-button both-side-triangle">Arrow</a>
   </body>
 </html>

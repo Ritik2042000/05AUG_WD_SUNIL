@@ -545,4 +545,11 @@ console.log(validateHexaCode('#121'));
 console.log(validateHexaCode('Ac122'));
 
 
-const validateDate = () => { }
+const validateDate = (date) => {
+    return /^(0[0-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[0-1])\/((19|20)[0-9]{2})$/.test(date)
+}
+console.log(validateDate('09/12/2021'));
+console.log(validateDate('13/20/2365'));
+console.log(validateDate('10/20/2011'));
+
+
