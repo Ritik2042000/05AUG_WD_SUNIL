@@ -93,7 +93,7 @@ const PatientForm = () => {
           label="Phone Number"
           placeholder="9999999999"
         />
-        <SubmitButton isLoading={isLoading} >Get Started</SubmitButton>
+        <SubmitButton isLoading={isLoading}>Get Started</SubmitButton>
       </form>
     </Form>
   );
