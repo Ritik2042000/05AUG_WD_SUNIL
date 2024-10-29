@@ -13,10 +13,11 @@ import { createUser } from "@/lib/actions/patient.actions";
 import SubmitButton from "../SubmitButton";
 import { FormFieldType } from "./PatinetForm";
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
-import { Doctors, GenderOptions } from "@/constants";
+import { Doctors, GenderOptions, IdentificationTypes } from "@/constants";
 import { Label } from "../ui/label";
 import { SelectItem } from "../ui/select";
 import Image from "next/image";
+import FileUploader from "../ui/FileUploader";
 
 const RegisterForm = ({ user }: { user: User }) => {
   const router = useRouter();
@@ -80,7 +81,7 @@ const RegisterForm = ({ user }: { user: User }) => {
           iconAlt="user"
         />
 
-        <div className="flex flex-col justify-between gap-4 xl:flex-row">
+        <div className="flex flex-col  gap-6 xl:flex-row">
           <CustomFormField
             fieldType={FormFieldType.INPUT}
             control={form.control}
@@ -98,7 +99,7 @@ const RegisterForm = ({ user }: { user: User }) => {
             placeholder="9999999999"
           />
         </div>
-        <div className="flex flex-col justify-between gap-4 xl:flex-row">
+        <div className="flex flex-col  gap-6 xl:flex-row">
           <CustomFormField
             fieldType={FormFieldType.DATEPICKER}
             control={form.control}
@@ -130,7 +131,7 @@ const RegisterForm = ({ user }: { user: User }) => {
             )}
           />
         </div>
-        <div className="flex flex-col justify-between gap-4 xl:flex-row">
+        <div className="flex flex-col  gap-6 xl:flex-row">
           <CustomFormField
             fieldType={FormFieldType.INPUT}
             control={form.control}
@@ -146,7 +147,7 @@ const RegisterForm = ({ user }: { user: User }) => {
             placeholder="Website Devloper"
           />
         </div>
-        <div className="flex flex-col justify-between gap-4 xl:flex-row">
+        <div className="flex flex-col  gap-6 xl:flex-row">
           <CustomFormField
             fieldType={FormFieldType.INPUT}
             control={form.control}
@@ -193,15 +194,132 @@ const RegisterForm = ({ user }: { user: User }) => {
             </SelectItem>
           ))}
         </CustomFormField>
+        <div className="flex flex-col  gap-6 xl:flex-row">
+          <CustomFormField
+            fieldType={FormFieldType.INPUT}
+            control={form.control}
+            name="insuranceProvider"
+            label="Insurance Provider"
+            placeholder="Bluecross Blueshield "
+          />
+          <CustomFormField
+            fieldType={FormFieldType.INPUT}
+            control={form.control}
+            name="insurancePolicyNumber"
+            label="Insurance Policy Number"
+            placeholder="ABC546545"
+          />
+        </div>
+        <div className="flex flex-col  gap-6 xl:flex-row">
+          <CustomFormField
+            fieldType={FormFieldType.TEXTAREA}
+            control={form.control}
+            name="allergies"
+            label="Allergies (If Any)"
+            placeholder="Penut,Pollen"
+          />
+          <CustomFormField
+            fieldType={FormFieldType.TEXTAREA}
+            control={form.control}
+            name="currentMedication"
+            label="Current Medication (If Any)"
+            placeholder="Ibuprofen 200mg,Paracetamol 500mg"
+          />
+        </div>
+        <div className="flex flex-col  gap-6 xl:flex-row">
+          <CustomFormField
+            fieldType={FormFieldType.TEXTAREA}
+            control={form.control}
+            name="familyMedicalHistory"
+            label="Family Medical History"
+            placeholder="Mother and Father Both had blood presure"
+          />
+          <CustomFormField
+            fieldType={FormFieldType.TEXTAREA}
+            control={form.control}
+            name="pastMedicalHistory"
+            label="Past Medical History"
+            placeholder="Appendectomy"
+          />
+        </div>
+
+        {/* Identification And Verification  */}
+
+        <section className="space-y-6">
+          <div className="mb-9 space-y-1">
+            <h2 className="sub-header">Indentification And Verification</h2>
+          </div>
+        </section>
+
         <CustomFormField
-          fieldType={FormFieldType.PHONE_INPUT}
+          fieldType={FormFieldType.SELECT}
           control={form.control}
-          name="phone"
-          label="Phone Number"
+          name="identificationType"
+          label="Identification Type"
+          placeholder="Select an Idetenfication Type"
+        >
+          {IdentificationTypes.map((type) => (
+            <SelectItem key={type} value={type}>
+              {type}
+            </SelectItem>
+          ))}
+        </CustomFormField>
+
+        <CustomFormField
+          fieldType={FormFieldType.INPUT}
+          control={form.control}
+          name="email"
+          label="Email"
+          placeholder="John@mail.com"
+          iconSrc="/assets/icons/email.svg"
+          iconAlt="email"
+        />
+        <CustomFormField
+          fieldType={FormFieldType.INPUT}
+          control={form.control}
+          name="idetificationNumber"
+          label="Identification Number"
           placeholder="9999999999"
         />
 
-        <div className="flex flex-col justify-between gap-4 xl:flex-row"></div>
+        <CustomFormField
+          fieldType={FormFieldType.SKELETON}
+          control={form.control}
+          name="identificationDocument"
+          label="Scanned Copy Of Identification Number"
+          renderSkeleton={(field) => (
+            <FormControl>
+              <FileUploader files={field.value} onChange={field.onChange} />
+            </FormControl>
+          )}
+        />
+
+        {/* consent and privacy */}
+
+        <section className="space-y-6">
+          <div className="mb-9 space-y-1">
+            <h2 className="sub-header">Consent And Privacy</h2>
+          </div>
+        </section>
+
+        <CustomFormField
+          fieldType={FormFieldType.CHECKBOX}
+          control={form.control}
+          name="treatmentConsent"
+          label="I Consent To Treatment"
+        />
+        <CustomFormField
+          fieldType={FormFieldType.CHECKBOX}
+          control={form.control}
+          name="disclosureConsent"
+          label="I Consent To Discloure Of Information"
+        />
+        <CustomFormField
+          fieldType={FormFieldType.CHECKBOX}
+          control={form.control}
+          name="privacyConsent"
+          label="I Consent To Privacy Policy"
+        />
 
         <SubmitButton isLoading={isLoading}>Get Started</SubmitButton>
       </form>
