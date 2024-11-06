@@ -43,12 +43,15 @@ export const createUser = async (user: CreateUserParams) => {
 export const getUser = async (userId: string) => {
   try {
     const user = await users.get(userId);
-    parseStringify(user);
+
+    return parseStringify(user);
   } catch (error) {
-    console.log(error);
+    console.error(
+      "An error occurred while retrieving the user details:",
+      error
+    );
   }
 };
-
 export const registerPatient = async ({
   identificationDocument,
   ...patient
@@ -69,11 +72,11 @@ export const registerPatient = async ({
       ID.unique(),
       {
         identificationDocumentId: file?.$id || null,
-        identificationDocumentUrl: `${ENDPOINT}/storage/buckets/${BUCKET_ID}/files/${file?.$id}/view?project=${PROJECT_ID}`,
+        identificationDocumentUrl: `${ENDPOINT}/storage/buckets/${BUCKET_ID}/files/${file?.$id}/view??project=${PROJECT_ID}`,
         ...patient,
       }
     );
-    return parseStringify(patient);
+    return parseStringify(newPatient);
   } catch (error) {
     console.log(error);
   }

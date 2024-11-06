@@ -4,8 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const Register = async ({ params: { userID } }: SearchParamProps) => {
-  const user = await getUser(userID);
+const Register = async ({ params: { userId } }: SearchParamProps) => {
+  const user = await getUser(userId);
+  // console.log(user,'page tsx user ');
 
   return (
     <div className="flex h-screen max-h-screen">
