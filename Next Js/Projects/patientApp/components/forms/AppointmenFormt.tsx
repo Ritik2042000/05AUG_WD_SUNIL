@@ -107,7 +107,7 @@ const AppointmentForm = ({
             dateFormate="dd/MM/yyyy - h:mm aa"
           />
 
-          <SubmitButton isLoading={isLoading}>Get Started</SubmitButton>
+          <SubmitButton isLoading={isLoading}>Get Appointment</SubmitButton>
         </form>
       </Form>
     </>
