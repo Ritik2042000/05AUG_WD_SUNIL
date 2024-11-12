@@ -101,3 +101,4 @@ export const registerPatient = async ({
     console.log(error);
   }
 };
+
