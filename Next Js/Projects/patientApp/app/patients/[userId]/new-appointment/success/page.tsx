@@ -1,5 +1,7 @@
+import { Button } from "@/components/ui/button";
 import { Doctors } from "@/constants";
 import { getAppointment } from "@/lib/actions/appointment.action";
+import { formatDateTime } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -43,7 +45,7 @@ const Success = async ({
           <p>We will be in tocuh shortly to confirm. </p>
         </section>
 
-        <section className="request-detalis">
+        <section className="request-detalis flex items-center gap-3">
           <p>Requested Appointment Detalis:</p>
           <div className="flex items-center gap-3">
             <Image
@@ -53,11 +55,32 @@ const Success = async ({
               width={100}
               className="size-6"
             />
+            <p className="whitespace-nowrap ">Dr.{doctor?.name!}</p>
+          </div>
+          <div className="flex gap-2">
+            <Image
+            src={'/assets/icons/calendar.svg'}
+            alt="calendar"
+            height={24}
+            width={24}
+            className=""
+            />
+            <p>{formatDateTime(appoinment.schedule).dateTime}</p>
           </div>
         </section>
+        <Button variant='outline' className="shad-primary-btn" asChild>
+          <Link href={`/patients/${userId}/new-appointment/`}>
+          New Appointment
+          </Link>
+        </Button>
+        <p className="copyright">
+        &copy;2024 CarePulse
+        </p>
       </div>
     </div>
   );
 };
+
+// http://localhost:3000/patients/671f942400274982df5d/new-appointment/success?appointmentId=67336e1e00385aec9232
 
 export default Success;
