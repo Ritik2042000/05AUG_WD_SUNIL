@@ -15,13 +15,24 @@ import {
 import { Input } from "@/components/ui/input";
 import { SignUpValidationSchema } from "@/lib/validation";
 import Loader from "@/components/shared/Loader";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { createUserAccount } from "@/lib/appwrite/api";
 import { useToast } from "@/hooks/use-toast";
+import {
+  useCreateUserAccount,
+  useSignInAccount,
+} from "@/lib/react-query/queriesAndMutation";
+import { useUserContext } from "@/context/AuthContext";
 
 const SignUpForm = () => {
-    const {toast} = useToast()
-  const isLoading = false;
+  const { toast } = useToast();
+  const {checkAuthUser,isLoading:isUserLoading} = useUserContext()
+  const navigate = useNavigate()
+
+  const { mutateAsync: createUserAccount, isPending: isCreatingUser } =
+    useCreateUserAccount();
+  const { mutateAsync: signInAccount, isPending: isSignIn } =
+    useSignInAccount();
 
   // 1. Define your form.
   const form = useForm<z.infer<typeof SignUpValidationSchema>>({
@@ -38,12 +49,27 @@ const SignUpForm = () => {
   async function onSubmit(values: z.infer<typeof SignUpValidationSchema>) {
     const newUser = await createUserAccount(values);
     if (!newUser) {
-        return toast({
-            title:'Sign up failed.Please try again.',
-        })
+      return toast({
+        title: "Sign up failed.Please try again.",
+      });
     }
 
-    // const session = await signInAccount?()
+    const session = await signInAccount({
+      email: values.email,
+      password: values.password,
+    });
+    if (!session) {
+      return toast({ title: "Sign In Failed,Please try again." });
+    }
+
+    const isLoggedIn = await checkAuthUser()
+
+    if (isLoggedIn) {
+      form.reset()
+      navigate('/')
+    }else{
+      return toast({title:'Sign Up  Failed.Please try again'})
+    }
   }
 
   return (
@@ -113,7 +139,7 @@ const SignUpForm = () => {
             )}
           />
           <Button type="submit" className="shad-button_primary">
-            {isLoading ? (
+            {isCreatingUser ? (
               <div className="flex-center gap-2 ">
                 <Loader />
                 Loading....
