@@ -1,6 +1,14 @@
 import React from 'react';
 
 const Contact = () => {
+
+    const hadleFormSubmit = (formData) => {
+      const data =  Object.fromEntries(formData.entries());
+    //   console.log(data,'formData');
+      
+    }
+
+
     return (
         <section className='section-contact'>
             <h2 className='container-title'>
@@ -8,10 +16,10 @@ const Contact = () => {
             </h2>
             <div className="contact-wrapper container">
 
-                <form action="">
-                    <input type="text" required autoComplete='false' placeholder='Enter your Name' name='username' className='form-control' />
-                    <input type="email" required autoComplete='false' placeholder='Enter your Email' name='email' className='form-control' />
-                    <textarea required autoComplete='false' rows={10} placeholder='Enter your Message' name='message' className='form-control' />
+                <form action={hadleFormSubmit}>
+                    <input type="text" required autoComplete='off' placeholder='Enter your Name' name='username' className='form-control' />
+                    <input type="email" required autoComplete='off' placeholder='Enter your Email' name='email' className='form-control' />
+                    <textarea required autoComplete='off' rows={10} placeholder='Enter your Message' name='message' className='form-control' />
                     <button type='submit' value={'send'}>Send</button>
                 </form>
             </div>
